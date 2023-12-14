@@ -2,7 +2,7 @@
 A collaborative project for Maryville College CSC marketing and use in competition preparation. Please glance through this README to understand the goals and contents of this project.
 
 # Purpose
-To provide CSC/Programming Team with database functionality to keep track of competition practice problems and student data as well as promote the organization to the college and public. The core functionality components of the problem bank tool are as follows.
+To provide CSC/The Programming Team with database functionality to keep track of competition practice problems and student data as well as promote the organization to the college and public. The core functionality components of the problem bank tool are as follows.
 * Retrieve and display student information, including name, year, profile picture, and problems solved.
 * Retrieve, add, edit, and delete problems from a living problem bank.
 * Add and edit problem categories.
@@ -18,12 +18,18 @@ To provide CSC/Programming Team with database functionality to keep track of com
     * Solved Problems
 3. [Home Page](#home)
 4. [About](#about)
-    * Header
-    * Advisor Blurb
-    * Student Blurbs
+    * [Header]
+    * [Advisor Blurb]
+    * [Student Blurbs]
+    * [Styling]
 5. [Major](#major)
     * Four-Year Breakdown
     * Foundational Steps
 6. [Contact Us](#contact-us)
     * Contact Form
     * Club Email Communication
+
+# About
+A) [Header]- Consists of an image gallery that cycles through images of the Programming Team; Include a revised CSC Mission Statement.
+B) [Advisor Blurb]- A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
+C) [Student Blurbs]- An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
