@@ -30,6 +30,6 @@ To provide CSC/The Programming Team with database functionality to keep track of
     * Club Email Communication
 
 # About
-A) [Header]- Consists of an image gallery that cycles through images of the Programming Team; Include a revised CSC Mission Statement.
-B) [Advisor Blurb]- A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
-C) [Student Blurbs]- An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
+A) [__Header__]: Consists of an image gallery that cycles through images of the Programming Team; Include a revised CSC Mission Statement.
+B) [__Advisor Blurb__]: A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
+C) [__Student Blurbs__]: An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
