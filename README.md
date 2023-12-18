@@ -1,5 +1,5 @@
 # Prog_Team_Website
-README authored by Chance Loveday. Contributions by [Insert collaborators' names here].
+README authored by Chance Loveday. Contributions by [__Insert collaborators' names here__].
 
 A collaborative project for Maryville College CSC marketing and use in competition preparation. Please glance through this README to understand the goals and contents of this project.
 
