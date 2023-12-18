@@ -32,7 +32,7 @@ To provide CSC/The Programming Team with database functionality to keep track of
     * Club Email Communication
 
 ## Getting Started
-If you are completely new to git or would like a refresher, look at the provided tutorial and cheat sheet. Major milestones are available in the attached GitHub project, and tasks will be updated here regularly.
+If you are completely new to git or would like a refresher, look at the provided [tutorial](https://youtu.be/8JJ101D3knE?feature=shared) and [cheat sheet](education.github.com/git-cheat-sheet-education.pdf). Major milestones are available in the attached GitHub project, and tasks will be updated here regularly.
 
 ## Problem Bank
 This portion should be entirely separate from the rest of the project. A page that utilizes databases to record practice problems and student info
