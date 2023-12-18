@@ -13,7 +13,7 @@ To provide CSC/The Programming Team with database functionality to keep track of
 # Table of Contents
 
 1. [Getting Started](#getting-started)
-2. [Problem Bank](#problembank) - A database tool to be utilized during Programming Team practice; this will be separate from the mainstream website as a private version or standalone tool
+2. [Problem Bank](#problem-bank) - A database tool to be utilized during Programming Team practice; this will be separate from the mainstream website as a private version or standalone tool
     * Student Profiler
     * Problem Table
     * Category Table
@@ -34,9 +34,20 @@ To provide CSC/The Programming Team with database functionality to keep track of
 ## Getting Started
 If you are completely new to git or would like a refresher, look at the provided tutorial and cheat sheet. Major milestones are available in the attached GitHub project, and tasks will be updated here regularly.
 
+## Problem Bank
+This portion should be entirely separate from the rest of the project. A page that utilizes databases to record practice problems and student info
+
+[__Requirements__]: Due to the sensitive needs of the database, the problem bank and associated tables should be restricted to members of the Programming Team. As a resolution, a login feature could be implemented, or this part could be a standalone tool.
+
+## Home
+
 ## About
 A page that should inform the public about CSC both as a competition team and as a student organization. Team achievements, student spotlights, and competition information is provided on this page.
 1. [__Header__]: Consists of an image gallery that cycles through images of the Programming Team; Include a revised CSC Mission Statement.
 2. [__Advisor Blurb__]: A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
 3. [__Student Blurbs__]: An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
 4. [__Styling__]: Distinctive theme that blends with the overall color scheme and theme as well as group pictures.
+
+## Major
+
+## Contact Us
