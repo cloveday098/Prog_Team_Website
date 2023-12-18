@@ -38,7 +38,7 @@ If you are completely new to git or would like a refresher, look at the provided
 ## Problem Bank
 This portion should be entirely separate from the rest of the project. A page that utilizes databases to record practice problems and student info
 
-[__Requirements__]: Due to the sensitive needs of the database, the problem bank and associated tables should be restricted to members of the Programming Team. As a resolution, a login feature could be implemented, or this part could be a standalone tool. This section may warrant further discussion.
+__Requirements__: Due to the sensitive needs of the database, the problem bank and associated tables should be restricted to members of the Programming Team. As a resolution, a login feature could be implemented, or this part could be a standalone tool. This section may warrant further discussion.
 
 1. [__Problems__]: Displays problems of a certain category. Options to add, edit, and delete a problem should be included.
 2. [__Categories__]: Displays the given categories. Options to add or edit categories should be included.
@@ -59,7 +59,7 @@ A page that should inform the public about CSC both as a competition team and as
 
 ## Major
 This is an optional section intended to clarify the path of a computer science major. Instead of linking to the paradigm, this page should clearly indicate the required courses, their availabilities, and any suggested grouping of courses.
-* {__Four-Year Breakdown__]:
+* __Four-Year Breakdown__:
      1) First-Year
         * MTH 125
         * MTH 225
@@ -81,4 +81,4 @@ This is an optional section intended to clarify the path of a computer science m
         * CSC 381
 ## Contact Us
 A form that contacts the Programming Team email with the contact's information.
-* [__Contact Form Implementation__]: The form should require a valid name, email, phone number, and message (at least 5-10 characters) from the sender. Only members linked to the team email will receive such messages. Security measures should be implemented to prevent phishing.
+* __Contact Form Implementation__: The form should require a valid name, email, phone number, and message (at least 5-10 characters) from the sender. Only members linked to the team email will receive such messages. Security measures should be implemented to prevent phishing.
