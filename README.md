@@ -26,6 +26,7 @@ To provide CSC/The Programming Team with database functionality to keep track of
     * Header
     * Advisor Blurb
     * Student Blurbs
+    * Team Info
     * Styling
 6. [Major](#major)
     * Four-Year Breakdown
@@ -55,10 +56,11 @@ A page that should inform the public about CSC both as a competition team and as
 1. [__Header__]: Consists of an image gallery that cycles through images of the Programming Team; Include a description of the Programming Team. The revised CSC Mission Statement should be provided on the Home page.
 2. [__Advisor Blurb__]: A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
 3. [__Student Blurbs__]: An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
-4. [__Styling__]: Distinctive theme that blends with the overall color scheme and theme as well as group pictures.
+4. {__Team Info__]: Highlights team achievements and notable programming contests.
+5. [__Styling__]: Distinctive theme that blends with the overall color scheme and theme as well as group pictures.
 
 ## Major
-This is an optional section intended to clarify the path of a computer science major. Instead of linking to the paradigm, this page should clearly indicate the required courses, their availabilities, and any suggested grouping of courses.
+This is an optional section intended to clarify the path of a computer science major. Instead of linking to the paradigm, this page should clearly indicate the required courses, their availabilities, and any suggested grouping of courses. This page can be as simple or as creative as desired.
 * __Four-Year Breakdown__:
      1) First-Year
         * MTH 125
