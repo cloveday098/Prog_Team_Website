@@ -1,3 +1,4 @@
+<!-- Image Gallery-->
 <script>
     src1 = "myrtleBeach_ccsc.jpg";
     src2 = "blast_from_the_past.jpg";
@@ -6,12 +7,15 @@
     src5 = "ccsc_team10.jpg";
     src6 = "mb_dinner_11_4.jpg";
     function load_updated_image() {
-        if (document.getElementById("imgGallery").src == "http://localhost/" + src1) {var url = src2;}
-        else if (document.getElementById("imgGallery").src == "http://localhost/"+src2) {var url = src3;}
-        else if (document.getElementById("imgGallery").src == "http://localhost/"+src3) {var url = src4;}
-        else if (document.getElementById("imgGallery").src == "http://localhost/"+src4) {var url = src5;}
-        else if (document.getElementById("imgGallery").src == "http://localhost/"+src5) {var url = src6;}
+        var img = document.getElementById("imgGallery").src.split("/Images/");
+        var imgID = img[1];
+        if (document.getElementById("imgGallery").src == src1) {var url = src2;}
+        else if (document.getElementById("imgGallery").src == src2) {var url = src3;}
+        else if (document.getElementById("imgGallery").src == src3) {var url = src4;}
+        else if (document.getElementById("imgGallery").src == src4) {var url = src5;}
+        else if (document.getElementById("imgGallery").src == src5) {var url = src6;}
         else {var url = src1;}
+        url = "./Images/" + url;
         document.getElementById("imgGallery").src = url;
         document.getElementById("url").innerHTML = url;
     }
@@ -19,6 +23,40 @@
         setInterval(load_updated_image, 6000)
     };
     </script>
+
+<!-- Student Spotlight Gallery-->
+<script>
+    class Student {
+        constructor(name, blurb, pic) {
+            this.name = name;
+            this.blurb = blurb;
+            this.pic = pic;
+        }
+        name() {
+            return this.name;
+        }
+        blurb() {
+            return this.blurb;
+        }
+        pic() {
+            return this.pic;
+        }
+    }
+
+    students = [student("Chance Loveday [VP & Co-Founder]", "Hi, I'm a sophomore Computer Science and Math major.<br>I'm active in several organizations across campus,<br>including S³, Mountain Challenge, and MC3D. However,<br>one club is particularly special. CSC has given me a place<br>to excel, hone my programming skills, and be around<br>some truly incredible people.", "http://localhost/chance.png")]
+    function nextStudent() {
+        alert("here");
+        document.getElementById("studentName").src=students[0%students.length].name();
+        document.getElementById("studentBlurb").src=students[0%students.length].blurb();
+        document.getElementById("spotlight").src=students[0%students.length].pic();
+    }
+    function lastStudent() {
+        alert("here");
+        //document.getElementById("studentName").src=students[0%students.length][0];
+        //document.getElementById("studentBlurb").src=students[0%students.length][1];
+        document.getElementById("spotlight").src=students[0%students.length].pic();
+    }
+</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +79,7 @@
             text-align: center;
         }
         .top {
-            background-image: url('http://localhost/mountain.jpg');
+            background-image: url('./mountain.jpg');
         }
         .bottom {
             background-color:mediumturquoise;
@@ -62,12 +100,12 @@
 <body style="background-color:mediumturquoise;">
     <div class="top">
     <center><h1 style="color:orange; font-family:Helvetica;">Meet The Team</h1>
-    <strong><p style="font-size:21px; color:#600015;">Curious about programming? You're in the right place!</p></strong>
+    <strong><p style="font-size:21px; color:rgb(96, 0, 21);">Curious about programming? You're in the right place!</p></strong>
     <p class="studentdescp" style="color:#600015;">
         The Computer Science Club (CSC) welcomes all students seeking to expand your knowledge and skills in programming and technology. <br>
         The club's Programming Team is an excellent way of achieving this. Teams of students compete in regional and international <br>
         programming competitions, enhancing their coding, problem-solving, and teammwork skills while having fun along the way.</p>
-    
+    <img id = "imgGallery" src="./Images/myrtleBeach_ccsc.jpg" onclick="javascript.window.onload()" width=auto height = "450">
     </center></div>
 
     <div class="bottom">
@@ -85,7 +123,7 @@
     <!--1st Row of Names-->
     <div class="row">
         <div class="side">
-            <div class="studenthead"><strong>Jessica Mohr [President & Co-Founder]</strong></div>
+            <div id="studentName" class="studenthead"><strong>Jessica Mohr [President & Co-Founder]</strong></div>
         </div>
         <div class="side">
             <div class="studenthead"><strong>Chance Loveday [VP & Co-Founder] </strong></div>
@@ -98,7 +136,7 @@
     <!--1st Row of Pics-->
     <div class="row">
         <div class="side">
-            <img src="http://localhost/jess.png" width=auto height="300">
+            <img id="spotlight" src="http://localhost/jess.png" width=auto height="300">
         </div>
         <div class="side">
             <img src="http://localhost/chance.png" width=auto height="300">
@@ -106,12 +144,15 @@
         <div class="side">
             <img src="http://localhost/kylind.png" width=auto height="300">
         </div>
+        <div class=""side">
+            <button type="button" style="width:50px; height:50px; color:black;" onclick="changeStudent">-></button>
+        </div>
     </div>
 
     <!--1st Row of Blurbs-->
     <div class="row">
         <div class="side">
-            <p class="studentdescp"></p>
+            <p id="studentBlurb" class="studentdescp"></p>
         </div>
         <div class="side">
             <p class="studentdescp">Hi, I'm a sophomore Computer Science and Math major. <br>
