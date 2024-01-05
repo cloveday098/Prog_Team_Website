@@ -32,33 +32,10 @@ To provide CSC/The Programming Team with database functionality to keep track of
     * Four-Year Breakdown
 7. [Contact Us](#contact-us)
     * Contact Form
+    * Club Email Communication
 
-<<<<<<< HEAD
-## About
+# About
 1. [__Header__]: Consists of an image gallery that cycles through images of the Programming Team; Include a revised CSC Mission Statement.
-=======
-## Getting Started
-If you are completely new to git or would like a refresher, look at the provided [tutorial](https://youtu.be/8JJ101D3knE?feature=shared) and [cheat sheet](education.github.com/git-cheat-sheet-education.pdf). This project will implement HTML, JavaScript, CSS/Bootstrap, and possibly PHP. If you are not familiar with any of these online tutorials are readily available, and _W3 Schools_ is highly recommended. Major milestones and initial tasks are available in the attached GitHub project; tasks will be updated here regularly.
-
-## Problem Bank
-This portion should be entirely separate from the rest of the project. A page that utilizes databases to record practice problems and student info
-
-__Requirements__: Due to the sensitive needs of the database, the problem bank and associated tables should be restricted to members of the Programming Team. As a resolution, a login feature could be implemented, or this part could be a standalone tool. This section may warrant further discussion.
-
-1. [__Problems__]: Displays problems of a certain category. Options to add, edit, and delete a problem should be included.
-2. [__Categories__]: Displays the given categories. Options to add or edit categories should be included.
-3. [__Solved Problems__]: Displays student names based on students who solved each problem.
-4. [__Student Profiler__][Optional]: Implements a profile for each member, including name, class rank, profile picture, and problems solved. If a login feature is implemented, students should be able to view their statistics and submit requests to receive credit for solved problems. The advisor's account should have similar capabilities but be able to log solve problems, remove students, and serve as an administrator.
-
-## Home
-1. [__Header__]: Contains either a navbar or series of buttons that lead to the remaining pages, consisting of but not limited to the _About_, _Major_, _Contact_, and Maryville College Home pages. A custom logo will also reside at the top of this page.
-2. [__Calendar__]: A feature that allows viewers to view upcoming events, events marked distinctly from the other dates.
-3. [__Socials__]: Include links to email and the Facebook page.
-
-## About
-A page that should inform the public about CSC both as a competition team and as a student organization. Team achievements, student spotlights, and competition information are provided on this page.
-1. [__Header__]: Consists of an image gallery that cycles through images of the Programming Team; Include a description of the Programming Team. The revised CSC Mission Statement should be provided on the Home page.
->>>>>>> 0d1bd6d671d424d00fa71c17df50625ceb2e3ec2
 2. [__Advisor Blurb__]: A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
 3. [__Student Blurbs__]: An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
 4. {__Team Info__]: Highlights team achievements and notable programming contests.
