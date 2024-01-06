@@ -55,6 +55,9 @@ __Requirements__: Due to the sensitive needs of the database, the problem bank a
 ## About
 A page that should inform the public about CSC both as a competition team and as a student organization. Team achievements, student spotlights, and competition information are provided on this page.
 1. [__Header__]: Consists of an image gallery that cycles through images of the Programming Team; Include a description of the Programming Team. The revised CSC Mission Statement should be provided on the Home page.
+
+Mission Statement as seen on the club constitution: The mission is to promote computer science and technical learning among computer science and non-computer science majors alike in the Maryville College community and provide meaningful experiences to individuals seeking a career relating to computer programming.
+
 2. [__Advisor Blurb__]: A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
 3. [__Student Blurbs__]: An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
 4. {__Team Info__]: Highlights team achievements and notable programming contests.
