@@ -7,13 +7,12 @@
     src5 = "ccsc_team10.jpg";
     src6 = "mb_dinner_11_4.jpg";
     function load_updated_image() {
-        var img = document.getElementById("imgGallery").src.split("/Images/");
-        var imgID = img[1];
-        if (document.getElementById("imgGallery").src == src1) {var url = src2;}
-        else if (document.getElementById("imgGallery").src == src2) {var url = src3;}
-        else if (document.getElementById("imgGallery").src == src3) {var url = src4;}
-        else if (document.getElementById("imgGallery").src == src4) {var url = src5;}
-        else if (document.getElementById("imgGallery").src == src5) {var url = src6;}
+        var img = document.getElementById("imgGallery").src;
+        if (img.indexOf(src1) > -1) {var url = src2;}
+        else if (img.indexOf(src2) > -1) {var url = src3;}
+        else if (img.indexOf(src3) > -1) {var url = src4;}
+        else if (img.indexOf(src4) > -1) {var url = src5;}
+        else if (img.indexOf(src5) > -1) {var url = src6;}
         else {var url = src1;}
         url = "./Images/" + url;
         document.getElementById("imgGallery").src = url;
@@ -104,7 +103,10 @@
     <p class="studentdescp" style="color:#600015;">
         The Computer Science Club (CSC) welcomes all students seeking to expand your knowledge and skills in programming and technology. <br>
         The club's Programming Team is an excellent way of achieving this. Teams of students compete in regional and international <br>
-        programming competitions, enhancing their coding, problem-solving, and teammwork skills while having fun along the way.</p>
+        programming competitions, enhancing their coding, problem-solving, and teammwork skills while having fun along the way. <br><br>
+        The mission is to promote computer science and technical learning among computer science and non-computer science majors <br>
+        alike in the Maryville College community and provide meaningful experiences to individuals seeking a career relating to <br>
+        computer programming.</p>
     <img id = "imgGallery" src="./Images/myrtleBeach_ccsc.jpg" onclick="javascript.window.onload()" width=auto height = "450">
     </center></div>
 
