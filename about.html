@@ -1,5 +1,16 @@
 <!-- Image Gallery-->
 <script>
+    var names = ["Jessica Mohr [President & Co-Founder]", "Chance Loveday [VP & Co-Founder]", "Kylind Reagan [Secretary]", "Samir Rojas [Treasurer]", "Gianna Mantegna", "Gustavo Hernandez"];
+    var blurbs = ["",
+                "Hi, I'm a sophomore Computer Science and Math major. I'm active in several organizations across campus, including S³, Mountain Challenge, and MC3D. However, one club is particularly special. CSC has given me a place to excel, hone my programming skills, and be around some truly incredible people.",
+                "I am a sophomore Computer Science and have been on the Programming Team since I was a freshman. It improved my coding skills, let me meet people in my field, and helped me feel more prepared for both the real world and academia. It's also a lot of fun for anyone who enjoys problem-solving and traveling with peers!",
+                "I am Samir Rojas, a passionate junior studying Computer Science and Math with an anticipated graduation in December 2024. What captivates me most in the realm of Computer Science is the exhilarating journey of programming. Crafting diverse applications and games, such as my rendition of the iconic DOOM game, fuels my enthusiasm by immersing me in multifaceted problem-solving adventures.",
+                "Hey, I'm a freshman pursuing an Environmental Science major with Computer Science and Humanities minors. I am a part of the Programming Team, Philosophy Club, S³, and the CCA technical team. My favorite part of CSC is getting to learn some pretty amazing techniques for coding. I love getting to learn about how to create programs that solve for the wildest of problems.",
+                "I am a Junior graduating in 2025, I am a computer science major, and my favorite memory from CSC was when I helped the team submit a correct problem. It felt good contributing to the team, since we used lots of teamwork, to ensure that we effectively use our time wisely."];
+    var pics = ["http://localhost/jess.png", "http://localhost/chance.png", "http://localhost/kylind.png", "http://localhost/samir.png", "http://localhost/gianna.png", "http://localhost/gus.png"];
+</script>
+
+<script>
     src1 = "myrtleBeach_ccsc.jpg";
     src2 = "blast_from_the_past.jpg";
     src3 = "lipscomb_2ndplace.jpg";
@@ -45,15 +56,6 @@
 
     //students = [student("Chance Loveday [VP & Co-Founder]", "Hi, I'm a sophomore Computer Science and Math major.<br>I'm active in several organizations across campus,<br>including S³, Mountain Challenge, and MC3D. However,<br>one club is particularly special. CSC has given me a place<br>to excel, hone my programming skills, and be around<br>some truly incredible people.", "http://localhost/chance.png")]
     function nextStudent() {
-        var names = ["Jessica Mohr [President & Co-Founder]", "Chance Loveday [VP & Co-Founder]", "Kylind Reagan [Secretary]", "Samir Rojas [Treasurer]", "Gianna Mantegna", "Gustavo Hernandez"];
-        var blurbs = ["",
-                    "Hi, I'm a sophomore Computer Science and Math major. I'm active in several organizations across campus, including S³, Mountain Challenge, and MC3D. However, one club is particularly special. CSC has given me a place to excel, hone my programming skills, and be around some truly incredible people.",
-                    "I am a sophomore Computer Science and have been on the Programming Team since I was a freshman. It improved my coding skills, let me meet people in my field, and helped me feel more prepared for both the real world and academia. It's also a lot of fun for anyone who enjoys problem-solving and traveling with peers!",
-                    "I am Samir Rojas, a passionate junior studying Computer Science and Math with an anticipated graduation in December 2024. What captivates me most in the realm of Computer Science is the exhilarating journey of programming. Crafting diverse applications and games, such as my rendition of the iconic DOOM game, fuels my enthusiasm by immersing me in multifaceted problem-solving adventures.",
-                    "Hey, I'm a freshman pursuing an Environmental Science major with Computer Science and Humanities minors. I am a part of the Programming Team, Philosophy Club, S³, and the CCA technical team. My favorite part of CSC is getting to learn some pretty amazing techniques for coding. I love getting to learn about how to create programs that solve for the wildest of problems.",
-                    "I am a Junior graduating in 2025, I am a computer science major, and my favorite memory from CSC was when I helped the team submit a correct problem. It felt good contributing to the team, since we used lots of teamwork, to ensure that we effectively use our time wisely."];
-        var pics = ["http://localhost/jess.png", "http://localhost/chance.png", "http://localhost/kylind.png", "http://localhost/samir.png", "http://localhost/gianna.png", "http://localhost/gus.png"];
-        
         document.getElementById("studID").value = (parseInt(document.getElementById("studID").value) + 1)%pics.length;
         var studID = document.getElementById("studID").value;
         //alert(studID);
@@ -62,10 +64,12 @@
         document.getElementById("spotlight").src = pics[studID];
     }
     function lastStudent() {
-        document.getElementById("studID").value = (parseInt(document.getElementById("studID").value) - 1)%6;
-        alert(document.getElementById("studID").value);
+        document.getElementById("studID").value = (parseInt(document.getElementById("studID").value) - 1)%pics.length;
+        if (document.getElementById("studID").value < 0) {document.getElementById("studID").value = pics.length - Math.abs(document.getElementById("studID").value);}
+        var studID = document.getElementById("studID").value;
+        //alert(document.getElementById("studID").value);
         document.getElementById("studentName").value = names[studID];
-        document.getElementById("studentBlurb").src = blurbs[studID];
+        document.getElementById("studentBlurb").value = blurbs[studID];
         document.getElementById("spotlight").src = pics[studID];
     }
 </script>
@@ -90,8 +94,10 @@
             padding: 12px;
             text-align: center;
         }
-        .top {
-            background-image: url('./mountain.jpg');
+        .sectHead {
+            color:orange;
+            font-family:Helvetica;
+            font-size: 32px;
         }
         .bottom {
             background-color:mediumturquoise;
@@ -107,6 +113,8 @@
             font-family: Helvetica;
             font-size:21px;
             width:375px;
+            text-align: center;
+            border: transparent;
         }
         .studentdescp {
             background-color:mediumturquoise;
@@ -114,28 +122,39 @@
             font-size: 18px;
             font-family: Arial;
             width: 375px;
-            height: 300px;
+            height: 250px;
+            text-align: center;
+            border: transparent;
+        }
+        .btn {
+            width: 50px;
+            height: 50px;
+            color: maroon;
+            background-color: orange;;
         }
     </style>
 </head>
 <a href="http://localhost/Programming%20Team.html" style="float:left;"><img src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/global/MC_V1-Enclosed_RGB_FullColor.png" width=auto height="50"></a>
 <body style="background-color:mediumturquoise;">
-    <div class="top">
-    <center><h1 style="color:orange; font-family:Helvetica;">Meet The Team</h1>
+    <section style="background-image: url('./Images/mountain.jpg');">
+    <center><h1 class="sectHead" style="font-size:36px;">Meet The Team</h1>
     <strong><p style="font-size:21px; color:rgb(96, 0, 21);">Curious about programming? You're in the right place!</p></strong>
-    <p class="studentdescp" style="color:#600015;">
-        The Computer Science Club (CSC) welcomes all students seeking to expand your knowledge and skills in programming and technology. <br>
-        The club's Programming Team is an excellent way of achieving this. Teams of students compete in regional and international <br>
+    <p class="studentdescp" style="color:#600015; background-color:transparent;">
+        The Computer Science Club (CSC) welcomes all students seeking to expand your knowledge and skills in programming and technology.
+        The club's Programming Team is an excellent way of achieving this. Teams of students compete in regional and international
         programming competitions, enhancing their coding, problem-solving, and teammwork skills while having fun along the way. <br><br>
-        The mission is to promote computer science and technical learning among computer science and non-computer science majors <br>
-        alike in the Maryville College community and provide meaningful experiences to individuals seeking a career relating to <br>
+        Mission Statement: The mission is to promote computer science and technical learning among computer science and non-computer science majors
+        alike in the Maryville College community and provide meaningful experiences to individuals seeking a career relating to
         computer programming.</p>
     <img id = "imgGallery" src="./Images/myrtleBeach_ccsc.jpg" onclick="javascript.window.onload()" width=auto height = "450">
-    </center></div>
+    </center>
+    </section>
 
+    <section>
+    <!--Advisor Blurb-->
     <div class="bottom">
     <center>
-    <h2 style="color:orange;">Our Advisor: Dr. Barbara Johnson</h2>
+    <h2 class="sectHead">Our Advisor: Dr. Barbara Johnson</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0E_dYTrlGgbONh8W-4SaTpX-ZStd4T_SAM4aVonwO&s" width=auto height="200"><br>
     <p class="advisordescp">"When I was a kid, I loved logic puzzles. I couldn’t get enough of them. As an adult, I started <br>
         taking computer science classes and made an amazing discovery: computer science is all about using <br>
@@ -144,114 +163,46 @@
         And the best perk of all is I get to work with such an amazing, fun, and brilliant group of students. <br>
         Seeing that spark in them is priceless! I have the best job in the world."<br><br></p>
     </center>
+    </section>
 
-    <!--1st Row of Names-->
+    <section>
+    <!--Student Spotlights-->
+    <center><h2 class="sectHead">Student Spotlights</h2></center>
+    <!--Name-->
     <div class="row">
         <div class="side">
             <input type="text" id="studentName" class="studenthead" value="Jessica Mohr [President & Co-Founder]" readonly>
         </div>
+    </div>
+
+    <!--Pic-->
+    <div class="row">
         <div class="side">
-            <div class="studenthead"><strong>Chance Loveday [VP & Co-Founder] </strong></div>
-        </div>
-        <div class="side">
-            <div class="studenthead"><strong>Kylind Reagan [Secretary] </strong></div>
+            <img id="spotlight" src="http://localhost/jess.png" width=auto height="350">
         </div>
     </div>
 
-    <!--1st Row of Pics-->
+    <!--Blurb-->
     <div class="row">
-        <div class="side">
-            <img id="spotlight" src="http://localhost/jess.png" width=auto height="300">
-        </div>
-        <div class="side">
-            <img src="http://localhost/chance.png" width=auto height="300">
-        </div>
-        <div class="side">
-            <img src="http://localhost/kylind.png" width=auto height="300">
-        </div>
+        <!--Back Btn-->
         <div class=""side">
             <input type="hidden" id="studID" value="0">
-            <button type="button" style="width:50px; height:50px; color:black;" onclick="nextStudent()">-></button>
+            <button type="button" class="btn" onclick="lastStudent()"><-</button>
         </div>
-    </div>
-
-    <!--1st Row of Blurbs-->
-    <div class="row">
+        
         <div class="side">
             <textarea id="studentBlurb" class="studentdescp" value="" readonly></textarea>
         </div>
-        <div class="side">
-            <p class="studentdescp">Hi, I'm a sophomore Computer Science and Math major. <br>
-                I'm active in several organizations across campus, <br>
-                including S³, Mountain Challenge, and MC3D. However, <br>
-                one club is particularly special. CSC has given me a place <br>
-                to excel, hone my programming skills, and be around <br>
-                some truly incredible people.
-                </p>
-        </div>
-        <div class="side">
-            <p class="studentdescp">I am a sophomore Computer Science and have been on the <br>
-                Programming Team since I was a freshman. It improved my coding <br>
-                skills, let me meet people in my field, and helped me feel more <br>
-                prepared for both the real world and academia. It's also a lot of <br>
-                fun for anyone who enjoys problem-solving and traveling with peers! <br>
-            </p>
-        </div>
-    </div>
 
-    <!--2nd Row of Names-->
-    <div class="row">
-        <div class="side">
-            <div class="studenthead"><strong>Samir Rojas [Treasurer]</strong></div>
-        </div>
-        <div class="side">
-            <div class="studenthead"><strong>Gianna Mantegna </strong></div>
-        </div>
-        <div class="side">
-            <div class="studenthead"><strong>Gustavo Hernandez </strong></div>
+        <!--Next Btn-->
+        <div class=""side">
+            <input type="hidden" id="studID" value="0">
+            <button type="button" class="btn" onclick="nextStudent()">-></button>
         </div>
     </div>
+    </section>
 
-    <!--2nd Row of Pics-->
-    <div class="row">
-        <div class="side">
-            <img src="http://localhost/samir.png" width=auto height="300">
-        </div>
-        <div class="side">
-            <img src="http://localhost/gianna.png" width=auto height="300">
-        </div>
-        <div class="side">
-            <img src="http://localhost/gus.png" width=auto height="300">
-        </div>
-    </div>
-     
-    <!--2nd Row of Blurbs-->
-    <div class="row">
-        <div class="side">
-            <p class="studentdescp">I am Samir Rojas, a passionate junior studying Computer Science <br>
-                and Math with an anticipated graduation in December 2024. <br>
-                What captivates me most in the realm of Computer Science is the <br>
-                exhilarating journey of programming. Crafting diverse applications <br>
-                and games, such as my rendition of the iconic DOOM game, fuels <br>
-                my enthusiasm by immersing me in multifaceted problem-solving adventures.</p>
-        </div>
-        <div class="side">
-            <p class="studentdescp">Hey, I'm a freshman pursuing an Environmental Science <br>
-                major with Computer Science and Humanities minors. <br>
-                I am a part of the Programming Team, Philosophy Club, S³, <br>
-                and the CCA technical team. My favorite part of CSC is <br>
-                getting to learn some pretty amazing techniques for coding. <br>
-                I love getting to learn about how to create programs that <br>
-                solve for the wildest of problems.</p>
-        </div>
-        <div class="side">
-            <p class="studentdescp">I am a Junior graduating in 2025, I am a computer science <br>
-                major, and my favorite memory from CSC was when I helped <br>
-                the team submit a correct problem. It felt good contributing <br>
-                to the team, since we used lots of teamwork, to ensure that <br>
-                we effectively use our time wisely.</p>
-        </div>
-    </div>
-    <center><iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="1000" height="600" frameborder="0" scrolling="no"></iframe></center>
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="750" height="400" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&mode=AGENDA&showTabs=0&showPrint=0&showDate=0&showTitle=0&showTz=0&showCalendars=1&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
 </body>
 </html>
