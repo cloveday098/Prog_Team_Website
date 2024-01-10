@@ -19,15 +19,18 @@
     src6 = "mb_dinner_11_4.jpg";
     function load_updated_image() {
         var img = document.getElementById("imgGallery").src;
-        if (img.indexOf(src1) > -1) {var url = src2;}
-        else if (img.indexOf(src2) > -1) {var url = src3;}
-        else if (img.indexOf(src3) > -1) {var url = src4;}
-        else if (img.indexOf(src4) > -1) {var url = src5;}
-        else if (img.indexOf(src5) > -1) {var url = src6;}
-        else {var url = src1;}
+        var url; var cap;
+        if (img.indexOf(src1) > -1) {url = src2; cap = "The MC CCSC champions from 2007 meet the Programming Team students and share their expertise";}
+        else if (img.indexOf(src2) > -1) {url = src3; cap = "MC's team (far right), consisting of Shok Samadov, Chance Loveday, and Kylind Reagan, won 2nd place at the Lipscomb regional Lifeline Contest";}
+        else if (img.indexOf(src3) > -1) {url = src4; cap = "The Programming Team in action during practice";}
+        else if (img.indexOf(src4) > -1) {url = src5; cap = "Congratulations to Pedro Pedro Antonio (far left), Gustavo Hernandez (left), Jessica Mohr (right), and Jorge Estrada-Martinez (far right) for securing 10th place in the 2023 CCSC Contest";}
+        else if (img.indexOf(src5) > -1) {url = src6; cap = "A well-deserved seafood dinner after a long day of programming";}
+        else {url = src1; cap="Only the best of the MC programmers at the 2023 CCSC Contest";}
         url = "./Images/" + url;
         document.getElementById("imgGallery").src = url;
+        document.getElementById("imgGalleryCap").innerHTML = cap;
         document.getElementById("url").innerHTML = url;
+        document.getElementById("cap").innerHTML = cap;
     }
     window.onload = function() {
         setInterval(load_updated_image, 6000)
@@ -146,7 +149,11 @@
         Mission Statement: The mission is to promote computer science and technical learning among computer science and <br>
         non-computer science majors alike in the Maryville College community and provide meaningful experiences to individuals<br>
         seeking a career relating to computer programming. </div>
-    <img id = "imgGallery" src="./Images/myrtleBeach_ccsc.jpg" onclick="javascript.window.onload()" width=auto height = "450">
+    
+    <figure>
+        <img id = "imgGallery" src="./Images/myrtleBeach_ccsc.jpg" onclick="javascript.window.onload()" width=auto height = "450">
+        <figcaption id="imgGalleryCap">Only the best of the MC programmers at the 2023 CCSC Contest</figcaption>
+    </figure>
     </center>
     </section>
 
@@ -169,6 +176,7 @@
     <!--Student Spotlights-->
     <center><h2 class="sectHead">Student Spotlights</h2></center>
     <!--Name-->
+    <hr>
     <div class="row">
         <div class="side">
             <input type="text" id="studentName" class="studenthead" value="Jessica Mohr [President & Co-Founder]" readonly>
@@ -178,7 +186,7 @@
     <!--Pic-->
     <div class="row">
         <div class="side">
-            <img id="spotlight" src="http://localhost/jess.png" width=auto height="350">
+            <img id="spotlight" src="./Images/jess.png" width=auto height="350">
         </div>
     </div>
 
@@ -201,8 +209,13 @@
         </div>
     </div>
     </section>
+    <hr style="color:white;">
 
     <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="750" height="400" frameborder="0" scrolling="no"></iframe>
     <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&mode=AGENDA&showTabs=0&showPrint=0&showDate=0&showTitle=0&showTz=0&showCalendars=1&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+
+    <section>
+        Competitions
+    </section>
 </body>
 </html>
