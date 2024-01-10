@@ -1,5 +1,5 @@
 # Prog_Team_Website
-README authored by Chance Loveday. Contributions by [__Insert collaborators' names here__].
+README authored by Chance Loveday. Contributions by Matt Hurst, Chance Loveday, and Kylind Reagan.
 
 A collaborative project for Maryville College CSC marketing and use in competition preparation. Please glance through this README to understand the goals and contents of this project.
 
@@ -35,7 +35,7 @@ To provide CSC/The Programming Team with database functionality to keep track of
     * Club Email Communication
 
 ## Getting Started
-If you are completely new to git or would like a refresher, look at the provided [tutorial](https://youtu.be/8JJ101D3knE?feature=shared) and [cheat sheet](education.github.com/git-cheat-sheet-education.pdf). This project will implement HTML, JavaScript, CSS/Bootstrap, and possibly PHP. If you are not familiar with any of these online tutorials are readily available, and _W3 Schools_ is highly recommended. Major milestones and initial tasks are available in the attached GitHub project; tasks will be updated here regularly.
+If you are completely new to git or would like a refresher, look at the provided [tutorial](https://youtu.be/8JJ101D3knE?feature=shared) and [cheat sheet](education.github.com/git-cheat-sheet-education.pdf). This project will implement HTML, JavaScript, CSS/Bootstrap, and possibly PHP. If you are not familiar with any of these, online tutorials are readily available, and _W3 Schools_ is highly recommended. Milestones and tasks are available in the attached GitHub project; tasks will be updated here regularly.
 
 ## Problem Bank
 This portion should be entirely separate from the rest of the project. A page that utilizes databases to record practice problems and student info
@@ -65,7 +65,7 @@ Mission Statement as seen on the club constitution: The mission is to promote co
 
 ## Major
 This is an optional section intended to clarify the path of a computer science major. Instead of linking to the paradigm, this page should clearly indicate the required courses, their availabilities, and any suggested grouping of courses. This page can be as simple or as creative as desired.
-* __Four-Year Breakdown__:
+* __Four-Year Breakdown__ (According to the incoming freshman class; courses are grouped by offering period and suggestions):
      1) First-Year
         * MTH 125
         * MTH 225
@@ -74,13 +74,15 @@ This is an optional section intended to clarify the path of a computer science m
      2) Sophomore or Junior
         * CSC 231 or (MTH 232 & CSC 312)
         * CSC 220
-        * CSC 250
+        * CSC 250 (take early)
         * CSC 299
      3) Junior or Sophomore
         * CSC 260
         * CSC 319
         * CSC 349 (if no CSC 314)
+        * MTH 321
      4) Senior
+        * CSC 250 (unless taken earlier)
         * CSC 312
         * CSC 314 (if no CSC 349)
         * Senior Studies
