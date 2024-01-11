@@ -7,7 +7,7 @@
                 "I am Samir Rojas, a passionate junior studying Computer Science and Math with an anticipated graduation in December 2024. What captivates me most in the realm of Computer Science is the exhilarating journey of programming. Crafting diverse applications and games, such as my rendition of the iconic DOOM game, fuels my enthusiasm by immersing me in multifaceted problem-solving adventures.",
                 "Hey, I'm a freshman pursuing an Environmental Science major with Computer Science and Humanities minors. I am a part of the Programming Team, Philosophy Club, S³, and the CCA technical team. My favorite part of CSC is getting to learn some pretty amazing techniques for coding. I love getting to learn about how to create programs that solve for the wildest of problems.",
                 "I am a Junior graduating in 2025, I am a computer science major, and my favorite memory from CSC was when I helped the team submit a correct problem. It felt good contributing to the team, since we used lots of teamwork, to ensure that we effectively use our time wisely."];
-    var pics = ["http://localhost/jess.png", "http://localhost/chance.png", "http://localhost/kylind.png", "http://localhost/samir.png", "http://localhost/gianna.png", "http://localhost/gus.png"];
+    var pics = ["./jess.png", "./chance.png", "./kylind.png", "./samir.png", "./gianna.png", "./gus.png"];
 </script>
 
 <script>
@@ -107,7 +107,7 @@
         }
         .advisordescp {
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             font-family: Arial;
         }
         .studenthead {
@@ -137,7 +137,7 @@
         }
     </style>
 </head>
-<a href="http://localhost/Programming%20Team.html" style="float:left;"><img src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/global/MC_V1-Enclosed_RGB_FullColor.png" width=auto height="50"></a>
+<a href="./home.html" style="float:left;"><img src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/global/MC_V1-Enclosed_RGB_FullColor.png" width=auto height="50"></a>
 <body style="background-color:mediumturquoise;">
     <section style="background-image: url('./Images/mountain.jpg');">
     <center><h1 class="sectHead" style="font-size:36px;">Meet The Team</h1>
@@ -152,7 +152,7 @@
     
     <figure>
         <img id = "imgGallery" src="./Images/myrtleBeach_ccsc.jpg" onclick="javascript.window.onload()" width=auto height = "450">
-        <figcaption id="imgGalleryCap">Only the best of the MC programmers at the 2023 CCSC Contest</figcaption>
+        <figcaption id="imgGalleryCap" style="color:maroon;">Only the best of the MC programmers at the 2023 CCSC Contest</figcaption>
     </figure>
     </center>
     </section>
@@ -161,14 +161,16 @@
     <!--Advisor Blurb-->
     <div class="bottom">
     <center>
-    <h2 class="sectHead">Our Advisor: Dr. Barbara Johnson</h2>
+    <h2 class="sectHead">Our Advisor</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0E_dYTrlGgbONh8W-4SaTpX-ZStd4T_SAM4aVonwO&s" width=auto height="200"><br>
     <p class="advisordescp">"When I was a kid, I loved logic puzzles. I couldn’t get enough of them. As an adult, I started <br>
-        taking computer science classes and made an amazing discovery: computer science is all about using <br>
-        mathematics and data structures and algorithmic techniques to solve more and more complex logic puzzles. <br>
-        I was hooked! Today I teach computer science at Maryville College, where they actually pay me to do what I love. <br>
-        And the best perk of all is I get to work with such an amazing, fun, and brilliant group of students. <br>
-        Seeing that spark in them is priceless! I have the best job in the world."<br><br></p>
+        taking computer science classes and made an amazing discovery: computer science is all <br>
+        about using mathematics and data structures and algorithmic techniques to solve more and <br>
+        more complex logic puzzles. I was hooked! Today I teach computer science at Maryville College,<br>
+        where they actually pay me to do what I love. And the best perk of all is I get to work <br>
+        with such an amazing, fun, and brilliant group of students. <br>
+        Seeing that spark in them is priceless! I have the best job in the world."<br><br>
+        -Dr. Barbara Johnson</p>
     </center>
     </section>
 
@@ -214,8 +216,20 @@
     <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="750" height="400" frameborder="0" scrolling="no"></iframe>
     <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&mode=AGENDA&showTabs=0&showPrint=0&showDate=0&showTitle=0&showTz=0&showCalendars=1&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
 
+    <!--Apply similar implementation of the college's on Jorge's website-->
     <section>
-        Competitions
+        <center><h2 class="sectHead">Competitions</h2></center>
+        <div class="row">
+            <div class="side">
+                <button> <a href="https://lipscomb-soc.org/contest.html" target="_blank" style="text-decoration: none; color: inherit; font-size: 24px;">Lipscomb</a> </button>
+            </div>
+            <div class="side">
+                <button> <a href="https://icpc.global/regionals/finder/Mid-Central-USA" target="_blank" style="text-decoration: none; color: inherit; font-size: 24px;">ICPC: TN Tech</button>
+            </div>
+            <div class="side">
+                <button> <a href="http://www.ccscse.org/conference.php?year=37th" target="_blank" style="text-decoration: none; color: inherit; font-size: 24px;">CCSC: Coastal Carolina</button>
+            </div>
+        </div>
     </section>
 </body>
 </html>
