@@ -135,9 +135,11 @@
             color: maroon;
             background-color: orange;;
         }
-        compbtn {
-            width: 100px;
-            height: 100px;
+        .compbtn {
+            width: 200px;
+            height: 180px;
+            color: white;
+            font-size: 24px;
         }
     </style>
     <link rel="icon" type="image/x-icon" href="./Images/placeholderlogo.png">
@@ -202,7 +204,7 @@
         <!--Back Btn-->
         <div class=""side">
             <input type="hidden" id="studID" value="0">
-            <button type="button" class="btn" onclick="lastStudent()"><-</button>
+            <button type="button" class="spotbtn" onclick="lastStudent()"><-</button>
         </div>
         
         <div class="side">
@@ -212,27 +214,26 @@
         <!--Next Btn-->
         <div class=""side">
             <input type="hidden" id="studID" value="0">
-            <button type="button" class="btn" onclick="nextStudent()">-></button>
+            <button type="button" class="spotbtn" onclick="nextStudent()">-></button>
         </div>
     </div>
     </section>
     <hr style="color:white;">
-
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="750" height="400" frameborder="0" scrolling="no"></iframe>
-    <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&mode=AGENDA&showTabs=0&showPrint=0&showDate=0&showTitle=0&showTz=0&showCalendars=1&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
 
     <!--Apply similar implementation of the college's on Jorge's website-->
     <section>
         <center><h2 class="sectHead">Competitions</h2></center>
         <div class="row">
             <div class="side">
-                <button style="width: 200px; height: 190px; background-image: url('./Images/lipscomb.jpg');"> <a href="https://lipscomb-soc.org/contest.html" target="_blank" style="text-decoration: none; color: white; background-color: purple; font-size: 24px;">Lipscomb</a> </button>
+                <a href="https://lipscomb-soc.org/contest.html" target="_blank"> <button class="compbtn" style="background-image: url('./Images/lipscomb.jpg');"> <br><br><br><br><br>Lipscomb </button> </a>
             </div>
             <div class="side">
-                <button> <a href="https://icpc.global/regionals/finder/Mid-Central-USA" target="_blank" style="text-decoration: none; color: inherit; font-size: 24px;">ICPC: TN Tech</button>
+                <a href="https://icpc.global/regionals/finder/Mid-Central-USA" target="_blank"> <button class="compbtn" style="background-image: url('./Images/tnTech.jpg');"> <br><br><br><br><br>ICPC: TN Tech </button> </a>
             </div>
             <div class="side">
-                <button> <a href="http://www.ccscse.org/conference.php?year=37th" target="_blank" style="text-decoration: none; color: inherit; font-size: 24px;">CCSC: Coastal Carolina</button>
+                
+                
+                <a href="http://www.ccscse.org/conference.php?year=37th" target="_blank"> <button class="compbtn" style="background-image: url('./Images/CCU.jpg');"> <br><br><br><br>CCSC: Coastal Carolina </button> </a>
             </div>
         </div>
     </section>
