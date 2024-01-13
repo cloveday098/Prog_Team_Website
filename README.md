@@ -33,6 +33,8 @@ To provide CSC/The Programming Team with database functionality to keep track of
 7. [Contact Us](#contact-us)
     * Contact Form
     * Club Email Communication
+8. [Problems](#problems)
+   * Community Practice Problems
 
 ## Getting Started
 If you are completely new to git or would like a refresher, look at the provided [tutorial](https://youtu.be/8JJ101D3knE?feature=shared) and [cheat sheet](education.github.com/git-cheat-sheet-education.pdf). This project will implement HTML, JavaScript, CSS/Bootstrap, and possibly PHP. If you are not familiar with any of these, online tutorials are readily available, and _W3 Schools_ is highly recommended. Milestones and tasks are available in the attached GitHub project; tasks will be updated here regularly.
@@ -48,7 +50,7 @@ __Requirements__: Due to the sensitive needs of the database, the problem bank a
 4. [__Student Profiler__][Optional]: Implements a profile for each member, including name, class rank, profile picture, and problems solved. If a login feature is implemented, students should be able to view their statistics and submit requests to receive credit for solved problems. The advisor's account should have similar capabilities but be able to log solve problems, remove students, and serve as an administrator.
 
 ## Home
-1. [__Header__]: Contains either a navbar or series of buttons that lead to the remaining pages, consisting of but not limited to the _About_, _Major_, _Contact_, and Maryville College Home pages. A custom logo will also reside at the top of this page.
+1. [__Header__]: Contains either a navbar or series of buttons that lead to the remaining pages, consisting of but not limited to the _About_, _Major_, _Contact_, _Problems_, and Maryville College Home pages. A custom logo will also reside at the top of this page.
 2. [__Calendar__]: A feature that allows viewers to view upcoming events, events marked distinctly from the other dates.
 3. [__Socials__]: Include links to email and the Facebook page.
 
@@ -60,7 +62,7 @@ Mission Statement as seen on the club constitution: The mission is to promote co
 
 2. [__Advisor Blurb__]: A short blurb provided by Dr. Johnson about her outlook on teaching computer science.
 3. [__Student Blurbs__]: An assortment of blurbs from current students about their respective experiences; Any CSC member is welcome to provide a blurb and picture to be listed on the website. Five to six student spotlights are optimal, but a gallery (implemented using arrow buttons) might be efficient without overcrowding the page.
-4. {__Team Info__]: Highlights team achievements and notable programming contests.
+4. {__Team Info__]: Highlights notable programming contests.
 5. [__Styling__]: Distinctive theme that blends with the overall color scheme and theme as well as group pictures.
 
 ## Major
@@ -87,6 +89,10 @@ This is an optional section intended to clarify the path of a computer science m
         * CSC 314 (if no CSC 349)
         * Senior Studies
         * CSC 381
+
 ## Contact Us
 A form that contacts the Programming Team email with the contact's information.
 * __Contact Form Implementation__: The form should require a valid name, email, phone number, and message (at least 5-10 characters) from the sender. Only members linked to the team email will receive such messages. Security measures should be implemented to prevent phishing.
+
+## Problems
+A page that provides sets of practice problems for the general public to try. Unless a custom online judge can be implemented, just use Kattis links.
