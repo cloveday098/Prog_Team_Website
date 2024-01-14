@@ -147,6 +147,66 @@
             background-color: #600015;
             color: white;
         }
+        .locations{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .locations-col{
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .locations-col img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .layer{
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .layer:hover{
+            background-color: rgba(100, 9, 40, 0.5)
+        }
+
+        .layer h3{
+            width: 100%;
+            font-weight: 500;
+            color: #ff6500;
+            font-size: 30px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .layer:hover h3{
+            bottom: 49%;
+            opacity: 1;
+        }
+
+        @media(max-width: 700px){
+            .locations{
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <a href="./home.html" style="float:left;"><img src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/global/MC_V1-Enclosed_RGB_FullColor.png" width=auto height="50"></a>
@@ -228,15 +288,16 @@
     <!--Apply similar implementation of the college's on Jorge's website-->
     <section>
         <center><h2 class="sectHead">Competitions</h2></center>
-        <div class="row">
-            <div class="side">
-                <a href="https://lipscomb-soc.org/contest.html" target="_blank"> <button class="compbtn" style="background-image: url('./Images/lipscomb.jpg');"> <br><br><br><br><br>Lipscomb </button> </a>
+        <div class="locations">
+            <div class="locations">
+                <div class="locations-col">
+                <a href="https://lipscomb-soc.org/contest.html" target="_blank"> <button class="compbtn" style="background-image: url('./Images/lipscomb.jpg');"> <div class="layer"> <h3>Lipscomb</h3> </div></button> </a>
+                </div>
+            <div class="locations-col">
+                <a href="https://icpc.global/regionals/finder/Mid-Central-USA" target="_blank"> <button class="compbtn" style="background-image: url('./Images/tnTech.jpg');"> <div class="layer"> <h3>ICPC: TN Tech </h3></div></button> </a>
             </div>
-            <div class="side">
-                <a href="https://icpc.global/regionals/finder/Mid-Central-USA" target="_blank"> <button class="compbtn" style="background-image: url('./Images/tnTech.jpg');"> <br><br><br><br><br>ICPC: TN Tech </button> </a>
-            </div>
-            <div class="side">
-                <a href="http://www.ccscse.org/conference.php?year=37th" target="_blank"> <button class="compbtn" style="background-image: url('./Images/CCU.jpg');"> <br><br><br><br>CCSC: Coastal Carolina </button> </a>
+            <div class="locations-col">
+                <a href="http://www.ccscse.org/conference.php?year=37th" target="_blank"> <button class="compbtn" style="background-image: url('./Images/CCU.jpg');"> <div class="layer"> <h3> Coastal Carolina </h3></div></button> </a>
             </div>
         </div>
     </section>
