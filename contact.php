@@ -85,7 +85,7 @@
    }
 </script>
 </head>
-<a href="http://localhost/Programming%20Team.html" style="float:left;"><img src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/global/MC_V1-Enclosed_RGB_FullColor.png" width=auto height="50"></a>
+<!--<a href="file:///C:\Users\k12jsti\source\repos\Prog_Team_Website\home.html" style="float:left;"><img src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/global/MC_V1-Enclosed_RGB_FullColor.png" width=auto height="50"></a>-->
 
 <body style="background-color:lightsalmon;">
     <div class="container border mt-3 bg-red">
