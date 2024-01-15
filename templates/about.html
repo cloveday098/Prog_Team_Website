@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+{% block title %}
+    About Us
+{% endblock %}
 <!-- Image Gallery-->
 <script>
     var names = ["Jessica Mohr [President & Co-Founder]", "Chance Loveday [VP & Co-Founder]", "Kylind Reagan [Secretary]", "Samir Rojas [Treasurer]", "Gianna Mantegna", "Gustavo Hernandez"];
@@ -7,7 +11,14 @@
                 "I am Samir Rojas, a passionate junior studying Computer Science and Math with an anticipated graduation in December 2024. What captivates me most in the realm of Computer Science is the exhilarating journey of programming. Crafting diverse applications and games, such as my rendition of the iconic DOOM game, fuels my enthusiasm by immersing me in multifaceted problem-solving adventures.",
                 "Hey, I'm a freshman pursuing an Environmental Science major with Computer Science and Humanities minors. I am a part of the Programming Team, Philosophy Club, S³, and the CCA technical team. My favorite part of CSC is getting to learn some pretty amazing techniques for coding. I love getting to learn about how to create programs that solve for the wildest of problems.",
                 "I am a Junior graduating in 2025, I am a computer science major, and my favorite memory from CSC was when I helped the team submit a correct problem. It felt good contributing to the team, since we used lots of teamwork, to ensure that we effectively use our time wisely."];
-    var pics = ["./Images/jess.png", "./Images/chance.png", "./Images/kylind.png", "./Images/samir.png", "./Images/gianna.png", "./Images/gus.png"];
+    var pics = [
+        "{{ url_for('static', filename='images/jess.png') }}",
+        "{{ url_for('static', filename='images/chance.png') }}",
+        "{{ url_for('static', filename='images/kylind.png') }}",
+        "{{ url_for('static', filename='images/samir.png') }}",
+        "{{ url_for('static', filename='images/gianna.png') }}",
+        "{{ url_for('static', filename='images/gus.png') }}"
+        ];
 </script>
 
 <script>
@@ -77,142 +88,11 @@
     }
 </script>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<>, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="icon" type="image/x-icon" href="./Images/placeholderlogo.png">
-    <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="about.css">
-    <style type = "text/css">
-        .row {
-            display: -ms-flexbox; /* IE10 */
-            display: flex;
-            -ms-flex-wrap: wrap; /* IE10 */
-            flex-wrap: wrap;
-        }
-        .side {
-            -ms-flex: 20%;
-            flex: 20%;
-            padding: 12px;
-            text-align: center;
-        }
-        .sectHead {
-            color:orange;
-            font-family:Helvetica;
-            font-size: 32px;
-        }
-        .bottom {
-            background-color:mediumturquoise;
-        }
-        .advisordescp {
-            color: white;
-            font-size: 16px;
-            font-family: Arial;
-        }
-        .studenthead {
-            background-color:mediumturquoise;
-            color:#600015;
-            font-family: Helvetica;
-            font-size:21px;
-            width:375px;
-            text-align: center;
-            border: transparent;
-        }
-        .studentdescp {
-            background-color:mediumturquoise;
-            color: white;
-            font-size: 18px;
-            font-family: Arial;
-            width: 375px;
-            height: 250px;
-            text-align: center;
-            border: transparent;
-        }
-        .spotbtn {
-            width: 50px;
-            height: 50px;
-            color: maroon;
-            background-color: orange;;
-        }
-        .compbtn {
-            width: 300px;
-            height: 275px;
-            color: white;
-            font-size: 24px;
-        }
-        .footer {
-            background-color: #600015;
-            color: white;
-        }
-        .locations{
-            margin-top: 3%;
-            margin-left: 11%;
-            display: flex;
-            justify-content: space-between;
-        }
-        .locations-col{
-            flex-basis: 30%;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
+{% block content %}
 
-        .locations-col img{
-            width: 100%;
-            height: auto;
-            display: block;
-        }
 
-        .layer{
-            background: transparent;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: 0.5s;
-        }
-
-        .layer:hover{
-            background-color: rgba(100, 9, 40, 0.5)
-        }
-
-        .layer h3{
-            width: 100%;
-            font-weight: 500;
-            color: #ff6500;
-            font-size: 30px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            position: absolute;
-            opacity: 0;
-            transition: 0.5s;
-        }
-
-        .layer:hover h3{
-            bottom: 49%;
-            opacity: 1;
-        }
-
-        @media(max-width: 700px){
-            .locations{
-                flex-direction: column;
-            }
-        }
-    </style>
-</head>
-<a href="./home.html" style="float:left;"><img src="./Images/mcLogo.png" loading="lazy"></a>
 <body style="background-color:mediumturquoise;">
-    <section style="background-image: url('./Images/mountain.jpg');">
+    <section style="background-image: url('{{url_for('static', filename='images/mountain.jpg')}}');">
     <center><h1 class="sectHead" style="font-size:36px;">Meet The <a href="./about_secret_lineup.html" style="text-decoration: none; color: inherit;">Team</a> </h1>
     <strong><p style="font-size:21px; color:rgb(96, 0, 21);">Curious about programming? You're in the right place!</p></strong>
     <div class="advisordescp" style="color:#600015; background-color:transparent;">
@@ -224,7 +104,7 @@
         seeking a career relating to computer programming. </div>
     
     <figure>
-        <img id = "imgGallery" src="./Images/myrtleBeach_ccsc.jpg" onclick="javascript.window.onload()" width=auto height = "450">
+        <img id = "imgGallery" src="{{url_for('static', filename='images/myrtleBeach_ccsc.jpg')}}" onclick="javascript.window.onload()" width=auto height = "450">
         <figcaption id="imgGalleryCap" style="color:darkblue;">Only the best of the MC programmers at the 2023 CCSC Contest</figcaption>
     </figure>
     </center>
@@ -261,7 +141,7 @@
     <!--Pic-->
     <div class="row">
         <div class="side">
-            <img id="spotlight" src="./Images/jess.png" width=auto height="350">
+            <img id="spotlight" src="{{url_for('static', filename='images/jess.png')}}" width=auto height="350">
         </div>
     </div>
 
@@ -292,22 +172,16 @@
         <div class="locations">
             <div class="locations">
                 <div class="locations-col">
-                <a href="https://lipscomb-soc.org/contest.html" target="_blank"> <button class="compbtn" style="background-image: url('./Images/lipscomb.jpg');"> <div class="layer"> <h3>Lipscomb</h3> </div></button> </a>
+                <a href="https://lipscomb-soc.org/contest.html" target="_blank"> <button class="compbtn" style="background-image: url('{{url_for('static', filename='images/lipscomb.jpg')}}');"> <div class="layer"> <h3>Lipscomb</h3> </div></button> </a>
                 </div>
             <div class="locations-col">
-                <a href="https://icpc.global/regionals/finder/Mid-Central-USA" target="_blank"> <button class="compbtn" style="background-image: url('./Images/tnTech.jpg');"> <div class="layer"> <h3>ICPC: TN Tech </h3></div></button> </a>
+                <a href="https://icpc.global/regionals/finder/Mid-Central-USA" target="_blank"> <button class="compbtn" style="background-image: url('{{url_for('static', filename='images/tnTech.jpg')}}');"> <div class="layer"> <h3>ICPC: TN Tech </h3></div></button> </a>
             </div>
             <div class="locations-col">
-                <a href="http://www.ccscse.org/conference.php?year=37th" target="_blank"> <button class="compbtn" style="background-image: url('./Images/CCU.jpg');"> <div class="layer"> <h3> Coastal Carolina </h3></div></button> </a>
+                <a href="http://www.ccscse.org/conference.php?year=37th" target="_blank"> <button class="compbtn" style="background-image: url('{{url_for('static', filename='images/CCU.jpg')}}');"> <div class="layer"> <h3> Coastal Carolina </h3></div></button> </a>
             </div>
         </div>
     </section>
-</body>
-<!--Footer (Partially stolen from Kylind)-->
-<div class="footer">
-<center>
-    <i class="fa-regular fa-copyright"></i> All information Maryville College 2024
-    502 E Lamar Alexander Pkwy, Maryville, TN 37804
-</center>
-</div>
+    {% endblock %}
+
 </html>
