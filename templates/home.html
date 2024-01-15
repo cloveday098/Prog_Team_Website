@@ -10,22 +10,22 @@
         <title>CSC Homepage</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
-        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/placeholderlogo.png')}}">
+        <link rel="icon" type="image/x-icon" href="../static/images/mcLogo.png">
     </head>
     <body>
         <div>
             <center>
-                <img id="bannerImage" src="{{url_for('static', filename='images/myrtleBeach_ccsc.jpg')}}" height="500px" width="auto" alt="Image failed to load" loading="lazy">
+                <img id="bannerImage" src="../static/images/myrtleBeach_ccsc.jpg" height="500px" width="auto" alt="Image failed to load" loading="lazy">
             </center>
         </div>
 
         <script>
             var images = [
-                "{{ url_for('static', filename='images/myrtleBeach_ccsc.jpg') }}",
-                "{{ url_for('static', filename='images/lipscomb_2ndplace.jpg') }}",
-                "{{ url_for('static', filename='images/blast_from_the_past.jpg') }}",
-                "{{ url_for('static', filename='images/mb_dinner_11_4.jpg') }}",
-                "{{ url_for('static', filename='images/ccsc_team10.jpg') }}"
+                "../static/images/myrtleBeach_ccsc.jpg",
+                "../static/images/lipscomb_2ndplace.jpg",
+                "../static/images/blast_from_the_past.jpg",
+                "../static/images/mb_dinner_11_4.jpg",
+                "../static/images/ccsc_team10.jpg"
             ];            
             var i = 0;
             var renew = setInterval(function(){
