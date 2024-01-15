@@ -1,0 +1,137 @@
+:root {
+    garnet: #600015;
+}
+
+.advisordescp {
+    color: white;
+    font-size: 16px;
+    font-family: Arial;
+}
+.bottom {
+    background-color:mediumturquoise;
+}
+.course {
+    color:#600015;
+    font-size: '21px';
+}
+.compbtn {
+    width: 300px;
+    height: 275px;
+    color: white;
+    font-size: 24px;
+}
+.footer {
+    background-color: #600015;
+    color: white;
+}
+.garnet {
+    color: #600015;
+}
+.locations{
+    margin-top: 3%;
+    margin-left: 11%;
+    display: flex;
+    justify-content: space-between;
+}
+.locations-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-col img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.layer:hover{
+    background-color: rgba(100, 9, 40, 0.5)
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #ff6500;
+    font-size: 30px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.orange {
+    color:#ff6500;
+}
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+.side {
+    -ms-flex: 20%;
+    flex: 20%;
+    padding: 12px;
+    text-align: center;
+}
+.sectHead {
+    color:orange;
+    font-family:Helvetica;
+    font-size: 32px;
+}
+.studenthead {
+    background-color:mediumturquoise;
+    color:#600015;
+    font-family: Helvetica;
+    font-size:21px;
+    width:375px;
+    text-align: center;
+    border: transparent;
+}
+.studentdescp {
+    background-color:mediumturquoise;
+    color: white;
+    font-size: 18px;
+    font-family: Arial;
+    width: 375px;
+    height: 250px;
+    text-align: center;
+    border: transparent;
+}
+.spotbtn {
+    width: 50px;
+    height: 50px;
+    color: maroon;
+    background-color: orange;;
+}
+.yr {
+    color:orange;
+    font-family: Helvetica;
+    font-style: oblique;
+    font-size: '24px';
+}
+
+@media(max-width: 700px){
+    .locations{
+        flex-direction: column;
+    }
+}

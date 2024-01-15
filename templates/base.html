@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<>, initial-scale=1.0">
+        <!-- I dunno what title should be. Probably fine. --> <!--Looks good to me -CL-->
+        <title>{% block title %}CSC Homepage{% endblock %}</title>
+        <!-- Bootstrap styles must be placed above our stylesheet if added. KH -->
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/style.css')}}">
+        <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/mcLogo.png')}}">
+        <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
+    </head>
+
+    <nav>
+        <div>
+            <!--Navbar-->
+            <pre>
+                <a href="/"><img href="/" align="left" src="{{url_for('static', filename='images/mcLogo.png')}}" alt="{{url_for('static', filename='images/placeholderlogo.png')}}" loading="lazy"></a>
+                <a href='/about/' align= "right">About</a>  <a href="/major/" align= "right">Major</a>  <a href="http://localhost/contact.php" align= "right">Contact</a>  <a href="http://localhost/problems.php" align= "right">Problems</a>
+            </pre>
+        </div>
+        <br><br><br>
+    </nav>
+    <header>    
+    
+    </header>
+    <body>
+
+        {% block content %}
+        {% endblock %}
+
+        <br><br><br>
+    <br><br><br>
+    </body>
+    
+    <!--Footer-->
+    {% block footer %}
+    <br><br><br>
+    <div class="footer" style="background-color: #600015; color: white;">
+    <center>
+        <i class="fa-regular fa-copyright"></i> All information Maryville College 2024
+        502 E Lamar Alexander Pkwy, Maryville, TN 37804
+    </center>
+    </div>
+    {% endblock %}
+</html>

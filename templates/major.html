@@ -1,37 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block title %}
+    A Computer Science Major At A Glance
+{% endblock %}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<>, initial-scale=1.0">
     <title>A Computer Science Major At A Glance</title>
-    <link rel="icon" type="image/x-icon" href="./Images/mcLogo.png">
-    <style type = "text/css">
-        .row {
-            display: -ms-flexbox; /* IE10 */
-            display: flex;
-            -ms-flex-wrap: wrap; /* IE10 */
-            flex-wrap: wrap;
-        }
-        .side {
-            -ms-flex: 10%;
-            flex: 10%;
-            padding: 12px;
-            text-align: center;
-        }
-        .yr {
-            color:orange;
-            font-family: Helvetica;
-            font-style: oblique;
-            font-size: '24px';
-        }
-        .course {
-            color:#600015;
-            font-size: '21px';
-        }
+    <style type = "text/css"> 
     </style>
 </head>
 
 <a href="./home.html" style="float:left;"><img src="./Images/mcLogo.png" loading="lazy"></a>
+{% block content %}
 <body style="background-color:#fde79e;">
     <div style="background-color:#600015; color:orange; text-align: center;"> 
     <h1 >A Computer Science Major At A Glance</h1><br>
@@ -108,4 +89,6 @@
     </div>
     </section>
 </body>
+{% endblock %}
+
 </html>
