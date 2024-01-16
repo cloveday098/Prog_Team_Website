@@ -29,12 +29,15 @@ def process_form():
 
     cursor = conn.cursor()
 
+    cursor.execute("SELECT * FROM users")
+    rows = cursor.fetchall()
+
     cursor.execute("SELECT * FROM users WHERE userid=? AND password=?" , (userid, password))
     result = cursor.fetchone()
 
     if result:
         #successfully found the user
-        return render_template('home.html')
+        return render_template('home.html', rows=rows)
     else:
         #did not find the user
         flash("Invalid login. Try again." , "error")

@@ -6,6 +6,21 @@
     <title>Home Page</title>
 </head>
 <body>
-    Database implementation tool (to be designed)
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
