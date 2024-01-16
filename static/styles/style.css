@@ -7,9 +7,6 @@
     font-size: 16px;
     font-family: Arial;
 }
-.bottom {
-    background-color:mediumturquoise;
-}
 .course {
     color:#600015;
     font-size: '21px';
@@ -78,6 +75,9 @@
     bottom: 49%;
     opacity: 1;
 }
+.navbar {
+    background-color: salmon;
+}
 .orange {
     color:#ff6500;
 }
@@ -99,7 +99,7 @@
     font-size: 32px;
 }
 .studenthead {
-    background-color:mediumturquoise;
+    background-color:inherit;
     color:#600015;
     font-family: Helvetica;
     font-size:21px;
@@ -108,12 +108,12 @@
     border: transparent;
 }
 .studentdescp {
-    background-color:mediumturquoise;
+    background-color:inherit;
     color: white;
     font-size: 18px;
     font-family: Arial;
-    width: 375px;
-    height: 250px;
+    width: 475px;
+    height: 200px;
     text-align: center;
     border: transparent;
 }

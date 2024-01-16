@@ -1,7 +1,8 @@
-{% extends "base.html" %}
+<!--Don't know what these are?-->
+<!--{% extends "base.html" %}
 {% block title %}
     About Us
-{% endblock %}
+{% endblock %}-->
 <!-- Image Gallery-->
 <script>
     var names = ["Jessica Mohr [President & Co-Founder]", "Chance Loveday [VP & Co-Founder]", "Kylind Reagan [Secretary]", "Samir Rojas [Treasurer]", "Gianna Mantegna", "Gustavo Hernandez"];
@@ -51,24 +52,6 @@
 <!-- Student Spotlight Gallery-->
 <!-- Contains student blurbs and student picture-->
 <script>
-    /*class Student {
-        constructor(name, blurb, pic) {
-            this.name = name;
-            this.blurb = blurb;
-            this.pic = pic;
-        }
-        name() {
-            return this.name;
-        }
-        blurb() {
-            return this.blurb;
-        }
-        pic() {
-            return this.pic;
-        }
-    }*/
-
-    //students = [student("Chance Loveday [VP & Co-Founder]", "Hi, I'm a sophomore Computer Science and Math major.<br>I'm active in several organizations across campus,<br>including S³, Mountain Challenge, and MC3D. However,<br>one club is particularly special. CSC has given me a place<br>to excel, hone my programming skills, and be around<br>some truly incredible people.", "http://localhost/chance.png")]
     function nextStudent() {
         document.getElementById("studID").value = (parseInt(document.getElementById("studID").value) + 1)%pics.length;
         var studID = document.getElementById("studID").value;
@@ -88,11 +71,20 @@
     }
 </script>
 
-{% block content %}
+<!--{% block content %}-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="../static/Images/mcLogo.png">
+    <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../static/styles/style.css">
+</head>
+<a href="./home.html" style="float:left;"><img src="../static/Images/mcLogo.png" loading="lazy"></a>
 
-<link rel="stylesheet" href="../static/styles/style.css">
-
-<body style="background-color:mediumturquoise;">
+<body style="background-color:darkcyan;">
     <section style="background-image: url('../static/images/mountain.jpg');">
     <center><h1 class="sectHead" style="font-size:36px;">Meet The <a href="./about_secret_lineup.html" style="text-decoration: none; color: inherit;">Team</a> </h1>
     <strong><p style="font-size:21px; color:rgb(96, 0, 21);">Curious about programming? You're in the right place!</p></strong>
@@ -113,7 +105,6 @@
 
     <section>
     <!--Advisor Blurb-->
-    <div class="bottom">
     <center>
     <h2 class="sectHead">Our Advisor</h2>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0E_dYTrlGgbONh8W-4SaTpX-ZStd4T_SAM4aVonwO&s" width=auto height="200"><br>
@@ -183,6 +174,6 @@
             </div>
         </div>
     </section>
-    {% endblock %}
+    <!--{% endblock %}-->
 
 </html>
