@@ -1,11 +1,18 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect, url_for
 import sqlite3
+import secrets
 
 app = Flask(__name__)
+app.secret_key = secrets.token_hex(16)
 
 @app.route('/')
 def home():
     return render_template('dbsignin.html')
+
+@app.route('/login')
+def login():
+    error = request.args.get('error')
+    return render_template('dbsignin.html' , error=error)
 
 @app.route('/process_form', methods=["POST"])
 def process_form():
@@ -17,6 +24,7 @@ def process_form():
     # id is an auto-incremented integer primary key,
     # userid is a not null varchar(255) field for a user's username which should be their name
     # password is a not null varchar(255) field
+    # for testing, there is a valid username of 'root' and a valid password of 'root' that will result in a log-in
     conn = sqlite3.connect('logins.db')
 
     cursor = conn.cursor()
@@ -26,10 +34,11 @@ def process_form():
 
     if result:
         #successfully found the user
-        return "successfully logged in!"
+        return render_template('home.html')
     else:
         #did not find the user
-        return "failed log in!"
+        flash("Invalid login. Try again." , "error")
+        return redirect(url_for('login', error='Invalid Login'))
 
     conn.close()
 
