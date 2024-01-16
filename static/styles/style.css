@@ -40,15 +40,11 @@
 .garnet {
     color: #600015;
 }
-.hr {
-    margin-left:-1%;
-    margin-right:-1%;
-}
 .imgGallery {
     height: 700px;
     border-top: 10px solid;
     border-image: linear-gradient(to right, maroon 50%, red 50%, orange 75%) 5;
-    margin-bottom: -1.6%;
+    margin-bottom: -1.3%;
     margin-left:-1%;
     margin-right:-1%;
     margin-top: -0.5%;
