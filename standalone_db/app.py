@@ -36,9 +36,12 @@ def process_form():
     cursor.execute("SELECT * FROM users WHERE userid=? AND password=?" , (userid, password))
     result = cursor.fetchone()
 
+    cursor.execute("SELECT * FROM problems")
+    rows = cursor.fetchall()
+
     if result:
         #successfully found the user
-        return render_template('home.html')
+        return render_template('home.html', rows=rows)
     else:
         #did not find the user
         flash("Invalid login. Try again." , "error")
@@ -59,11 +62,17 @@ def submitquery():
 
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
+    print("Rows:")
+    print(rows)
 
     cursor.close()
     conn.close()
 
     return render_template('home.html' , rows=rows)
+
+# @app.route('/editproblem', methods=["POST"])
+# def editproblem():
+#     pass
 
 if __name__ == '__main__':
     app.run(debug=True)
