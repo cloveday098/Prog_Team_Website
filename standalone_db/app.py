@@ -62,8 +62,6 @@ def submitquery():
 
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
-    print("Rows:")
-    print(rows)
 
     cursor.close()
     conn.close()
