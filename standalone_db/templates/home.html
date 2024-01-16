@@ -9,8 +9,10 @@
     <table>
         <thead>
             <tr>
-                <th>User ID</th>
-                <th>Password</th>
+                <th>Problem ID</th>
+                <th>Problem Name</th>
+                <th>Problem Description</th>
+                <th>Category ID</th>
             </tr>
         </thead>
         <tbody>
@@ -18,9 +20,15 @@
                 <tr>
                     <td>{{ row[0] }}</td>
                     <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
+    <form method="post" action="/submitquery">
+        <input type="text" name="query">
+        <button type="submit"></button>
+    </form>
 </body>
 </html>

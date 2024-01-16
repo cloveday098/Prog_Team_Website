@@ -29,21 +29,41 @@ def process_form():
 
     cursor = conn.cursor()
 
-    cursor.execute("SELECT * FROM users")
-    rows = cursor.fetchall()
+    # users is a table stored in logins
+    # cursor.execute("SELECT * FROM users")
+    # rows = cursor.fetchall()
 
     cursor.execute("SELECT * FROM users WHERE userid=? AND password=?" , (userid, password))
     result = cursor.fetchone()
 
     if result:
         #successfully found the user
-        return render_template('home.html', rows=rows)
+        return render_template('home.html')
     else:
         #did not find the user
         flash("Invalid login. Try again." , "error")
         return redirect(url_for('login', error='Invalid Login'))
 
     conn.close()
+
+@app.route('/submitquery', methods=["POST"])
+def submitquery():
+    query = request.form['query']
+
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute(query)
+
+    conn.commit()
+
+    cursor.execute("SELECT * FROM problems")
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('home.html' , rows=rows)
 
 if __name__ == '__main__':
     app.run(debug=True)
