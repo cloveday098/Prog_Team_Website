@@ -37,7 +37,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="icon" type="image/x-icon" href="./Images/mcLogo.png">
     <link rel="stylesheet" href="contact2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,20 +68,22 @@
           border-radius:4px;
       }
     </style>
+<!--
 <script src="contact.js"></script>
 <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
+</script>-->
 <script type="text/javascript">
-   (function(){
+   /*(function(){
       emailjs.init("ogf2JF9JdcQbhnvuy");
-   })();
+   })();*/
    function test() {
         if (document.getElementById("nameErr").value == "" && document.getElementById("emailErr").value == "" && document.getElementById("phoneErr").value == "" && document.getElementById("msgErr").value == "") {
-            sendMail();
+            //sendMail();
+            alert(document.getElementById("nameErr").value);
+            document.getElementById('form1').submit();
+            alert("Your message was sent successfully!");
         }
-        document.getElementById('form1').submit();
-        alert("Email submitted successfully");
    }
 </script>
 </head>
@@ -97,7 +98,7 @@
             </div>
             <div class="col-md-6 py-3 custom-form-bg">
                 <h1><center>Contact Form</center></h1>
-                <form method="post" id="form1" name="form1" action="" >
+                <form method="post" id="form1" name="form1" action="https://formsubmit.co/fec31366a72fd21c2ebb7d88160a2d44" >
                 <div class="form-group">
                     <h5 for="name">Name <span class = "error">* <?php echo $nameErr;?></span> </h5>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
