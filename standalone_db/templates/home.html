@@ -39,13 +39,13 @@
             margin-right: 8px;
         }
         
-        button {
+        #subbutton {
             padding: 8px 16px;
             background-color: #646464;
             color: white;
         }
 
-        button:hover {
+        #subbutton:hover {
             background-color: #363636;
         }
     </style>
@@ -58,6 +58,8 @@
                 <th>Problem Name</th>
                 <th>Problem Description</th>
                 <th>Category ID</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -67,13 +69,15 @@
                     <td>{{ row[1] }}</td>
                     <td>{{ row[2] }}</td>
                     <td>{{ row[3] }}</td>
+                    <td><button onclick="location.href='/editproblem?problemid={{ row[0] }}'">Edit problem {{ row[0] }}</button></td>
+                    <td><button onclick="location.href='/handledeleteproblem?problemid={{ row[0] }}'">Delete problem</button></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
     <form method="post" action="/submitquery">
         <input type="text" name="query">
-        <button type="submit">Submit Query</button>
+        <button id="subbutton" type="submit">Submit Query</button>
     </form>
 </body>
 </html>

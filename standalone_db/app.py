@@ -68,9 +68,28 @@ def submitquery():
 
     return render_template('home.html' , rows=rows)
 
-# @app.route('/editproblem', methods=["POST"])
-# def editproblem():
-#     pass
+@app.route('/editproblem', methods=["POST" , "GET"])
+def editproblem():
+    problemid = request.args.get("problemid")
+    return render_template('editproblem.html' , problemid=problemid)
+
+@app.route('/handledeleteproblem')
+def handledeleteproblem():
+    problemid = request.args.get("problemid")
+
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM problems WHERE problem_id = ?", (problemid))
+    conn.commit()
+
+    cursor.execute("SELECT * FROM problems")
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('home.html' , rows=rows)
 
 if __name__ == '__main__':
     app.run(debug=True)
