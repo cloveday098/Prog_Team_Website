@@ -14,7 +14,7 @@ def login():
     error = request.args.get('error')
     return render_template('dbsignin.html' , error=error)
 
-@app.route('/process_form', methods=["POST"])
+@app.route('/process_form', methods=["POST","GET"])
 def process_form():
 
     userid = request.form['userid']
@@ -25,27 +25,28 @@ def process_form():
     # userid is a not null varchar(255) field for a user's username which should be their name
     # password is a not null varchar(255) field
     # for testing, there is a valid username of 'root' and a valid password of 'root' that will result in a log-in
+    # users is a table stored in 'logins.db'
+
     conn = sqlite3.connect('logins.db')
-
     cursor = conn.cursor()
-
-    # users is a table stored in logins
-
     cursor.execute("SELECT * FROM users WHERE userid=? AND password=?" , (userid, password))
     result = cursor.fetchone()
 
-    cursor.execute("SELECT * FROM problems")
-    rows = cursor.fetchall()
-
     if result:
         #successfully found the user
-        return render_template('home.html', rows=rows)
+        return render_template('home.html')
     else:
         #did not find the user
-        flash("Invalid login. Try again." , "error")
         return redirect(url_for('login', error='Invalid Login'))
 
-    conn.close()
+@app.route('/problems')
+def problems():
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM problems")
+    rows = cursor.fetchall()
+    return render_template('problems.html', rows=rows)
 
 @app.route('/submitquery', methods=["POST"])
 def submitquery():
@@ -64,12 +65,18 @@ def submitquery():
     cursor.close()
     conn.close()
 
-    return render_template('home.html' , rows=rows)
+    return render_template('problems.html' , rows=rows)
 
 @app.route('/editproblem', methods=["POST" , "GET"])
 def editproblem():
     problemid = request.args.get("problemid")
-    return render_template('editproblem.html' , problemid=problemid)
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM problems where problem_id=?",(problemid))
+    rows = cursor.fetchall()
+
+    return render_template('editproblem.html' , rows=rows)
 
 @app.route('/handledeleteproblem')
 def handledeleteproblem():
@@ -87,7 +94,7 @@ def handledeleteproblem():
     cursor.close()
     conn.close()
 
-    return render_template('home.html' , rows=rows)
+    return render_template('problems.html' , rows=rows)
 
 if __name__ == '__main__':
     app.run(debug=True)

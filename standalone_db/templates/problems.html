@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: 'Arial' , sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #992626;
+            color: white;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 8px;
+        }
+        
+        #subbutton {
+            padding: 8px 16px;
+            background-color: #646464;
+            color: white;
+        }
+
+        #subbutton:hover {
+            background-color: #363636;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Problem Name</th>
+                <th>Problem Description</th>
+                <th>Category ID</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td><button onclick="location.href='/editproblem?problemid={{ row[0] }}'">Edit problem</button></td>
+                    <td><button onclick="location.href='/handledeleteproblem?problemid={{ row[0] }}'">Delete problem</button></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form method="post" action="/submitquery">
+        <input type="text" name="query">
+        <button id="subbutton" type="submit">Submit Query</button>
+    </form>
+</body>
+</html>
