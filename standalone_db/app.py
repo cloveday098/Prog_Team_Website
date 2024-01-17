@@ -27,6 +27,10 @@ def process_form():
     # for testing, there is a valid username of 'root' and a valid password of 'root' that will result in a log-in
     # users is a table stored in 'logins.db'
 
+    # EXTENSIVE USER VALIDATION NEEDED HERE
+    # 
+    # 
+
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE userid=? AND password=?" , (userid, password))
@@ -76,7 +80,7 @@ def editproblem():
     cursor.execute("SELECT * FROM problems where problem_id=?",(problemid))
     rows = cursor.fetchall()
 
-    return render_template('editproblem.html' , rows=rows)
+    return render_template('editproblem.html' , rows=rows, pid=problemid)
 
 @app.route('/handledeleteproblem')
 def handledeleteproblem():
@@ -95,6 +99,32 @@ def handledeleteproblem():
     conn.close()
 
     return render_template('problems.html' , rows=rows)
+
+@app.route('/submitedit', methods=["POST","GET"])
+def submitedit():
+    # EXTENSIVE VALIDATION GOES HERE
+    #
+    # 
+
+    name = request.form.get("name")
+    description = request.form.get("description")
+    category = request.form.get("category")
+    problemid = request.form.get("pid")
+    print(name, description, category, problemid)
+
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("UPDATE problems SET problem_name=?, problem_description=?, category_id=? WHERE problem_id = ?", (name, description, category, problemid))
+    conn.commit()
+
+    cursor.execute("SELECT * FROM problems")
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('problems.html', rows=rows)
 
 if __name__ == '__main__':
     app.run(debug=True)
