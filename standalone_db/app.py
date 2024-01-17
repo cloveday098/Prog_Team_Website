@@ -30,8 +30,6 @@ def process_form():
     cursor = conn.cursor()
 
     # users is a table stored in logins
-    # cursor.execute("SELECT * FROM users")
-    # rows = cursor.fetchall()
 
     cursor.execute("SELECT * FROM users WHERE userid=? AND password=?" , (userid, password))
     result = cursor.fetchone()
