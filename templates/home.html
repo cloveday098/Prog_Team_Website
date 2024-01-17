@@ -1,3 +1,4 @@
+<!--Still don't know what these are?-->
 <!--{% extends "base.html" %}
 {% block title %}
     Home Page
@@ -6,27 +7,29 @@
 {% block content %}-->
 <html>
     <head>
-        <title>Welcome to CSC at MC</title>
-        <link rel="stylesheet" href="style.css">
+        <!-- I dunno what title should be. Probably fine. --> <!--Looks good to me -CL-->
+        <title>CSC Homepage</title>
+        <link rel="stylesheet" href="../static/styles/style.css">
         <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
-        <link rel="icon" type="image/x-icon" href="./Images/placeholderlogo.png">
+        <link rel="icon" type="image/x-icon" href="../static/images/mcLogo.png">
     </head>
+    <!--I modified some of the design on this page, including the navbar and the images. Feel free to change any of them as you like before we come a consensus on the Home Page's style.-->
     <body>
         <div class="navbar">
             <!--Navbar-->
-            <pre>
-                <img align="left" src="./Images/mcLogo.png" loading="lazy"><img align="left" src="./Images/placeholderlogo.png" loading="lazy">           <a href="about.html" align= "right">About</a>  <a href="major.html" align= "right">Major</a>  <a href="contact.php" align= "right">Contact</a>  <a href="problems.php" align= "right">Problems</a>
+            <pre>   <!--Additionally, make Contact a button at the bottom with the Facebook link-->
+                <img align="left" src="../static/Images/mcLogo.png" loading="lazy"><img align="left" src="../static/Images/placeholderlogo.png" loading="lazy">           <a class="navlinks" href="about.html" align= "right">About</a>  <a class="navlinks" href="major.html" align= "right">Major</a>  <a class="navlinks" href="http://localhost/contact.php" align= "right">Contact</a>  <a class="navlinks" href="http://localhost/problems.php" align= "right">Problems</a>
             </pre>
         </div>
         <br><br><br>
         <div>
-            
-                <!--Body-->
-                <center><h1>Welcome to Maryville College's Computer Science Club</h1>
-                <img id="bannerImage" src="./Images/myrtleBeach_ccsc.jpg" height="600" width="auto" alt="Image failed to load" loading="lazy">
-                <h1 id="desc"></h1></center>
-                <br>
-                Getting Started:
+            <center>
+                <img id="bannerImage" src="../static/Images/improv_coding_session.jpg" height="400px" width="auto" alt="Image failed to load" loading="lazy">
+                <img id="bannerImage" src="../static/Images/uiclass_2023.jpg" height="400px" width="auto" alt="Image failed to load" loading="lazy">
+                <!--<img id="bannerImage" src="../static/Images/myrtleBeach_ccsc.jpg" height="500px" width="auto" alt="Image failed to load" loading="lazy">-->
+            </center>
+            <br>
+            Getting Started:
                 <li>Check our schedule below to join us in Programming practice</li>
                 <li>Contact us through our contact page</li>
                 <li>Practice a few problems from the problem bank</li>
@@ -40,12 +43,17 @@
                 </ul>
         </div>
 
-        <script>
-            var images = ["./Images/myrtleBeach_ccsc.jpg", "./Images/lipscomb_2ndplace.jpg", "./Images/ccsc_team10.jpg", "./Images/freshies.jpg", "./Images/working.jpg", "./Images/dijkstra.jpg", "./Images/uiclass_2023.jpg"];
-            // I don't think descriptions are needed here, and are better suited for just the about page, but here they are if we want them - KAR
-            /* var descriptions = ["The programming team at our most recent contest! (2023 CCSC)", "MC's team (far right), consisting of (from left to right) Shok Samadov, Chance Loveday, and Kylind Reagan, won 2nd place at the Lipscomb regional Lifeline Contest", 
-            "MC's team (from left to right: Pedro Pedro Antonio, Gustavo Hernandez, Jessica Mohr, and Jorge Estrada-Martinez) won 10th place at the 2023 CCSC Contest", "This is filler text", "CSC members working together on a project", 
-            "This is filler text", "The Programming Team in action during practice"] */
+        <!--Thinking about different approach than About Page-->
+        <!--<script>
+            var images = [      
+                /*"../static/Images/myrtleBeach_ccsc.jpg",
+                "../static/Images/lipscomb_2ndplace.jpg",
+                "../static/Images/blast_from_the_past.jpg",
+                "../static/Images/mb_dinner_11_4.jpg",
+                "../static/Images/ccsc_team10.jpg"*/
+                "../static/Images/improv_coding_session.jpg",
+                "../static/Images/uiclass_2023.jpg"
+            ];
             var i = 0;
             var renew = setInterval(function(){
                 if(images.length == i){
@@ -54,50 +62,33 @@
                 else {
                 document.getElementById("bannerImage").src = images[i]; 
                 i++;}
-            },5000); 
-            /* Experiment with random images rather than prior set interval. Not enough images for it to work imo but it is an option - KAR
-            x = 0;
-            var renew = setInterval(function(){
-                y = getRandomInt(images.length-1)
-                if (x == y) {
-                    y++;
-                }
-                x = y;
-                //document.getElementById("desc").textContent = descriptions[y];
-                document.getElementById("bannerImage").src = images[y];},7000);
-                */
-                function getRandomInt(max) {
-                    return Math.floor(Math.random() * max);
-                    }
-            
-        </script>
-<br><br><br>
-<center>
-    Upcoming events:
-</center>
-        <!--Calender by Chance-->
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="750" height="400" frameborder="0" scrolling="no"></iframe>
-        <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&mode=AGENDA&showTabs=0&showPrint=0&showDate=0&showTitle=0&showTz=0&showCalendars=1&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border:solid 1px #777" width="400" height="400" frameborder="0" scrolling="no"></iframe>
-        <center>Please join us to hone your problem-solving skills, explore the art of algorithmic thinking, and have fun!</center>
+            },10000);
+        </script>-->
         <br><br><br>
+
+        <!--Calendar Stolen from Chance-->
+        <h2><center>Upcoming Events:</center></h2>
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="750" height="400" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?height=400&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&showNav=0&mode=AGENDA&showTabs=0&showPrint=0&showDate=0&showTitle=0&showTz=0&showCalendars=1&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border:solid 1px #777" width="400" height="400" align="right" frameborder="0" scrolling="no"></iframe>
+        <br><br><br>
+        <center>Please join us to hone your problem-solving skills, explore the art of algorithmic thinking, and have fun!</center>
         <div>
-        <!--Socials & Other things (NOTE: Might need to change) - KAR-->
-        <div>
-        <a href="https://www.facebook.com/groups/112478608462745" target="_blank" aria-label="Link to https:  https://www.facebook.com/groups/112478608462745  page" title="Link to https://www.facebook.com/groups/112478608462745  page">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" >
+
+        <!--Socials & Other things-->
+        <a href="https://www.facebook.com/groups/112478608462745" aria-label="Link to https:  https://www.facebook.com/groups/112478608462745  page" title="Link to https://www.facebook.com/groups/112478608462745  page">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM16 8C20.4 8 24 11.6 24 16C24 20 21.1 23.4 17.1 24V18.3H19L19.4 16H17.2V14.5C17.2 13.9 17.5 13.3 18.5 13.3H19.5V11.3C19.5 11.3 18.6 11.1 17.7 11.1C15.9 11.1 14.7 12.2 14.7 14.2V16H12.7V18.3H14.7V23.9C10.9 23.3 8 20 8 16C8 11.6 11.6 8 16 8Z" fill="#646464"></path>
             </svg></a>
-        </div>
     </div>
-    <br><br><br>
-    </body>
     <!--{% endblock %}-->
-    
+
     <!--Footer-->
     <div class="footer">
-    <center>
-        <i class="fa-regular fa-copyright"></i> All information Maryville College 2024
-        502 E Lamar Alexander Pkwy, Maryville, TN 37804
-    </center>
-    </div>
+        <center>
+            <i class="fa-regular fa-copyright"></i> All information Maryville College 2024
+            502 E Lamar Alexander Pkwy, Maryville, TN 37804
+        </center>
+        </div>
+    </body>
+
 </html>
