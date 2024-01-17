@@ -6,16 +6,10 @@
     <title>Edit Problem</title>
 </head>
 <body>
-    <!-- 1,2,3 -->
-    <!-- <input name="name" type="text" value="{{rows[0][1]}}">
-    <input name="description" type="text" value="{{rows[0][2]}}">
-    <input name="category" type="text" value="{{rows[0][3]}}">
-    <button onclick="location.href='/problems'">Go to problems</button>
-    <button onclick="location.href='/submitedit?name={{rows[0][1]}}&desc={{rows[0][2]}}&category={{rows[0][3]}}&pid={{rows[0][0]}}'">Edit</button> -->
-
     <form action="/submitedit" method="post">
         <input name="name" type="text" value="{{rows[0][1]}}">
-        <input name="description" type="text" value="{{rows[0][2]}}">
+        <input name="link" type="text" value="{{rows[0][2]}}">
+        <input name="difficulty" type="text" value="{{rows[0][4]}}">
         <input name="category" type="text" value="{{rows[0][3]}}">
         <input type="hidden" name="pid" value="{{rows[0][0]}}">
         <button onclick="location.href='/problems'">Go to problems</button>

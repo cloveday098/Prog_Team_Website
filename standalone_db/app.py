@@ -107,15 +107,16 @@ def submitedit():
     # 
 
     name = request.form.get("name")
-    description = request.form.get("description")
+    link = request.form.get("link")
     category = request.form.get("category")
+    difficulty = request.form.get("difficulty")
     problemid = request.form.get("pid")
-    print(name, description, category, problemid)
+    print(name, link, category, problemid)
 
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
 
-    cursor.execute("UPDATE problems SET problem_name=?, problem_description=?, category_id=? WHERE problem_id = ?", (name, description, category, problemid))
+    cursor.execute("UPDATE problems SET problem_name=?, problem_link=?, category_id=?, difficulty=? WHERE problem_id = ?", (name, link, category, difficulty, problemid))
     conn.commit()
 
     cursor.execute("SELECT * FROM problems")
