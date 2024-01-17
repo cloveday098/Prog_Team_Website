@@ -1,4 +1,4 @@
-<?php
+<!--<?php
     $name = $email = $phone = $message = $nameErr = $emailErr = $phoneErr = $msgError = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (!isset($_POST['name'])) {
@@ -29,7 +29,7 @@
       $data = htmlspecialchars($data);
       return $data;
   }
-?>
+?>-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="contact2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
@@ -78,12 +77,12 @@
       emailjs.init("ogf2JF9JdcQbhnvuy");
    })();*/
    function test() {
-        if (document.getElementById("nameErr").value == "" && document.getElementById("emailErr").value == "" && document.getElementById("phoneErr").value == "" && document.getElementById("msgErr").value == "") {
+        /*if (document.getElementById("nameErr").value == "" && document.getElementById("emailErr").value == "" && document.getElementById("phoneErr").value == "" && document.getElementById("msgErr").value == "") {
             //sendMail();
             alert(document.getElementById("nameErr").value);
-            document.getElementById('form1').submit();
-            alert("Your message was sent successfully!");
-        }
+        }*/
+        document.getElementById('form1').submit();
+        alert("Your message was sent successfully!");
    }
 </script>
 </head>
@@ -97,31 +96,34 @@
                 <h4>Feel free to contact us anytime if you have any questions. If you want to join or have suggestions, please send us your ideas.</h4>
             </div>
             <div class="col-md-6 py-3 custom-form-bg">
-                <h1><center>Contact Form</center></h1>
-                <form method="post" id="form1" name="form1" action="https://formsubmit.co/fec31366a72fd21c2ebb7d88160a2d44" >
+            <h1><center>Contact Form</center></h1>
+            <form id="form1" name="form1" action="https://formsubmit.co/fec31366a72fd21c2ebb7d88160a2d44" method="POST">
+                <input type="hidden" name="_subject" value="New Email">
+                <input type="hidden" name="_next" value="http://localhost/contactthankyou.html">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
-                    <h5 for="name">Name <span class = "error">* <?php echo $nameErr;?></span> </h5>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
+                    <h5 for="name">Name <span class = "error">* <!--<?php echo $nameErr;?>--></span> </h5>
+                    <input type="text" class="form-control" type="text" name="name" placeholder="Enter your name" required>
                 </div>
                 <div class="form-group">
-                    <h5 for="email">Email <span class = "error">* <?php echo $emailErr;?></span> </h5>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+                    <h5 for="email">Email <span class = "error">* <!--<?php echo $emailErr;?>--></span> </h5>
+                    <input type="email" class="form-control" type="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
-                    <h5 for="phone">Phone <span class = "error">* <?php echo $phoneErr;?></span> </h5>
-                    <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter your phone number">
+                    <h5 for="phone">Phone <span class = "error">* <!--<?php echo $phoneErr;?>--></span> </h5>
+                    <input type="phone" class="form-control" type="text" name="phone" placeholder="Enter your phone number" required>
                 </div>
                 <div class="form-group">
-                    <h5 for="message">Message <span class = "error">* <?php echo $msgErr;?></span> </h5>
-                    <textarea name="message" id="message" rows="3" class="form-control"></textarea>
+                    <h5 for="message">Message <span class = "error">* <!--<?php echo $msgErr;?>--></span> </h5>
+                    <textarea type="text" name="message" rows="3" class="form-control" required></textarea>
                 </div>
-                <input type='hidden' id='nameErr' value=<?php echo $nameErr;?>>
+                <!--<input type='hidden' id='nameErr' value=<?php echo $nameErr;?>>
                 <input type='hidden' id='emailErr' value=<?php echo $emailErr;?>>
                 <input type='hidden' id='phoneErr' value=<?php echo $phoneErr;?>>
-                <input type='hidden' id='msgErr' value=<?php echo $msgErr;?>>
+                <input type='hidden' id='msgErr' value=<?php echo $msgErr;?>>-->
                 
-                </form>
-                <center><input type='button' onclick="test()" class="btn custom-btn" value='Submit'></center>
+            </form>
+            <center><button type='submit' onclick="test()" class="btn custom-btn">Submit</button></center>
                 
             </div>
         </div>
