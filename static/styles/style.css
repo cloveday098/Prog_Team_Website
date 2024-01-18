@@ -13,6 +13,12 @@
     font-size: 16px;
     font-family: Arial;
 }
+.border {
+    border-top: 4px solid;
+    margin-left:-1%;
+    margin-right:-1%;
+    margin-top: 1%;
+}
 .course {
     color:#600015;
     font-size: '21px';
@@ -27,7 +33,7 @@
     color:white;
     font-size:21px;
     position: relative;
-    min-height: 450px;
+    min-height: 430px;
     opacity: 70%;
 }
 .footer {
@@ -39,6 +45,15 @@
 }
 .garnet {
     color: #600015;
+}
+.homeGallery {
+    height:600px;
+    background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/improv_coding_session.JPG') center/cover;
+    border-top: 10px solid;
+    border-image: linear-gradient(to right, maroon 50%, red 50%, orange 75%) 5;
+}
+.homeGallery:hover {
+    background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/uiclass_2023.JPG') center/cover;
 }
 .imgGallery {
     height: 700px;
