@@ -52,19 +52,20 @@
             </section>
 
         <!--Thinking about different approach than About Page-->
-        <!--<script>
-        var images = ["./Images/myrtleBeach_ccsc.jpg", "./Images/lipscomb_2ndplace.jpg", "./Images/ccsc_team10.jpg", "./Images/freshies.jpg", "./Images/working.jpg", "./Images/dijkstra.jpg", "./Images/uiclass_2023.jpg"];
-
+        <script>
+        //var images = ["./Images/myrtleBeach_ccsc.jpg", "./Images/lipscomb_2ndplace.jpg", "./Images/ccsc_team10.jpg", "./Images/freshies.jpg", "./Images/working.jpg", "./Images/dijkstra.jpg", "./Images/uiclass_2023.jpg"];
+        var images = ["../static/images/improv_coding_session.JPG", "../static/images/uiclass_2023.JPG"];
             var i = 0;
             var renew = setInterval(function(){
                 if(images.length == i){
                     i = 0;
                 }
                 else {
-                document.getElementById("bannerImage").src = images[i]; 
-                i++;}
+                    document.getElementById("gallery").style.backgroundImage = "linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url(" + images[i] + ")";
+                    i++;
+                }
             },5000);
-        </script>-->
+        </script>
         <br><br><br>
 
         <!--Calendar by Chance-->

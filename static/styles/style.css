@@ -52,9 +52,6 @@
     border-top: 10px solid;
     border-image: linear-gradient(to right, maroon 50%, red 50%, orange 75%) 5;
 }
-.homeGallery:hover {
-    background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/uiclass_2023.JPG') center/cover;
-}
 .imgGallery {
     height: 700px;
     border-top: 10px solid;
@@ -63,25 +60,6 @@
     margin-left:-1%;
     margin-right:-1%;
     margin-top: -0.5%;
-}
-.locations{
-    margin-top: 3%;
-    margin-left: 11%;
-    display: flex;
-    justify-content: space-between;
-}
-.locations-col{
-    flex-basis: 30%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.locations-col img{
-    width: 100%;
-    height: auto;
-    display: block;
 }
 .layer{
     background: transparent;
@@ -114,6 +92,25 @@
 .layer:hover h3{
     bottom: 49%;
     opacity: 1;
+}
+.locations{
+    margin-top: 3%;
+    margin-left: 11%;
+    display: flex;
+    justify-content: space-between;
+}
+.locations-col{
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-col img{
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .navbar {
     background-color: salmon;
