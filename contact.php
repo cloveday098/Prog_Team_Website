@@ -81,7 +81,14 @@
       emailjs.init("ogf2JF9JdcQbhnvuy");
    })();*/
    function test() {
-        if (document.getElementById("name").value != "" && document.getElementById("email").value != "" && document.getElementById("phone").value != "" && document.getElementById("message").value != "") {
+        if (document.getElementById("name").value != "" &&
+            document.getElementById("email").value != "" &&
+            document.getElementById("email").value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) != -1 &&
+            document.getElementById("phone").value != "" &&
+            document.getElementById("phone").value.search(/[a-zA-Z._!@#$%^&*+]/g) == -1 &&
+            document.getElementById("message").value != "" &&
+            document.getElementById("message").value.length >= 5) {
+            
             document.getElementById('form1').submit();
             alert("Your message was sent successfully!");
         }
@@ -91,11 +98,11 @@
             else {document.getElementById("nameErr").value = "";}
 
             if (document.getElementById("email").value == "") {document.getElementById("emailErr").value = "Email cannot be empty";}
-            else if (document.getElementById("email").value.search('@') == -1) {document.getElementById("emailErr").value = "Include an actual email"}
+            else if (document.getElementById("email").value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) == -1) {document.getElementById("emailErr").value = "Include an actual email";}
             else {document.getElementById("emailErr").value = "";}
             
             if (document.getElementById("phone").value == "") {document.getElementById("phoneErr").value = "Phone cannot be empty";}
-            else if (document.getElementById("phone").value.search(/[a-z]/g) != -1) {document.getElementById("phoneErr").value = "Enter a valid phone number";}
+            else if (document.getElementById("phone").value.search(/[a-zA-Z._!@#$%^&*+]/g) != -1) {document.getElementById("phoneErr").value = "Enter a valid phone number";}
             else {document.getElementById("phoneErr").value = "";}
             
             if (document.getElementById("message").value.length < 5) {document.getElementById("msgErr").value = "Minimum 5 characters";}
@@ -119,8 +126,8 @@
                 <h4>Feel free to contact us anytime if you have any questions. If you want to join or have suggestions, please send us your ideas.</h4>
             </div>
             <div class="col-md-6 py-3 custom-form-bg">
-            <h1><center>Contact Form</center></h1>
-            <form id="form1" name="form1" action="https://formsubmit.co/fec31366a72fd21c2ebb7d88160a2d44" method="POST">
+            <h1><center>Contact Form</center></h1> <!--fec31366a72fd21c2ebb7d88160a2d44 for chance.loveday-->   <!--366a6380303826f3d77a363358bfc3ae for programming.team-->
+            <form id="form1" name="form1" action="https://formsubmit.co/366a6380303826f3d77a363358bfc3ae" method="POST">
                 <input type="hidden" name="_subject" value="New Email">
                 <input type="hidden" name="_next" value="http://localhost/contactthankyou.html">
                 <input type="hidden" name="_captcha" value="false">
