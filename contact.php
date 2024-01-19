@@ -85,18 +85,20 @@
             document.getElementById('form1').submit();
             alert("Your message was sent successfully!");
         }
-        else {
+        else {   // Find out how to use regexs.
             alert("Error: Fill out all fields");
             if (document.getElementById("name").value == "") {document.getElementById("nameErr").value = "Please enter a valid name";}
             else {document.getElementById("nameErr").value = "";}
 
             if (document.getElementById("email").value == "") {document.getElementById("emailErr").value = "Email cannot be empty";}
+            else if (document.getElementById("email").value.search('@') == -1) {document.getElementById("emailErr").value = "Include an actual email"}
             else {document.getElementById("emailErr").value = "";}
             
             if (document.getElementById("phone").value == "") {document.getElementById("phoneErr").value = "Phone cannot be empty";}
+            else if (document.getElementById("phone").value.search(/[a-z]/g) != -1) {document.getElementById("phoneErr").value = "Enter a valid phone number";}
             else {document.getElementById("phoneErr").value = "";}
             
-            if (document.getElementById("message").value == "") {document.getElementById("msgErr").value = "Message cannot be empty";}
+            if (document.getElementById("message").value.length < 5) {document.getElementById("msgErr").value = "Minimum 5 characters";}
             else {document.getElementById("msgErr").value = "";}
         }
         /*if (document.getElementById("nameErr").value == "" && document.getElementById("emailErr").value == "" && document.getElementById("phoneErr").value == "" && document.getElementById("msgErr").value == "") {
