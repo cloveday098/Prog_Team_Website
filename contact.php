@@ -37,8 +37,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="icon" type="image/x-icon" href="./Images/mcLogo.png">
-    <link rel="stylesheet" href="contact2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
@@ -53,7 +51,11 @@
           font-family: 'Poppins', sans-serif;
           color:#600015;
       }
-      .error {color: #FF0000;}
+      .error {
+        color: #FF0000;
+        background-color: inherit;
+        border: transparent;
+    }
       .custom-bg {
           background-color: #640928;
           color: #ff6500;
@@ -69,20 +71,39 @@
           border-radius:4px;
       }
     </style>
+<!--
 <script src="contact.js"></script>
 <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
+</script>-->
 <script type="text/javascript">
-   (function(){
+   /*(function(){
       emailjs.init("ogf2JF9JdcQbhnvuy");
-   })();
+   })();*/
    function test() {
-        if (document.getElementById("nameErr").value == "" && document.getElementById("emailErr").value == "" && document.getElementById("phoneErr").value == "" && document.getElementById("msgErr").value == "") {
-            sendMail();
+        if (document.getElementById("name").value != "" && document.getElementById("email").value != "" && document.getElementById("phone").value != "" && document.getElementById("message").value != "") {
+            document.getElementById('form1').submit();
+            alert("Your message was sent successfully!");
         }
-        document.getElementById('form1').submit();
-        alert("Email submitted successfully");
+        else {
+            alert("Error: Fill out all fields");
+            if (document.getElementById("name").value == "") {document.getElementById("nameErr").value = "Please enter a valid name";}
+            else {document.getElementById("nameErr").value = "";}
+
+            if (document.getElementById("email").value == "") {document.getElementById("emailErr").value = "Email cannot be empty";}
+            else {document.getElementById("emailErr").value = "";}
+            
+            if (document.getElementById("phone").value == "") {document.getElementById("phoneErr").value = "Phone cannot be empty";}
+            else {document.getElementById("phoneErr").value = "";}
+            
+            if (document.getElementById("message").value == "") {document.getElementById("msgErr").value = "Message cannot be empty";}
+            else {document.getElementById("msgErr").value = "";}
+        }
+        /*if (document.getElementById("nameErr").value == "" && document.getElementById("emailErr").value == "" && document.getElementById("phoneErr").value == "" && document.getElementById("msgErr").value == "") {
+            //sendMail();
+            alert(document.getElementById("name").value);
+        }*/
+        //alert(document.getElementById("nameErr").value);
    }
 </script>
 </head>
@@ -96,31 +117,30 @@
                 <h4>Feel free to contact us anytime if you have any questions. If you want to join or have suggestions, please send us your ideas.</h4>
             </div>
             <div class="col-md-6 py-3 custom-form-bg">
-                <h1><center>Contact Form</center></h1>
-                <form method="post" id="form1" name="form1" action="" >
+            <h1><center>Contact Form</center></h1>
+            <form id="form1" name="form1" action="https://formsubmit.co/fec31366a72fd21c2ebb7d88160a2d44" method="POST">
+                <input type="hidden" name="_subject" value="New Email">
+                <input type="hidden" name="_next" value="http://localhost/contactthankyou.html">
+                <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
-                    <h5 for="name">Name <span class = "error">* <?php echo $nameErr;?></span> </h5>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name">
+                    <h5 for="name">Name <span class = "error">* <input class="error" type="text" id="nameErr" value="" readonly></span> </h5>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                 </div>
                 <div class="form-group">
-                    <h5 for="email">Email <span class = "error">* <?php echo $emailErr;?></span> </h5>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email">
+                    <h5 for="email">Email <span class = "error">* <input class="error" type="text" id="emailErr" value="" readonly></span> </h5>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
-                    <h5 for="phone">Phone <span class = "error">* <?php echo $phoneErr;?></span> </h5>
-                    <input type="phone" class="form-control" name="phone" id="phone" placeholder="Enter your phone number">
+                    <h5 for="phone">Phone <span class = "error">* <input class="error" type="text" id="phoneErr" value="" readonly></span> </h5>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
                 </div>
                 <div class="form-group">
-                    <h5 for="message">Message <span class = "error">* <?php echo $msgErr;?></span> </h5>
-                    <textarea name="message" id="message" rows="3" class="form-control"></textarea>
+                    <h5 for="message">Message <span class = "error">* <input class="error" type="text" id="msgErr" value="" readonly></span> </h5>
+                    <textarea type="text" id="message" name="message" rows="3" class="form-control"></textarea>
                 </div>
-                <input type='hidden' id='nameErr' value=<?php echo $nameErr;?>>
-                <input type='hidden' id='emailErr' value=<?php echo $emailErr;?>>
-                <input type='hidden' id='phoneErr' value=<?php echo $phoneErr;?>>
-                <input type='hidden' id='msgErr' value=<?php echo $msgErr;?>>
                 
-                </form>
-                <center><input type='button' onclick="test()" class="btn custom-btn" value='Submit'></center>
+            </form>
+            <center><button type='submit' onclick="test()" class="btn custom-btn">Submit</button></center>
                 
             </div>
         </div>
