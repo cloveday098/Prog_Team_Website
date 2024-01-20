@@ -77,7 +77,7 @@ def editproblem():
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
 
-    cursor.execute("SELECT * FROM problems where problem_id=?",(problemid))
+    cursor.execute("SELECT * FROM problems where problem_id=?", ((problemid,)))
     rows = cursor.fetchall()
 
     return render_template('editproblem.html' , rows=rows, pid=problemid)
@@ -89,7 +89,7 @@ def handledeleteproblem():
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
 
-    cursor.execute("DELETE FROM problems WHERE problem_id = ?", (problemid))
+    cursor.execute("DELETE FROM problems WHERE problem_id = ?", ((problemid,)))
     conn.commit()
 
     cursor.execute("SELECT * FROM problems")
@@ -132,7 +132,7 @@ def submitadd():
     # EXTENSIVE VALIDATION GOES HERE
     # 
     # 
-    
+
     name = request.form.get("name")
     link = request.form.get("link")
     difficulty = request.form.get("difficulty")

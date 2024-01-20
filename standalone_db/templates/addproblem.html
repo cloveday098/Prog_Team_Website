@@ -4,14 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Problem</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 3%;
+        }
+
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        #subbutton, button {
+            padding: 8px 16px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #subbutton {
+            background-color: #992626;
+        }
+
+        #subbutton:hover {
+            background-color: #751d1d;
+        }
+    </style>
 </head>
 <body>
     <form method="POST" action="/submitadd">
+        <label for="name">Name: </label>
         <input name="name" type="text" placeholder="name">
+
+        <label for="link">Link: </label>
         <input name="link" type="text" placeholder="link">
+
+        <label for="difficulty">Difficulty: </label>
         <input name="difficulty" type="text" placeholder="difficulty">
+
+        <label for="category">Category ID: </label>
         <input name="category" type="text" placeholder="categoryid">
-        <button type="submit">Add Problem</button>
+
+        <button onclick="location.href='/problems'" style="background-color: #646464;">Go to problems</button>
+        <button id="subbutton" type="submit">Add Problem</button>
     </form>
 </body>
 </html>

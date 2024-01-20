@@ -48,6 +48,16 @@
         #subbutton:hover {
             background-color: #363636;
         }
+
+        #add {
+            background-color: #992626;
+            color: white;
+            cursor: pointer;
+        }
+
+        #add:hover {
+            background-color: #751d1d;
+        }
     </style>
 </head>
 <body>
@@ -76,7 +86,7 @@
         </tbody>
     </table>
     <form method="post" action="/addproblem">
-        <button type="submit">Add Problem</button>
+        <button id="add" type="submit">Add Problem</button>
     </form>
     <form method="post" action="/submitquery">
         <input type="text" name="query">
