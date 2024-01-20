@@ -67,7 +67,7 @@
       }
 
       .custom-form-bg{
-          background-color: rgba(58, 59, 64, 0.372);
+          background-color: blue;
           border-radius:4px;
       }
     </style>
