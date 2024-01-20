@@ -129,6 +129,10 @@ def submitedit():
 
 @app.route('/submitadd' , methods=["POST"])
 def submitadd():
+    # EXTENSIVE VALIDATION GOES HERE
+    # 
+    # 
+    
     name = request.form.get("name")
     link = request.form.get("link")
     difficulty = request.form.get("difficulty")
