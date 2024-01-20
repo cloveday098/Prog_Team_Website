@@ -75,6 +75,9 @@
             {% endfor %}
         </tbody>
     </table>
+    <form method="post" action="/addproblem">
+        <button type="submit">Add Problem</button>
+    </form>
     <form method="post" action="/submitquery">
         <input type="text" name="query">
         <button id="subbutton" type="submit">Submit Query</button>

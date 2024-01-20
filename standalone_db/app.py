@@ -127,5 +127,30 @@ def submitedit():
 
     return render_template('problems.html', rows=rows)
 
+@app.route('/submitadd' , methods=["POST"])
+def submitadd():
+    name = request.form.get("name")
+    link = request.form.get("link")
+    difficulty = request.form.get("difficulty")
+    category = request.form.get("category")
+
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("INSERT INTO problems (problem_name, problem_link, difficulty, category_id) VALUES (?,?,?,?)" , (name, link, difficulty, category))
+    conn.commit()
+
+    cursor.execute("SELECT * FROM problems")
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('problems.html', rows=rows)
+
+@app.route('/addproblem', methods=["POST"])
+def addproblem():
+    return render_template('addproblem.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
