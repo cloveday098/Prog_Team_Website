@@ -106,6 +106,7 @@
 .locations-col{
     flex-basis: 30%;
     border-radius: 10px;
+    margin-right: 50px;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
@@ -156,15 +157,6 @@
     font-size: 32px;
     margin-top: 0%;
 }
-.studenthead {
-    background-color:inherit;
-    color:#600015;
-    font-family: Helvetica;
-    font-size:21px;
-    width:375px;
-    text-align: center;
-    border: transparent;
-}
 .studentdescp {
     background-color:inherit;
     color: #fde79e;
@@ -172,6 +164,15 @@
     font-family: Arial;
     width: 375px;
     height: 250px;
+    text-align: center;
+    border: transparent;
+}
+.studenthead {
+    background-color:inherit;
+    color:#600015;
+    font-family: Helvetica;
+    font-size:24px;
+    width:375px;
     text-align: center;
     border: transparent;
 }
