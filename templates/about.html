@@ -56,19 +56,37 @@
     function nextStudent() {
         document.getElementById("studID").value = (parseInt(document.getElementById("studID").value) + 1)%pics.length;
         var studID = document.getElementById("studID").value;
-        //alert(studID);
+        var studID2 = (parseInt(studID)+1)%pics.length;
+        var studID3 = (parseInt(studID)+2)%pics.length;
+        
         document.getElementById("studentName").value = names[studID];
+        document.getElementById("studentName2").value = names[studID2];
+        document.getElementById("studentName3").value = names[studID3];
         document.getElementById("studentBlurb").value = blurbs[studID];
+        document.getElementById("studentBlurb2").value = blurbs[studID2];
+        document.getElementById("studentBlurb3").value = blurbs[studID3];
         document.getElementById("spotlight").src = pics[studID];
+        document.getElementById("spotlight2").src = pics[studID2];
+        document.getElementById("spotlight3").src = pics[studID3];
     }
     function lastStudent() {
         document.getElementById("studID").value = (parseInt(document.getElementById("studID").value) - 1)%pics.length;
         if (document.getElementById("studID").value < 0) {document.getElementById("studID").value = pics.length - Math.abs(document.getElementById("studID").value);}
         var studID = document.getElementById("studID").value;
-        //alert(document.getElementById("studID").value);
+        var studID2 = (parseInt(studID)+1)%pics.length;
+        if (studID2 < 0) {studID2 = pics.length - Math.abs(studID2);}
+        var studID3 = (parseInt(studID)+2)%pics.length;
+        if (studID3 < 0) {studID3 = pics.length - Math.abs(studID3);}
+
         document.getElementById("studentName").value = names[studID];
+        document.getElementById("studentName2").value = names[studID2];
+        document.getElementById("studentName3").value = names[studID3];
         document.getElementById("studentBlurb").value = blurbs[studID];
+        document.getElementById("studentBlurb2").value = blurbs[studID2];
+        document.getElementById("studentBlurb3").value = blurbs[studID3];
         document.getElementById("spotlight").src = pics[studID];
+        document.getElementById("spotlight2").src = pics[studID2];
+        document.getElementById("spotlight3").src = pics[studID3];
     }
 </script>
 
@@ -134,12 +152,24 @@
         <div class="side">
             <input type="text" id="studentName" class="studenthead" value="Jessica Mohr [President & Co-Founder]" readonly>
         </div>
+        <div class="side">
+            <input type="text" id="studentName2" class="studenthead" value="Chance Loveday [VP & Co-Founder]" readonly>
+        </div>
+        <div class="side">
+            <input type="text" id="studentName3" class="studenthead" value="Kylind Reagan [Secretary]" readonly>
+        </div>
     </div>
 
     <!--Pic-->
     <div class="row">
         <div class="side">
             <img id="spotlight" src="../static/images/jess.png" width=auto height="350">
+        </div>
+        <div class="side">
+            <img id="spotlight2" src="../static/images/chance.png" width=auto height="350">
+        </div>
+        <div class="side">
+            <img id="spotlight3" src="../static/images/kylind.png" width=auto height="350">
         </div>
     </div>
 
@@ -152,9 +182,15 @@
         </div>
         
         <div class="side">
-            <textarea id="studentBlurb" class="studentdescp" value="" readonly></textarea>
+            <textarea id="studentBlurb" class="studentdescp" readonly></textarea>
         </div>
-
+        <div class="side">
+            <textarea id="studentBlurb2" class="studentdescp" readonly>Hi, I'm a sophomore Computer Science and Math major. I'm active in several organizations across campus, including S³, Mountain Challenge, and MC3D. However, one club is particularly special. CSC has given me a place to excel, hone my programming skills, and be around some truly incredible people.</textarea>
+        </div>
+        <div class="side">
+            <textarea id="studentBlurb3" class="studentdescp" readonly>I am a sophomore Computer Science and have been on the Programming Team since I was a freshman. It improved my coding skills, let me meet people in my field, and helped me feel more prepared for both the real world and academia. It's also a lot of fun for anyone who enjoys problem-solving and traveling with peers!</textarea>
+        </div>
+        
         <!--Next Btn-->
         <div class=""side">
             <input type="hidden" id="studID" value="0">
@@ -181,7 +217,7 @@
     </section>
     <!--{% endblock %}-->
 
-    <!--Footer (Partially stolen from Kylind)-->
+    <!--Footer-->
     <div class="footer">
         <center>
             <i class="fa-regular fa-copyright"></i> All information Maryville College 2024

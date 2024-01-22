@@ -167,11 +167,11 @@
 }
 .studentdescp {
     background-color:inherit;
-    color: white;
+    color: #fde79e;
     font-size: 18px;
     font-family: Arial;
-    width: 475px;
-    height: 200px;
+    width: 375px;
+    height: 250px;
     text-align: center;
     border: transparent;
 }
