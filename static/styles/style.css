@@ -30,11 +30,12 @@
     font-size: 24px;
 }
 .curious {
-    color:lightgray;
+    color:#fde79e;
     font-size:21px;
     position: relative;
     min-height: 400px;
     opacity: 70%;
+    margin-top: -1%;
 }
 .footer {
     background-color: #600015;
