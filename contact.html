@@ -1,36 +1,3 @@
-<?php
-    $name = $email = $phone = $message = $nameErr = $emailErr = $phoneErr = $msgError = "";
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if (!isset($_POST['name'])) {
-        $nameErr = "Please enter a valid name";
-      }
-      else {
-        $name = get_input($_POST["name"]);
-        if (!preg_match("/^[a-zA-Z-' ]/", $name)) {$nameErr = "Only letters and whitespace allowed!";}
-      }
-
-      if (isset($_POST['email'])) {
-        $email = get_input($_POST["email"]);
-        if (!preg_match("/^[a-zA-Z-' @]/", $email)) {$emailErr = "Only letters, @, and whitespace allowed!";}
-      }
-      else {$emailErr = "Email cannot be empty!";}
-      
-      if (isset($_POST['phone'])) {
-        $phone = get_input($_POST["phone"]);
-        if (!preg_match("/^[0-9-() ]/", $phone)) {$phoneErr = "Give a valid phone number!";}
-      }
-      else {$phoneErr = "Give a valid phone number!";}
-
-      if (isset($_POST['message']) && strlen(get_input($_POST["message"])) >= 5) {$message = get_input($_POST["message"]) . "<br>My phone number is ". $phone;}
-      else {$msgErr = "Message must be at least 5 characters!";}
-    }
-
-    function get_input($data) {
-      $data = htmlspecialchars($data);
-      return $data;
-  }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,7 +34,7 @@
       }
 
       .custom-form-bg{
-          background-color: blue;
+          background-color: rgba(58, 59, 64, 0.372);
           border-radius:4px;
       }
     </style>
