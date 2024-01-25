@@ -47,7 +47,6 @@ def process_form():
 def problems():
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
-
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
     return render_template('problems.html', rows=rows)
