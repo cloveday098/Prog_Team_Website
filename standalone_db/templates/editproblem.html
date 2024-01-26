@@ -60,12 +60,34 @@
         <input name="difficulty" type="number" value="{{rows[0][4]}}">
 
         <label for="category">Category:</label>
-        <input name="category" type="text" value="{{rows[0][3]}}">
+        <!-- <input name="category" type="text" value="{{rows[0][3]}}"> -->
+
+        {% for category in categories %}
+            <label>
+                <input type="checkbox" name="categories" value="{{ category[0] }}">{{ category[1]  }}
+            </label><br>
+        {% endfor %}
 
         <input type="hidden" name="pid" value="{{rows[0][0]}}">
+        <input type="hidden" name="category_ids" id="category_ids" value="">
 
-        <button onclick="location.href='/problems'" style="background-color: #646464;">Go to problems</button>
+        <button onclick="goToProblems(event)" style="background-color: #646464;">Go to problems</button>
         <button type="submit" id="subbutton">Edit</button>
     </form>
+    <script>
+        function goToProblems(event) {
+            event.preventDefault();
+        
+            var checkedCategories = document.querySelectorAll('input[name="categories"]:checked');
+        
+            var checkedCategoryIds = Array.from(checkedCategories).map(function(checkbox) {
+                return checkbox.value;
+            });
+        
+            document.getElementById('category_ids').value = checkedCategoryIds.join(',');
+        
+            document.forms[0].submit();
+        }
+        </script>
 </body>
 </html>

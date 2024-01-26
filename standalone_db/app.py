@@ -87,7 +87,10 @@ def editproblem():
     cursor.execute("SELECT * FROM problems where problem_id=?", ((problemid,)))
     rows = cursor.fetchall()
 
-    return render_template('editproblem.html' , rows=rows, pid=problemid)
+    cursor.execute("SELECT * FROM categories")
+    categories = cursor.fetchall()
+
+    return render_template('editproblem.html' , rows=rows, pid=problemid, categories=categories)
 
 @app.route('/editcategory', methods=["POST" , "GET"])
 def editcategory():
@@ -142,6 +145,11 @@ def submitedit():
     # EXTENSIVE VALIDATION GOES HERE
     #
     # 
+
+    # TWO CATEGORY VARIABLES: category IS THE ID, IT IS FUNCTIONAL. actualcategories IS AN ATTEMPTED LIST OF CATEGORY NAMES, BUT IT IS NOT FUNCTIONAL RIGHT NOW.
+    # IM WORKING ON IT
+    actualcategories = request.form.get("category_ids")
+    print(actualcategories)
 
     name = request.form.get("name")
     link = request.form.get("link")
