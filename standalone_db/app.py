@@ -51,6 +51,14 @@ def problems():
     rows = cursor.fetchall()
     return render_template('problems.html', rows=rows)
 
+@app.route('/categories')
+def categories():
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM categories")
+    rows = cursor.fetchall()
+    return render_template('categories.html', rows=rows)
+
 @app.route('/submitquery', methods=["POST"])
 def submitquery():
     query = request.form['query']
@@ -81,6 +89,17 @@ def editproblem():
 
     return render_template('editproblem.html' , rows=rows, pid=problemid)
 
+@app.route('/editcategory', methods=["POST" , "GET"])
+def editcategory():
+    categoryid = request.args.get("categoryid")
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT * FROM categories where category_id=?" , (categoryid,))
+    rows = cursor.fetchall()
+
+    return render_template('editcategory.html' , rows=rows, cid=categoryid)
+
 @app.route('/handledeleteproblem')
 def handledeleteproblem():
     problemid = request.args.get("problemid")
@@ -98,6 +117,25 @@ def handledeleteproblem():
     conn.close()
 
     return render_template('problems.html' , rows=rows)
+
+@app.route('/handledeletecategory')
+def handledeletecategory():
+    categoryid = request.args.get("categoryid")
+    print(categoryid)
+
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("DELETE FROM categories WHERE category_id = ?" , (categoryid,))
+    conn.commit()
+
+    cursor.execute("SELECT * FROM categories")
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('categories.html' , rows=rows)
 
 @app.route('/submitedit', methods=["POST","GET"])
 def submitedit():

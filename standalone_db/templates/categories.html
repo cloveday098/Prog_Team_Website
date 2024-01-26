@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problems</title>
+    <title>Categories</title>
     <style>
         body {
             font-family: 'Arial' , sans-serif;
@@ -64,10 +64,7 @@
     <table>
         <thead>
             <tr>
-                <th>Problem Name</th>
-                <th>Problem Link</th>
-                <th>Difficulty</th>
-                <th>Category ID</th>
+                <th>Category Name</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -76,17 +73,14 @@
             {% for row in rows %}
                 <tr>
                     <td>{{ row[1] }}</td>
-                    <td>{{ row[2] }}</td>
-                    <td>{{ row[4] }}</td>
-                    <td>{{ row[3] }}</td>
-                    <td><button onclick="location.href='/editproblem?problemid={{ row[0] }}'">Edit problem</button></td>
-                    <td><button onclick="location.href='/handledeleteproblem?problemid={{ row[0] }}'">Delete problem</button></td>
+                    <td><button onclick="location.href='/editcategory?categoryid={{ row[0] }}'">Edit category</button></td>
+                    <td><button onclick="location.href='/handledeletecategory?categoryid={{ row[0] }}'">Delete category</button></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-    <form method="post" action="/addproblem">
-        <button id="add" type="submit">Add Problem</button>
+    <form method="post" action="/addcategory">
+        <button id="add" type="submit">Add Category</button>
     </form>
     <form method="post" action="/submitquery">
         <input type="text" name="query">
