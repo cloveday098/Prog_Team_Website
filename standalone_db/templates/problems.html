@@ -67,7 +67,7 @@
                 <th>Problem Name</th>
                 <th>Problem Link</th>
                 <th>Difficulty</th>
-                <th>Category ID</th>
+                <th>Categories</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -78,7 +78,9 @@
                     <td>{{ row[1] }}</td>
                     <td>{{ row[2] }}</td>
                     <td>{{ row[4] }}</td>
-                    <td>{{ row[3] }}</td>
+                    <td>
+                        {{row[3]}}
+                    </td>
                     <td><button onclick="location.href='/editproblem?problemid={{ row[0] }}'">Edit problem</button></td>
                     <td><button onclick="location.href='/handledeleteproblem?problemid={{ row[0] }}'">Delete problem</button></td>
                 </tr>

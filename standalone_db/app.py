@@ -49,7 +49,9 @@ def problems():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
-    return render_template('problems.html', rows=rows)
+    cursor.execute("SELECT * FROM categories")
+    categories = cursor.fetchall()
+    return render_template('problems.html', rows=rows, categories=categories)
 
 @app.route('/categories')
 def categories():
@@ -73,10 +75,13 @@ def submitquery():
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
 
+    cursor.execute("SELECT * FROM categories")
+    categories = cursor.fetchall()
+
     cursor.close()
     conn.close()
 
-    return render_template('problems.html' , rows=rows)
+    return render_template('problems.html' , rows=rows, categories=categories)
 
 @app.route('/editproblem', methods=["POST" , "GET"])
 def editproblem():
@@ -116,10 +121,13 @@ def handledeleteproblem():
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
 
+    cursor.execute("SELECT * FROM categories")
+    categories = cursor.fetchall()
+
     cursor.close()
     conn.close()
 
-    return render_template('problems.html' , rows=rows)
+    return render_template('problems.html' , rows=rows, categories=categories)
 
 @app.route('/handledeletecategory')
 def handledeletecategory():
@@ -148,8 +156,16 @@ def submitedit():
 
     # TWO CATEGORY VARIABLES: category IS THE ID, IT IS FUNCTIONAL. actualcategories IS AN ATTEMPTED LIST OF CATEGORY NAMES, BUT IT IS NOT FUNCTIONAL RIGHT NOW.
     # IM WORKING ON IT
-    actualcategories = request.form.get("category_ids")
+
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    actualcategories = request.form.getlist("categories")
     print(actualcategories)
+
+    for cat in actualcategories:
+        pass
+        # here, we iterate through the list and append rows to a hybrid table
 
     name = request.form.get("name")
     link = request.form.get("link")
@@ -158,19 +174,19 @@ def submitedit():
     problemid = request.form.get("pid")
     print(name, link, category, problemid)
 
-    conn = sqlite3.connect('logins.db')
-    cursor = conn.cursor()
-
     cursor.execute("UPDATE problems SET problem_name=?, problem_link=?, category_id=?, difficulty=? WHERE problem_id = ?", (name, link, category, difficulty, problemid))
     conn.commit()
 
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
 
+    cursor.execute("SELECT * FROM categories")
+    categories = cursor.fetchall()
+
     cursor.close()
     conn.close()
 
-    return render_template('problems.html', rows=rows)
+    return render_template('problems.html', rows=rows, categories=categories, actualcategories=actualcategories)
 
 @app.route('/submitadd' , methods=["POST"])
 def submitadd():
@@ -191,11 +207,13 @@ def submitadd():
 
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
+    cursor.execute("SELECT * FROM categories")
+    categories = cursor.fetchall()
 
     cursor.close()
     conn.close()
 
-    return render_template('problems.html', rows=rows)
+    return render_template('problems.html', rows=rows, categories=categories)
 
 @app.route('/addproblem', methods=["POST"])
 def addproblem():
