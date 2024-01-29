@@ -1,5 +1,5 @@
 # Prog_Team_Website
-README authored by Chance Loveday. Contributions by Matt Hurst, Chance Loveday, and Kylind Reagan.
+README authored by Chance Loveday. Contributions by Jorge Estrada-Martinez, Kyle Haywood, Matt Hurst, Chance Loveday, Jessica Mohr, and Kylind Reagan.
 
 A collaborative project for Maryville College CSC marketing and use in competition preparation. Please glance through this README to understand the goals and contents of this project.
 
