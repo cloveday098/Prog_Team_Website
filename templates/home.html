@@ -16,16 +16,15 @@
         <link rel="icon" type="image/x-icon" href="../static/images/mcLogo.png">
         
         <style>
-            html {
-        font-family: Inter, Arial, Helvetica, sans-serif;
-        font-size: 18px;
-      }
       body, html {
         border: 0;
         height: 100%;
         margin: 0;
         padding: 0;
         width: 100%;
+        font-family: Inter, Arial, Helvetica, sans-serif;
+        font-size: 18px;
+
     }
       body {
         font-weight: 700;
@@ -45,22 +44,16 @@
         <section id="navbar" class="navbar">
             <!--Navbar-->
             <pre>  
-                <img align="left" src="../static/Images/mcLogo.png" style="margin-top:-1%; margin-left: 4%;" loading="lazy">    <a class="navlinks" href="about.html">About</a>    <a class="navlinks" href="major.html">Major</a>    <a class="navlinks" href="http://localhost/contact.php">Contact</a>    <a class="navlinks" href="http://localhost/problems.php">Problems</a><img align="right" src="../static/Images/placeholderlogo.png" style="margin-top:-1%; margin-right: 4%;" loading="lazy">
+                <img align="left" src="../static/Images/mcLogo.png" style="margin-top:-1%; margin-left: 4%;" loading="lazy">    <a class="navlinks" href="about.html">About</a>    <a class="navlinks" href="major.html">Major</a>    <a class="navlinks" href="contact.php">Contact</a>    <a class="navlinks" href="problems.html">Problems</a><img align="right" src="../static/Images/placeholderlogo.png" style="margin-top:-1%; margin-right: 4%;" loading="lazy">
             </pre>
         </section>
-        <br><br><br>
-
         <section id="gallery" class="homeGallery" style="background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/improv_coding_session.JPG') center/cover;">
         <h1 style="color:maroon; text-shadow: -1px -1px 0 orange, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-size: 50px; margin-top:0%; margin-left: 13%;">Computer Science Club</h1>
-            <!--<img id="bannerImage" src="../static/Images/improv_coding_session.jpg" height="400px" width="auto" alt="Image failed to load" loading="lazy">
-            <img id="bannerImage" src="../static/Images/uiclass_2023.jpg" height="400px" width="auto" alt="Image failed to load" loading="lazy">-->
-            <!--<img id="bannerImage" src="../static/Images/myrtleBeach_ccsc.jpg" height="500px" width="auto" alt="Image failed to load" loading="lazy">-->
-            <br>
             </section>
 
-            <section>
-            <center><h2>Getting Started:</h2></center>
-                <li>Check our schedule below to join us in Programming practice</li>
+            <section class="getStarted">
+            <h2 style="font-size: 35px;">Getting Started:</h2>
+                <li>Check our schedule below to join us in Programming practice or another event</li>
                 <li>Contact us through our contact page</li>
                 <li>Practice a few problems from the problem bank</li>
                 <li>Follow us on:
@@ -91,9 +84,11 @@
         <section id=""calendar" style="margin-top: -3.5%;">
         <!--New Calendar-->
         <h2><center>Upcoming Events:</center></h2>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23039BE5&ctz=America%2FNew_York&title=CSC%20%26%20Programming%20Team%20Calendar&showTitle=0&showTabs=0&showCalendars=0&src=Y19iYjg2OTNhMGY5N2YyNTY1ODBiZGNjZTc2MmE2NGU3NDFkMjY3Nzk5ZGJkNDQ3M2NjNWU0NzE0MGM3ZmE5ZWVkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19jYjE5MmI2MzY2NzhlNGJiNjU2YjRhNzViOTcwMGQ3MGU4MWRmZDVhNjNkZTM1NTNhMWM0Y2ZmMzkxMGYwZDc3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%239E69AF&color=%23D50000" style="border:solid 1px #777" width="600" height="600" frameborder="0" scrolling="no"></iframe>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23D50000&ctz=America%2FNew_York&mode=AGENDA&showDate=0&showCalendars=0&showTabs=0&showNav=0&src=Y19jYjE5MmI2MzY2NzhlNGJiNjU2YjRhNzViOTcwMGQ3MGU4MWRmZDVhNjNkZTM1NTNhMWM0Y2ZmMzkxMGYwZDc3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" style="border-width:0" width="300" height="600" frameborder="0" scrolling="no"></iframe>
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%233F51B5&ctz=America%2FNew_York&mode=AGENDA&showDate=0&showCalendars=0&showTabs=0&showNav=0&src=Y19iYjg2OTNhMGY5N2YyNTY1ODBiZGNjZTc2MmE2NGU3NDFkMjY3Nzk5ZGJkNDQ3M2NjNWU0NzE0MGM3ZmE5ZWVkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%239E69AF" style="border-width:0" width="300" height="600" frameborder="0" scrolling="no"></iframe>
+        <center>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23D50000&ctz=America%2FNew_York&showTabs=0&mode=AGENDA&showNav=0&showDate=0&showCalendars=0&src=Y19jYjE5MmI2MzY2NzhlNGJiNjU2YjRhNzViOTcwMGQ3MGU4MWRmZDVhNjNkZTM1NTNhMWM0Y2ZmMzkxMGYwZDc3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D50000" style="border:solid 1px #777" width="300" height="600" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23039BE5&ctz=America%2FNew_York&showTitle=0&showTabs=0&src=Y18wMzM0ZGJhMzVmYTFhNjNhMTU1MWNhZTcyOWE1ODFhODRkYjZjMjZjOTMwZjExZDdkYzIzYzg1ZjI2YzBlZDYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19iYjg2OTNhMGY5N2YyNTY1ODBiZGNjZTc2MmE2NGU3NDFkMjY3Nzk5ZGJkNDQ3M2NjNWU0NzE0MGM3ZmE5ZWVkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19jYjE5MmI2MzY2NzhlNGJiNjU2YjRhNzViOTcwMGQ3MGU4MWRmZDVhNjNkZTM1NTNhMWM0Y2ZmMzkxMGYwZDc3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33&color=%239E69AF&color=%23D50000&color=%230B8043" style="border:solid 1px #777" width="600" height="600" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%233F51B5&ctz=America%2FNew_York&showTabs=0&mode=AGENDA&showNav=0&showDate=0&showCalendars=0&src=Y19iYjg2OTNhMGY5N2YyNTY1ODBiZGNjZTc2MmE2NGU3NDFkMjY3Nzk5ZGJkNDQ3M2NjNWU0NzE0MGM3ZmE5ZWVkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%239E69AF" style="border:solid 1px #777" width="300" height="600" frameborder="0" scrolling="no"></iframe>
+        </center>
         <br><br><br>
         <center>Please join us to hone your problem-solving skills, explore the art of algorithmic thinking, and have fun!</center>
         </section>
