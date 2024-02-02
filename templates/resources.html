@@ -1,0 +1,78 @@
+
+<!--Still don't know what these are?-->
+<!--{% extends "base.html" %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}-->
+<script>
+    var pics = ["..static/images/lukekoch.png", "..static/images/davemcneelywhite.jpg", "..static/images/kaylabrown.jpg" ]
+    var descriptions = [
+    "Luke Koch is a Cybersecurity Researcher at Oak Ridge National Lab and is pursuing a Data Science PhD at UtK. He graduated from Maryville College with a degree in Mathematics and is currently working on a PhD.",
+    "Dave McNeely-White is an applied Computer Vision Scientist who currentlt works for Amazon and has worked for a variety of companies in the technology sphere. He graduated from Maryville College with a degree in Computer Science.",
+    ""]
+    var links = ["lukekoch.html", "davemcneelywhite.html", "kaylabrown.html"]
+    var contacts = ["mailto: kochlr@ornl.gov", "N/A", "N/A"]
+</script>
+<!--Page is kind of robotic. To be fixed-->
+<html>
+    <head>
+        <title>CSC Resources</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../static/styles/style.css">
+        <link rel="stylesheet" href="../static/styles/index.css">
+        <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="../static/images/mcLogo.png">
+    </head>
+
+    <body>
+        <section id="navbar" class="navbar">
+            <!--Navbar-->
+            <pre>  
+                <a href="./home.html" style="float:left;"><img align="left" src="../static/Images/mcLogo.png" style="margin-top:-1%; margin-left: 4%;" loading="lazy"></a>    <a class="navlinks" href="about.html">About</a>    <a class="navlinks" href="major.html">Major</a>    <a class="navlinks" href="contact.php">Contact</a>    <a class="navlinks" href="problems.html">Problems</a><img align="right" src="../static/Images/placeholderlogo.png" style="margin-top:-1%; margin-right: 4%;" loading="lazy">
+            </pre>
+        </section>
+        <center><strong><h2 style="font-size:40px; color:#600015 ;">Resources</h2></strong>
+        Contact us for more resources</center>
+
+        <h1>General Computer Science</h1>
+        Perfect for anyone
+        <a></a>
+
+        <h1>Programming Competitions</h1>
+        <a href="https://open.kattis.com/" target="_blank">Kattis</a>
+        <a href="https://mwermelinger.github.io/kattis-guide/" target="_blank">Kattis guide</a>
+        <a href="https://youtube.com/playlist?list=PLy4-sNQybCmkSQU3rEGEPeBK6Z7E7RMGv&feature=shared" target="_blank">Youtube Playlist</a>
+
+        Many alumni have been on the Programming team.. See if you can find them all!
+        <h1>Data Science</h1>
+
+        <h1>Web Development</h1>
+
+        <br><br>Meet Web Development Alumni<br>
+        
+        <img align="left" id="alumni" src="../static/images/kaylabrown.jpg" width=auto height="150"> <p id="alumniDesc" >Luke Koch is a Cybersecurity Researcher at Oak Ridge National Lab and is pursuing a Data Science PhD at UtK. He graduated from Maryville College with a degree in Mathematics.</p>
+        <a href="" onclick="window.open('../templates/alumnipages/kaylabrown.html', 'newwindow', 'width=1000,height=550'); return false;">Learn more></a><br><br><br>
+        <h1>Software Engineering</h1>
+
+        <h1>Cybersecurity</h1>
+        <a href="https://www.sans.org/tools/?focus-area=cyber-defense">Free Tools</a>
+        <a href="">Youtube Playlist</a>
+
+        <br><br>Meet Cybersecurity Alumni<br>
+        
+        <img align="left" id="alumni" src="../static/images/lukekoch.jpg" width=auto height="150"> <p id="alumniDesc" >Luke Koch is a Cybersecurity Researcher at Oak Ridge National Lab and is pursuing a Data Science PhD at UtK. <br>He has experience with dversarial machine learning and static binary instrumentation.<br> He graduated from Maryville College with a degree in Mathematics</p>
+        <a href="" onclick="window.open('../templates/alumnipages/lukekoch.html', 'newwindow', 'width=1000,height=550'); return false;">Learn more></a><br><br><br>
+
+        <h1>Ethical Hacking</h1>
+
+        <h1>Artificial Intelligence</h1>
+
+        
+    </body>
+
+
+
+</html>
