@@ -49,6 +49,7 @@ def problems():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
+    print("rows:" , rows)
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
     return render_template('problems.html', rows=rows, categories=categories)
@@ -163,9 +164,9 @@ def submitedit():
     actualcategories = request.form.getlist("categories")
     print(actualcategories)
 
-    for cat in actualcategories:
-        pass
-        # here, we iterate through the list and append rows to a hybrid table
+    cats = []
+
+
 
     name = request.form.get("name")
     link = request.form.get("link")
@@ -173,6 +174,40 @@ def submitedit():
     difficulty = request.form.get("difficulty")
     problemid = request.form.get("pid")
     print(name, link, category, problemid)
+
+    cursor.execute("DELETE FROM problemscategories WHERE problem_id=?" , (problemid,))
+    conn.commit()
+
+    counter = 0
+
+    for cat in actualcategories:
+        # here, we iterate through the list and append rows to a hybrid table
+        cursor.execute("SELECT category_name FROM categories WHERE category_id=?",(int(cat),))
+        cname = cursor.fetchone()
+        print(cname[0])
+
+        cursor.execute("INSERT INTO problemscategories (problem_id , category_id) VALUES (? , ?)" , (problemid , int(cat)))
+        conn.commit()
+
+        cursor.execute("SELECT * FROM problemscategories WHERE problem_id = ?" , (problemid,))
+        testing = cursor.fetchall()
+        print(testing)
+
+        cursor.execute("SELECT * FROM problemscategories")
+        pr = cursor.fetchall()
+        print("Whole table:")
+        print(pr)
+
+        cursor.execute("SELECT category_name FROM CATEGORIES WHERE category_id = ?" , (testing[counter][1] , ))
+        cactual = cursor.fetchone()
+
+        cats.append(cactual)
+
+        counter = counter + 1
+    
+    print(cats)
+
+    conn.commit()
 
     cursor.execute("UPDATE problems SET problem_name=?, problem_link=?, category_id=?, difficulty=? WHERE problem_id = ?", (name, link, category, difficulty, problemid))
     conn.commit()
@@ -186,7 +221,7 @@ def submitedit():
     cursor.close()
     conn.close()
 
-    return render_template('problems.html', rows=rows, categories=categories, actualcategories=actualcategories)
+    return render_template('problems.html', rows=rows, cats=cats)
 
 @app.route('/submitadd' , methods=["POST"])
 def submitadd():

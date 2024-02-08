@@ -79,7 +79,9 @@
                     <td>{{ row[2] }}</td>
                     <td>{{ row[4] }}</td>
                     <td>
-                        {{row[3]}}
+                        {% for cat in cats %}
+                            {{ cat[0] }}
+                        {% endfor %}
                     </td>
                     <td><button onclick="location.href='/editproblem?problemid={{ row[0] }}'">Edit problem</button></td>
                     <td><button onclick="location.href='/handledeleteproblem?problemid={{ row[0] }}'">Delete problem</button></td>
