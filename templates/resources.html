@@ -30,16 +30,70 @@
     <body>
         <section id="navbar" class="navbar">
             <!--Navbar-->
-            <pre>  
-                <a href="./home.html" style="float:left;"><img align="left" src="../static/Images/mcLogo.png" style="margin-top:-1%; margin-left: 4%;" loading="lazy"></a>    <a class="navlinks" href="about.html">About</a>    <a class="navlinks" href="major.html">Major</a>    <a class="navlinks" href="contact.php">Contact</a>    <a class="navlinks" href="problems.html">Problems</a><img align="right" src="../static/Images/placeholderlogo.png" style="margin-top:-1%; margin-right: 4%;" loading="lazy">
-            </pre>
+            <div class="programmingsite-header1">
+                <a href="https://www.maryvillecollege.edu/" target="_blank">
+                <img alt="image" src="../static/images/mc_logo-removebg-preview-200h.png" class="MClogo"/>
+                </a>
+                <nav class="programmingsite-links2">
+                <a class="navlinks" href="./about.html">About</a>
+                <a class="navlinks" href="./index.html">Major</a>
+                <a class="navlinks">Resources</a>
+                <a class="navlinks" href="./problems.html">Problems</a>
+                <a class="navlinks" href=""onclick="window.open('http://localhost/contact.html', 'newwindow', 'width=1000,height=550'); return false;">Contact</a>
+                </nav>
+                <image src="../static\images\CSC Logo.png" class="progsite-logo"/>
+            </div>
         </section>
-        <center><strong><h2 style="font-size:40px; color:#600015 ;">Resources</h2></strong>
-        Contact us for more resources</center>
+        <center><strong><h2 style="font-size:40px; color:#600015 ;">Resources</h2></strong></center>
 
         <h1>General Computer Science</h1>
         Perfect for anyone
-        <a></a>
+        <br>
+        <div class="web-card"> 
+            <a href="https://github.com/rust-lang/rustlings/" target="_blank">
+            <img class="web-card-img" src="../static/images/rustlings.png">
+            <h3 class="web-card-tag">LANGUAGE</h3>
+            <h2 class="web-card-title">Rustlings</h2>
+            <div class="web-card-desc">Practice exercises to learn the language RUST</div>
+        </a>
+        </div>
+        <div class="web-card"> 
+            <a href="https://teachyourselfcs.com/" target="_blank">
+            <img class="web-card-img" src="../static/images/teachyourselfcs.png">
+            <h3 class="web-card-tag">ALL-IN-ONE RESOURCE</h3>
+            <h2 class="web-card-title">teachyourselfcs</h2>
+            <div class="web-card-desc">Contains books for all areas of CS. Many great titles.</div>
+        </a>
+        </div>
+
+        <div class="web-card"> 
+            <a href="https://www.coursera.org/" target="_blank">
+            <img class="web-card-img" src="../static/images/coursea.png">
+            <h3 class="web-card-tag">ALL-IN-ONE RESOURCE</h3>
+            <h2 class="web-card-title">Coursea</h2>
+            <div class="web-card-desc">A good and easy way to learn while earning certificates</div>
+        </a>
+        </div>
+
+        <div class="web-card"> 
+            <a href="https://www.freecodecamp.org/learn" target="_blank">
+            <img class="web-card-img" src="../static/images/fcc.png">
+            <h3 class="web-card-tag">ALL-IN-ONE RESOURCE</h3>
+            <h2 class="web-card-title">Free Code Camp</h2>
+            <div class="web-card-desc">A good and easy way to learn while earning certificates</div>
+        </a>
+        </div>
+
+        <div class="alumni-card">
+            <h3 class="alumni-card-title">Meet Web Development Alumni</h3>
+            <a href="" onclick="window.open('../templates/alumnipages/kaylabrown.html', 'newwindow', 'width=1000,height=550'); return false;">
+                <img align="left" id="alumni-card-img" src="../static/images/kaylabrown.jpg">
+                <div class="alumni-card-desc">
+
+                </div>
+                <center>CLICK TO LEARN MORE</center>
+            </a>
+        </div>
 
         <h1>Programming Competitions</h1>
         <div class="web-card"> 
@@ -75,8 +129,17 @@
             <div class="web-card-desc">YouTube playlist curated by the programming team.</div>
         </a>
         </div>
+        <br>
         Many alumni have been on the Programming team.. See if you can find them all!
         <h1>Data Science</h1>
+        <div class="web-card"> 
+            <a href="https://www.kaggle.com/">
+                <img class="web-card-img" src="../static/images/kaggle.png">
+                <h3 class="web-card-tag">ALL-IN-ONE RESOURCE</h3>
+                <h2 class="web-card-title">KAGGLE</h2>
+                <div class="web-card-desc">A data science competition platform and online community of data scientists and machine learning practitioners under Google LLC</div>
+        </a>
+        </div>
         <div class="web-card"> 
             <a href="https://youtube.com/playlist?list=PLy4-sNQybCmkV4aUACKUhlksQfqSy-9eN&feature=shared" target="_blank">
                 <img class="web-card-img" src="../static/images/youtube.png">
@@ -85,12 +148,20 @@
                 <div class="web-card-desc">YouTube playlist curated by the programming team.</div>
             </a>
         </div>
-        <br><br>Meet Data Science Alumni<br>
+        <div class="alumni-card">
+            <h3 class="alumni-card-title">Meet Data Science Alumni</h3>
+            <a href="" onclick="window.open('../templates/alumnipages/evanezell.html', 'newwindow', 'width=1000,height=550'); return false;">
+                <img align="left" id="alumni-card-img" src="../static/images/evanezell.jpg">
+                <div class="alumni-card-desc">
+                </div>
+                <center>CLICK TO LEARN MORE</center>
+            </a>
+        </div>
 
         <h1>Web Development</h1>
 
         <div class="web-card"> 
-        <a href="https://okmonk.com/">
+        <a href="https://okmonk.com/" target="_blank">
             <img class="web-card-img" src="../static/images/okmonk.png">
             <h3 class="web-card-tag">REFERENCE DIRECTORY</h3>
             <h2 class="web-card-title">okmonk</h2>
@@ -99,7 +170,7 @@
         </div>
 
         <div class="web-card"> 
-            <a href="https://www.awwwards.com/websites/">
+            <a href="https://www.awwwards.com/websites/" target="_blank">
                 <img class="web-card-img" src="../static/images/awwwards.png">
                 <h3 class="web-card-tag">ALL-IN-ONE RESOURCE</h3>
                 <h2 class="web-card-title">awwwards</h2>
@@ -118,6 +189,16 @@
         </div>
         <h1>Software Engineering</h1>
 
+        <div class="alumni-card">
+            <h3 class="alumni-card-title">Meet Web Development Alumni</h3>
+            <a href="" onclick="window.open('../templates/alumnipages/kaylabrown.html', 'newwindow', 'width=1000,height=550'); return false;">
+                <img align="left" id="alumni-card-img" src="../static/images/kaylabrown.jpg">
+                <div class="alumni-card-desc">
+
+                </div>
+                <center>CLICK TO LEARN MORE</center>
+            </a>
+        </div>
         <h1>Cybersecurity</h1>
         <div class="web-card"> 
         <a href="https://www.sans.org/tools/?focus-area=cyber-defense" target="_blank">
@@ -136,6 +217,15 @@
             </a>
         </div>
 
+        <div class="web-card"> 
+            <a href="https://darknetdiaries.com/" target="_blank">
+                <img class="web-card-img" src="../static/images/darknet.png">
+                <h3 class="web-card-tag">PODCASTS</h3>
+                <h2 class="web-card-title">Darknet Diaries</h2>
+                <div class="web-card-desc">Monthly podcasts about the dangers of the internet.</div>
+            </a>
+            </div>
+
         <div class="alumni-card">
         <a href="" onclick="window.open('../templates/alumnipages/lukekoch.html', 'newwindow', 'width=1000,height=550'); return false;">
             <h3 class="alumni-card-title">Meet Cybersecurity Alumni</h3>
@@ -149,13 +239,122 @@
         </div>
         <h1>Ethical Hacking</h1>
 
-        <br><br>Meet Hacking Alumni<br>
+        <div class="web-card"> 
+            <a href="https://www.kali.org/" target="_blank">
+                <img class="web-card-img" src="../static/images/kali.png">
+                <h3 class="web-card-tag">LINUX</h3>
+                <h2 class="web-card-title">Kali</h2>
+                <div class="web-card-desc">Kali Linux is an open-source, Debian-based Linux distribution geared towards various information security tasks, such as Penetration Testing, Security Research, Computer Forensics and Reverse Engineering.</div>
+            </a>
+        </div>
+
+        <div class="web-card"> 
+            <a href="https://www.virtualbox.org/" target="_blank">
+                <img class="web-card-img" src="../static/images/VIRTUALBOX.png">
+                <h3 class="web-card-tag">VIRTUAL MACHINE</h3>
+                <h2 class="web-card-title">Virtual Box</h2>
+                <div class="web-card-desc">A virtual machine for running linux (as you do not want to use your personal machine for hacking)</div>
+            </a>
+        </div>
+
+
+
+        <div class="alumni-card">
+            <h3 class="alumni-card-title">Meet Web Development Alumni</h3>
+            <a href="" onclick="window.open('../templates/alumnipages/kaylabrown.html', 'newwindow', 'width=1000,height=550'); return false;">
+                <img align="left" id="alumni-card-img" src="../static/images/kaylabrown.jpg">
+                <div class="alumni-card-desc">
+
+                </div>
+                <center>CLICK TO LEARN MORE</center>
+            </a>
+        </div>
 
         <h1>Artificial Intelligence</h1>
 
-        
+        <div class="web-card"> 
+            <a href="https://www.deeplearningbook.org/" target="_blank">
+                <img class="web-card-img" src="../static/images/dlbook.png">
+                <h3 class="web-card-tag">TEXTBOOK</h3>
+                <h2 class="web-card-title">Deep learning book</h2>
+                <div class="web-card-desc">A free textbook on deep learning written by top researchers</div>
+            </a>
+        </div>
+
+        <div class="web-card"> 
+            <a href="https://pytorch.org/tutorials/beginner/basics/intro.html" target="_blank">
+                <img class="web-card-img" src="../static/images/pytorch.png">
+                <h3 class="web-card-tag">PYTHON LIBRARY</h3>
+                <h2 class="web-card-title">Pytorch</h2>
+                <div class="web-card-desc">A tutorial on how to use the industry-standard deep learning library</div>
+            </a>
+        </div>
+
+        <div class="web-card"> 
+            <a href="https://paperswithcode.com/" target="_blank">
+                <img class="web-card-img" src="../static/images/paperswithcode.png">
+                <h3 class="web-card-tag">AI MODELS</h3>
+                <h2 class="web-card-title">Papers with code</h2>
+                <div class="web-card-desc">A great place to find and compare AI models trained for different tasks</div>
+            </a>
+        </div>
+
+        <div class="web-card"> 
+            <a href="https://huggingface.co/" target="_blank">
+                <img class="web-card-img" src="../static/images/huggingface.png">
+                <h3 class="web-card-tag">AI MODELS</h3>
+                <h2 class="web-card-title">Hugging Face</h2>
+                <div class="web-card-desc">Another great place to find others' datasets and implementations (with apps you can try in the browser)</div>
+            </a>
+        </div>
+
+
+        <div class="alumni-card">
+            <h3 class="alumni-card-title">Meet AI Alumni</h3>
+            <a href="" onclick="window.open('../templates/alumnipages/davemcneelywhite.html', 'newwindow', 'width=1000,height=550'); return false;">
+                <img align="left" id="alumni-card-img" src="../static/images/davemcneelywhite.jpg">
+                <div class="alumni-card-desc">
+                    David McNeely-White is a Computer Vision Scientist working for Amazon. He has also worked as a NET and software developer.
+                </div>
+                <center>CLICK TO LEARN MORE</center>
+            </a>
+        </div>
+
+        <br>
+
+
+        <center>Don't see anything you like? Contact us, we might have what you're looking for.</center>
+
+        <br>
+        <div class="Footer">
+            <footer class="innerFooter">
+              <div class="footer-container">
+                <a href="https://www.maryvillecollege.edu/" target="_blank" rel="noreferrer noopener">
+                  <img alt="image" src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/MC-footer-logo-v5.png"/>
+                </a>
+                <div class="logo-container">
+                  <span class="footer-logo">MC Programming Team</span>
+                  <nav class="programmingsite-nav1">
+                    <a href="https://www.maryvillecollege.edu/academics/programs-of-study/computer-science/" target="_blank" rel="noreferrer noopener"class="bottom-nav">
+                      Info
+                    </a>
+                    <span class="bottom-nav">Contact</span>
+                  </nav>
+                </div>
+              </div>
+              <div class="programmingsite-separator"></div>
+              <div class="bottom-container">
+                <span class="copyright-text"> © 2024 MC Programming Team, All Rights Reserved. </span>
+                <div class="programmingsite-icon-group1">
+                    <a href="https://www.facebook.com/groups/112478608462745/" target="_blank" rel="noreferrer noopener">
+                        <svg viewBox="0 0 602.2582857142856 1024" class="fbIcon">
+                          <path d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"></path>
+                        </svg>
+                      </a>
+                </div>
+              </div>
+            </footer>
+          </div>
     </body>
-
-
 
 </html>

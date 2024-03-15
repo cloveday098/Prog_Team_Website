@@ -3,6 +3,7 @@
 }
 
 .web-card {
+    display: inline-block;
     padding-left: 25px;
   padding-right: 25px;
   flex: 0 0 25%;
