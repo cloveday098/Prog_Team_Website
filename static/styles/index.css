@@ -1,92 +1,35 @@
-.featureCard {
-  width: 100%;
-  display: flex;
-  padding: var(--dl-space-space-twounits);
-  position: relative;
-  align-items: flex-start;
-  border-radius: var(--dl-radius-radius-radius8);
-  flex-direction: row;
-  justify-content: flex-start;
-  background-color: var(--dl-color-gray-white);
-}
-.feature-card-container {
-  flex: 0 0 auto;
-  width: 2rem;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.feature-card-icon {
-  fill: #600015;
-  width: 24px;
-  height: 24px;
-  margin-right: var(--dl-space-space-oneandhalfunits);
-}
-.feature-card-subcontainer {
-  gap: var(--dl-space-space-unit);
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.feature-card-text {
-  font-family: "Raleway";
-  font-weight: 600;
-  line-height: 28px;
-}
-.feature-card-text1 {
-  color: var(--dl-color-gray-800);
-  line-height: 1.6;
-}
-@media(max-width: 767px) {
-  .featureCard {
-    flex-direction: row;
-  }
-  .feature-card-container1 {
-    flex-direction: column;
-  }
-}
-@media(max-width: 479px) {
-  .feature-card-container1 {
-    flex-direction: column;
-  }
-}
-
-.question-container {
-  gap: var(--dl-space-space-unit);
-  flex: 1;
-  width: auto;
-  height: auto;
-  display: flex;
-  position: relative;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.question-text {
-  color: #600015;
-  font-weight: 700;
-  line-height: 1.6;
-  font-size: 20px;
-}
-.question-text1 {
-  color: var(--dl-color-gray-black);
-  line-height: 1.6;
-}
-
-.programmingsite-header {
+.header1 {
   width: 100%;
   height: 133px;
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: flex-end;
   padding-top: var(--dl-space-space-oneandhalfunits);
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: var(--dl-space-space-oneandhalfunits);
-  justify-content: flex-end;
-  background-color: var(--dl-color-danger-300);
+  justify-content: flex-start;
+  background-color: #600015;
 }
-
+.navlinks-container {
+  top: 52px;
+  flex: 1;
+  left: 742px;
+  width: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.navlinks {
+  color: var(--dl-color-gray-white);
+  font-size: 26px;
+  transition: 0.3s;
+  margin-left: var(--dl-space-space-twounits);
+}
+.navlinks:hover {
+  color: #3d6e70ff;
+}
 .MClogo {
   top: 27px;
   left: 18px;
@@ -102,6 +45,19 @@
   height: 130px;
   position: absolute;
   object-fit: cover;
+}
+
+/*.programmingsite-header {
+  width: 100%;
+  height: 133px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: var(--dl-space-space-oneandhalfunits);
+  flex-direction: row;
+  padding-bottom: var(--dl-space-space-oneandhalfunits);
+  justify-content: flex-end;
+  background-color: var(--dl-color-danger-300);
 }
 .programmingsite-navbar-interactive {
   top: 23px;
@@ -342,41 +298,6 @@
   width: var(--dl-size-size-xsmall);
   height: var(--dl-size-size-xsmall);
 }
-.programmingsite-header1 {
-  width: 100%;
-  height: 133px;
-  display: flex;
-  position: relative;
-  align-items: flex-end;
-  padding-top: var(--dl-space-space-oneandhalfunits);
-  flex-direction: column;
-  padding-bottom: var(--dl-space-space-oneandhalfunits);
-  justify-content: flex-start;
-  background-color: #600015;
-}
-
-.programmingsite-links2 {
-  top: 52px;
-  flex: 1;
-  left: 742px;
-  width: auto;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.navlinks {
-  color: var(--dl-color-gray-white);
-  font-size: 26px;
-  transition: 0.3s;
-  margin-left: var(--dl-space-space-twounits);
-}
-.navlinks:hover {
-  color: #3d6e70ff;
-}
-
 .programmingsite-hero-button1 {
   top: 31px;
   color: var(--dl-color-gray-white);
@@ -399,7 +320,8 @@
   color: var(--dl-color-gray-white);
   border-color: rgba(41, 20, 119, 0.9);
   background-color: rgba(41, 20, 119, 0.9);
-}
+}*/
+
 .centerText {
   width: 100%;
   height: 663px;
@@ -410,7 +332,7 @@
   justify-content: center;
   background-image: url("../images/progteam_practice-1500w.jpg");
 }
-.programmingsite-hero {
+.progsite-hero {
   flex: 1;
   width: 1443px;
   height: 100%;
@@ -462,7 +384,7 @@
   text-decoration: none;
   background-color: var(--dl-color-danger-orange);
 }
-.programmingsite-hero-button11:hover {
+.getStarted-btn:hover {
   color: var(--dl-color-gray-white);
   border-color: rgba(41, 20, 119, 0.9);
   background-color: rgba(41, 20, 119, 0.9);
@@ -477,6 +399,7 @@
   line-height: 1.6;
 }
 
+/*Section 1*/
 .site-details {
   width: 100%;
   height: 468px;
@@ -508,13 +431,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-.programmingsite-text02 {
-  color: var(--dl-color-danger-500);
-  text-align: left;
-  font-family: "Raleway";
-  margin-bottom: var(--dl-space-space-oneandhalfunits);
-}
-.programmingsite-details-heading {
+.details-heading {
   color: #600015;
   width: 80%;
   text-align: left;
@@ -522,7 +439,7 @@
   line-height: 1.6;
   margin-bottom: var(--dl-space-space-oneandhalfunits);
 }
-.programmingsite-details-sub-heading {
+.details-subheading {
   color: var(--dl-color-gray-black);
   font-size: 18px;
   text-align: left;
@@ -540,6 +457,7 @@
   border-width: 2px;
 }
 
+/*Section 2*/
 .outcomes-container {
   flex: 0 0 auto;
   width: 100%;
@@ -562,7 +480,7 @@
   padding-bottom: var(--dl-space-space-fourunits);
   justify-content: flex-start;
 }
-.outcomes-Subcontainer1 {
+.outcomes-subcontainer1 {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -575,19 +493,75 @@
   margin-bottom: var(--dl-space-space-oneandhalfunits);
   text-transform: uppercase;
 }
-.outcomes-Subheading {
+.outcomes-subheading {
   color: var(--dl-color-gray-white);
   font-size: 18px;
   text-align: center;
   line-height: 1.3;
 }
-.outcomes-Subcontainer2 {
+.outcomes-subcontainer2 {
   width: 100%;
   display: grid;
   grid-gap: var(--dl-space-space-twounits);
   grid-template-columns: 1fr 1fr;
 }
-.programmingsite-gallery {
+.featureCard {
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  position: relative;
+  align-items: flex-start;
+  border-radius: var(--dl-radius-radius-radius8);
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: var(--dl-color-gray-white);
+}
+.feature-card-container {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.feature-card-icon {
+  fill: #600015;
+  width: 24px;
+  height: 24px;
+  margin-right: var(--dl-space-space-oneandhalfunits);
+}
+.feature-card-subcontainer {
+  gap: var(--dl-space-space-unit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.feature-card-text {
+  font-family: "Raleway";
+  font-weight: 600;
+  line-height: 28px;
+}
+.feature-card-text1 {
+  color: var(--dl-color-gray-800);
+  line-height: 1.6;
+}
+@media(max-width: 767px) {
+  .featureCard {
+    flex-direction: row;
+  }
+  .feature-card-container1 {
+    flex-direction: column;
+  }
+}
+@media(max-width: 479px) {
+  .feature-card-container1 {
+    flex-direction: column;
+  }
+}
+
+/*Section 3*/
+.gallery {
   flex: 0 0 auto;
   width: 100%;
   height: auto;
@@ -595,7 +569,7 @@
   align-items: center;
   justify-content: center;
 }
-.programmingsite-gallery1 {
+.gallery1 {
   gap: var(--dl-space-space-oneandhalfunits);
   width: 100%;
   display: flex;
@@ -623,15 +597,9 @@
   padding-left: var(--dl-space-space-threeunits);
   padding-right: var(--dl-space-space-threeunits);
 }
-.programmingsite-container05 {
-  width: 100%;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
-  display: grid;
-  grid-gap: var(--dl-space-space-unit);
-  margin-top: var(--dl-space-space-twounits);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.programmingsite-banner {
+
+/*Section 4*/
+.banner {
   flex: 0 0 auto;
   width: 100%;
   height: auto;
@@ -640,7 +608,7 @@
   justify-content: center;
   background-color: var(--dl-color-gray-black);
 }
-.programmingsite-banner1 {
+.banner1 {
   gap: var(--dl-space-space-oneandhalfunits);
   width: 2568px;
   display: flex;
@@ -682,7 +650,9 @@
   border-color: rgba(41, 20, 119, 0.9);
   background-color: rgba(41, 20, 119, 0.9);
 }
-.programmingsite-faq {
+
+/*Section 5*/
+.progsite-faq {
   flex: 0 0 auto;
   width: 100%;
   height: auto;
@@ -690,7 +660,7 @@
   align-items: center;
   justify-content: center;
 }
-.programmingsite-faq-container {
+.progsite-faq-container {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -698,7 +668,7 @@
   flex-direction: row;
   justify-content: center;
 }
-.programmingsite-faq1 {
+.progsite-faq1 {
   gap: var(--dl-space-space-twounits);
   width: 100%;
   display: flex;
@@ -710,14 +680,14 @@
   flex-direction: row;
   padding-bottom: var(--dl-space-space-fourunits);
 }
-.programmingsite-container06 {
+.programmingsite-faq1-container {
   display: flex;
   max-width: 35%;
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
 }
-.programmingsite-text05 {
+.faq-text {
   color: #600015;
   font-family: "Raleway";
   margin-bottom: var(--dl-space-space-oneandhalfunits);
@@ -734,12 +704,33 @@
   text-align: left;
   line-height: 1.6;
 }
-.programmingsite-container07 {
+.question-container {
+  gap: var(--dl-space-space-unit);
+  flex: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.question-text {
+  color: #600015;
+  font-weight: 700;
+  line-height: 1.6;
+  font-size: 20px;
+}
+.question-text1 {
+  color: var(--dl-color-gray-black);
+  line-height: 1.6;
+}
+.commonQuestions-container {
   gap: var(--dl-space-space-oneandhalfunits);
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
+
 .Footer {
   flex: 0 0 auto;
   width: 100%;
@@ -763,7 +754,7 @@
   justify-content: space-between;
   background-color: #600015;
 }
-.programmingsite-container08 {
+.footer-container {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -771,13 +762,7 @@
   align-items: flex-start;
   justify-content: center;
 }
-.programmingsite-image3 {
-  width: auto;
-  height: 160px;
-  object-fit: cover;
-  text-decoration: none;
-}
-.programmingsite-container09 {
+.logo-container {
   gap: var(--dl-space-space-oneandhalfunits);
   width: 560px;
   display: flex;
@@ -787,7 +772,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-.programmingsite-logo2 {
+.footer-logo {
   color: var(--dl-color-gray-white);
   font-size: 2em;
   font-weight: bold;
@@ -819,7 +804,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
 }
-.programmingsite-container10 {
+.bottom-container {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -827,7 +812,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.programmingsite-text28 {
+.copyright-text {
   color: var(--dl-color-secondary-gray500);
 }
 .programmingsite-icon-group1 {
@@ -838,10 +823,13 @@
 }
 .fbIcon {
   fill: var(--dl-color-secondary-gray500);
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   text-decoration: none;
 }
+
+
+/*Mobile View*/
 @media(max-width: 991px) {
   .programmingsite-hero {
     flex-direction: column;
@@ -923,37 +911,37 @@
   .programmingsite-text02 {
     text-align: center;
   }
-  .programmingsite-details-heading {
+  .details-heading {
     text-align: center;
   }
-  .programmingsite-details-sub-heading {
+  .details-subheading {
     text-align: center;
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
-  .programmingsite-features1 {
+  .progsite-features1 {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
   .programmingsite-container04 {
     grid-template-columns: 1fr;
   }
-  .programmingsite-gallery1 {
+  .gallery1 {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
-  .programmingsite-gallery-sub-heading {
+  .gallery-subheading {
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
   .programmingsite-container05 {
     grid-template-columns: 1fr 1fr;
   }
-  .programmingsite-banner1 {
+  .banner1 {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
-  .programmingsite-banner-sub-heading {
+  .banner-subheading {
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
   }
@@ -962,7 +950,7 @@
     padding-right: var(--dl-space-space-twounits);
     flex-direction: column;
   }
-  .programmingsite-container06 {
+  .progsite-faq1-container {
     max-width: 100%;
     align-self: center;
     align-items: center;
@@ -978,12 +966,12 @@
     margin-right: 0px;
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
-  .programmingsite-container10 {
+  .bottom-container {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
   }
-  .programmingsite-text28 {
+  .copyright-text {
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
 }
@@ -1033,12 +1021,12 @@
     margin-top: var(--dl-space-space-oneandhalfunits);
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }
-  .programmingsite-container10 {
+  .bottom-container {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
   }
-  .programmingsite-text28 {
+  .copyright-text {
     text-align: center;
     margin-bottom: var(--dl-space-space-oneandhalfunits);
   }

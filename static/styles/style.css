@@ -70,7 +70,7 @@
   justify-content: space-between;
   background-color: #600015;
 }
-.programmingsite-container08 {
+.footer-container {
   flex: 0 0 auto;
   width: auto;
   height: auto;
@@ -78,13 +78,7 @@
   align-items: flex-start;
   justify-content: center;
 }
-.programmingsite-image3 {
-  width: auto;
-  height: 160px;
-  object-fit: cover;
-  text-decoration: none;
-}
-.programmingsite-container09 {
+.logo-container {
   gap: var(--dl-space-space-oneandhalfunits);
   width: 560px;
   display: flex;
@@ -94,7 +88,7 @@
   flex-direction: column;
   justify-content: flex-start;
 }
-.programmingsite-logo2 {
+.footer-logo {
   color: var(--dl-color-gray-white);
   font-size: 2em;
   font-weight: bold;
@@ -127,7 +121,7 @@
   border-left-width: 0px;
   border-right-width: 0px;
 }
-.programmingsite-container10 {
+.bottom-container {
   flex: 0 0 auto;
   width: 100%;
   display: flex;
@@ -135,7 +129,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.programmingsite-text28 {
+.copyright-text {
   color: var(--dl-color-secondary-gray500);
 }
 .programmingsite-icon-group1 {
@@ -146,8 +140,8 @@
 }
 .fbIcon {
   fill: var(--dl-color-secondary-gray500);
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   text-decoration: none;
 }
 
