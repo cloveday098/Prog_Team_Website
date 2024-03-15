@@ -1,10 +1,3 @@
-<!--Still don't know what these are?-->
-<!--{% extends "base.html" %}
-{% block title %}
-    Home Page
-{% endblock %}
-
-{% block content %}-->
 <html>
     <head>
         <!-- I dunno what title should be. Probably fine. --> <!--Looks good to me -CL-->
@@ -16,10 +9,22 @@
     <!--I modified some of the design on this page, including the navbar and the images. Feel free to change any of them as you like before we come a consensus on the Home Page's style.-->
     <body style="background-color: darkcyan;">
         <section id="navbar" class="navbar">
+            <link rel="stylesheet" href="../static/styles/samirstyle.css" />
             <!--Navbar-->
-            <pre>   <!--Additionally, make Contact a button at the bottom with the Facebook link-->
-                <a href="https://www.maryvillecollege.edu/" target="_blank" ><img align="left" src="../static/Images/mcLogo.png" style="margin-top:-1%; margin-left: 3%;" loading="lazy"></a>    <a class="navlinks" href="about.html">About</a>    <a class="navlinks" href="major_page/index.html">Major</a>   <a class="navlinks" href="" onclick="window.open('http://localhost/contact.html', 'newwindow', 'width=1000,height=550'); return false;">Contact</a>    <a class="navlinks" href="http://localhost/problems.php">Problems</a> <a href="./home.html"><img align="right" src="../static/Images/cscLogo_garnet.png" height="75px" style="margin-top:-1%; margin-right: 3%;" loading="lazy"></a>
-            </pre>
+            <div class="programmingsite-header1">
+                <a href="https://www.maryvillecollege.edu/" target="_blank">
+                <img alt="image" src="../static/images/mc_logo-removebg-preview-200h.png" class="MClogo"/>
+                </a>
+                <nav class="programmingsite-links2">
+                <a class="navlinks" href="./about.html">About</a>
+                <a class="navlinks" href="./index.html">Major</a>
+                <a class="navlinks">Resources</a>
+                <a class="navlinks" href=""onclick="window.open('http://localhost/contact.html', 'newwindow', 'width=1000,height=550'); return false;">Contact</a>
+                </nav>
+                <a href="../templates\home.html">
+                <image src="../static\images\CSC Logo.png" class="progsite-logo"/>
+                </a>
+            </div>
         </section>
         <br><br><br>
 
@@ -31,7 +36,7 @@
             <br>
             </section>
 
-            <section id="main" style="margin-top: -1%; margin-left:-1%; margin-right:-1%;">
+            <section id="main" style="margin-top: -1%; margin-left:-1%; margin-right:-1%; color: var(--dl-color-gray-white);">
             <center>
             <h2>Getting Started:</h2>
                 <li>Check our schedule below to join us in Programming practice</li>
@@ -66,7 +71,7 @@
         </script>
         <br><br><br>
 
-        <section id=""calendar" style="margin-top: -3.5%;">
+        <section id=""calendar" style="margin-top: -3.5%; color: var(--dl-color-gray-white);">
         <!--Calendar by Chance-->
         <h2><center>Upcoming Events:</center></h2> <h4 align="right" style="margin-right: 10%; margin-bottom: -1.2%">Meeting Dates</h4>
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%234285F4&ctz=America%2FNew_York&title=CSC&showTz=0&showPrint=0&showNav=0&showTitle=0&showDate=1&showCalendars=1&showTabs=0&src=Y18yMGJiNDA1MDdhNzljMjU5ZjMwODJhYThmMjhlMGYyMDdhYTgxZmUxZmE5YjNlNTczZjBkNzE1YzY2Y2NkOGU0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F4511E" style="border-width:0" width="750" height="400" frameborder="0" scrolling="no"></iframe>
@@ -82,15 +87,38 @@
              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16ZM16 8C20.4 8 24 11.6 24 16C24 20 21.1 23.4 17.1 24V18.3H19L19.4 16H17.2V14.5C17.2 13.9 17.5 13.3 18.5 13.3H19.5V11.3C19.5 11.3 18.6 11.1 17.7 11.1C15.9 11.1 14.7 12.2 14.7 14.2V16H12.7V18.3H14.7V23.9C10.9 23.3 8 20 8 16C8 11.6 11.6 8 16 8Z" fill="#646464"></path>
             </svg></a>
     </div>
-    <!--{% endblock %}-->
 
     <!--Footer-->
-    <div class="footer">
-        <center>
-            <i class="fa-regular fa-copyright"></i> All information Maryville College 2024
-            502 E Lamar Alexander Pkwy, Maryville, TN 37804
-        </center>
-        </div>
+    <div class="Footer">
+        <footer class="innerFooter">
+          <div class="footer-container">
+            <a href="https://www.maryvillecollege.edu/" target="_blank" rel="noreferrer noopener">
+              <img alt="image" src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/MC-footer-logo-v5.png"/>
+            </a>
+            <div class="logo-container">
+              <span class="footer-logo">MC Programming Team</span>
+              <nav class="programmingsite-nav1">
+                <a href="https://www.maryvillecollege.edu/academics/programs-of-study/computer-science/" target="_blank" rel="noreferrer noopener"class="bottom-nav">
+                  Info
+                </a>
+                <span class="bottom-nav">Contact</span>
+              </nav>
+            </div>
+          </div>
+          <div class="programmingsite-separator"></div>
+          <div class="bottom-container">
+            <span class="copyright-text"> © 2024 MC Programming Team, All Rights Reserved. </span>
+            <div class="programmingsite-icon-group1">
+                <a href="https://www.facebook.com/groups/112478608462745/" target="_blank" rel="noreferrer noopener">
+                    <svg viewBox="0 0 602.2582857142856 1024" class="fbIcon">
+                      <path d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"></path>
+                    </svg>
+                  </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
     </body>
 
 </html>
