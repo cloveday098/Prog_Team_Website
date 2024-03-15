@@ -209,7 +209,7 @@
 .layer{
   background: transparent;
   height: 100%;
-  width: 100%;
+  width: 73%;
   position: absolute;
   top: 0;
   left: 0;
@@ -296,7 +296,7 @@
 }
 .studentdescp {
   background-color:inherit;
-  color: #fde79e;
+  color: var(--dl-color-secondary-gray500);
   font-size: 18px;
   font-family: Arial;
   width: 375px;
