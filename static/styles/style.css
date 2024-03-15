@@ -270,6 +270,9 @@
 .orange {
     color:#ff6500;
 }
+probHint{
+  color: #600015;
+}
 .row {
     display: -ms-flexbox; /* IE10 */
     display: flex;
