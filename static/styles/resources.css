@@ -4,8 +4,8 @@
 
 .web-card {
     padding-left: 25px;
-  padding-right: 25px;
-  flex: 0 0 25%;
+    padding-right: 25px;
+    flex: 0 0 25%;
     max-width: 25%;
     text-decoration: none;
     overflow:hidden;
