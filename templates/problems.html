@@ -30,11 +30,37 @@
         </section>
         <br><br><br><br><br>
 
+        <script>
+            function search() {
+  // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchinput");
+        table = document.getElementById("probtable");
+        filter = input.value.toUpperCase();
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+            }
+        }
+        }
+    </script>
+
         <table class="styled-table">
             <thead>
             <tr>
                 <td>Problem Name</td>
                 <td>Category</td>
+                <td>Website</td>
+                <td>Difficulty</td>
                 <td>Link</td>
             </tr>
             </thead>
@@ -42,7 +68,9 @@
                 <tr>
                     <td>Champernowne Verification</td>
                     <td>Ad Hoc</td>
-                    <td><a href="https://open.kattis.com/problems/champernowneverification">https://open.kattis.com/problems/champernowneverification</a></td>
+                    <td>Kattis</td>
+                    <td>1.4</td>
+                    <td><a href="https://open.kattis.com/problems/champernowneverification" target="_blank">https://open.kattis.com/problems/champernowneverification</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">A simple problem that may require a reread</td>
@@ -51,7 +79,9 @@
                 <tr>
                     <td>Chanukah Challenge</td>
                     <td>Ad Hoc</td>
-                    <td><a href="https://open.kattis.com/problems/chanukah">https://open.kattis.com/problems/chanukah</a></td>
+                    <td>Kattis</td>
+                    <td>1.4</td>
+                    <td><a href="https://open.kattis.com/problems/chanukah" target="_blank">https://open.kattis.com/problems/chanukah</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Just counting candles</td>
@@ -60,7 +90,9 @@
                 <tr>
                     <td>Rampant Growth</td>
                     <td>Ad Hoc</td>
-                    <td><a href="https://open.kattis.com/problems/rampantgrowth">https://open.kattis.com/problems/rampantgrowth</a></td>
+                    <td>Kattis</td>
+                    <td>1.8</td>
+                    <td><a href="https://open.kattis.com/problems/rampantgrowth" target="_blank">https://open.kattis.com/problems/rampantgrowth</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Formulate a plan to help Eddy</td>
@@ -69,7 +101,9 @@
                 <tr>
                     <td>Sort of Sorting</td>
                     <td>Data Structures</td>
-                    <td><a href="https://open.kattis.com/problems/sortofsorting">https://open.kattis.com/problems/sortofsorting</a></td>
+                    <td>Kattis</td>
+                    <td>1.8</td>
+                    <td><a href="https://open.kattis.com/problems/sortofsorting" target="_blank">https://open.kattis.com/problems/sortofsorting</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Sorting the normal way is too much work!</td>
@@ -78,7 +112,9 @@
                 <tr>
                     <td>Recount</td>
                     <td>Data Structures</td>
-                    <td><a href="https://open.kattis.com/problems/recount">https://open.kattis.com/problems/recount</a></td>
+                    <td>Kattis</td>
+                    <td>2.0</td>
+                    <td><a href="https://open.kattis.com/problems/recount" target="_blank">https://open.kattis.com/problems/recount</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Dictionaries are useful...even for elections like this.</td>
@@ -87,7 +123,9 @@
                 <tr>
                     <td>Mastering Mastermind</td>
                     <td>Ad Hoc</td>
-                    <td><a href="https://open.kattis.com/problems/mastermind">https://open.kattis.com/problems/mastermind</a></td>
+                    <td>Kattis</td>
+                    <td>2.6</td>
+                    <td><a href="https://open.kattis.com/problems/mastermind" target="_blank">https://open.kattis.com/problems/mastermind</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
@@ -96,7 +134,9 @@
                 <tr>
                     <td>Anagram Counting</td>
                     <td>Numeric</td>
-                    <td><a href="https://open.kattis.com/problems/anagramcounting">https://open.kattis.com/problems/anagramcounting</a></td>
+                    <td>Kattis</td>
+                    <td>3.0</td>
+                    <td><a href="https://open.kattis.com/problems/anagramcounting" target="_blank">https://open.kattis.com/problems/anagramcounting</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
@@ -105,7 +145,9 @@
                 <tr>
                     <td>Almost Perfect</td>
                     <td>Numeric</td>
-                    <td><a href="https://open.kattis.com/problems/almostperfect">https://open.kattis.com/problems/almostperfect</a></td>
+                    <td>Kattis</td>
+                    <td>3.1</td>
+                    <td><a href="https://open.kattis.com/problems/almostperfect" target="_blank">https://open.kattis.com/problems/almostperfect</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
@@ -114,7 +156,9 @@
                 <tr>
                     <td>Adding Words</td>
                     <td>Data Structures</td>
-                    <td><a href="https://open.kattis.com/problems/addingwords">https://open.kattis.com/problems/addingwords</a></td>
+                    <td>Kattis</td>
+                    <td>4.0</td>
+                    <td><a href="https://open.kattis.com/problems/addingwords" target="_blank">https://open.kattis.com/problems/addingwords</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
