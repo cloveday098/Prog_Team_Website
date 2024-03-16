@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Problems</title>
         <link rel="stylesheet" href="../static/styles/style.css">
         <link rel="stylesheet" href="../static/styles/problems.css">
         <script src="https://kit.fontawesome.com/29ba4da398.js" crossorigin="anonymous"></script>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <link rel="icon" type="image/x-icon" href="../static/Images/CSC Logo.png">
         <style>
 
@@ -31,17 +33,23 @@
         <br><br><br><br><br>
 
         <script>
-            function search() {
+            function search(n, search) {
   // Declare variables
         var input, filter, table, tr, td, i, txtValue;
-        input = document.getElementById("searchinput");
+        if (search == 0) {
+            input = document.getElementById("searchinput");
+        }
+        else {
+            input = document.getElementById("searchinput2");
+
+        }
         table = document.getElementById("probtable");
         filter = input.value.toUpperCase();
         tr = table.getElementsByTagName("tr");
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td")[0];
+            td = tr[i].getElementsByTagName("td")[n];
             if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -52,16 +60,75 @@
             }
         }
         }
-    </script>
+        function sortTable(n) {
+            
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("probtable");
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          $('.styled-table th::after').css('content: "\f161"')
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          $('.styled-table th::after').css('content: "\f161"')
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
 
-        <table class="styled-table">
+    </script>
+    <br>
+    <center><input type="text" id="searchinput" onkeyup="search(0,0)" placeholder="Search for problem.."><input type="text" id="searchinput2" onkeyup="search(3,2)" placeholder="Search by difficulty.."></center>
+        <table id="probtable" class="styled-table">
             <thead>
             <tr>
-                <td>Problem Name</td>
-                <td>Category</td>
-                <td>Website</td>
-                <td>Difficulty</td>
-                <td>Link</td>
+                <th onclick="sortTable(0)">Problem Name</th>
+                <th onclick="sortTable(1)">Category</th>
+                <th onclick="sortTable(2)">Website</th>
+                <th onclick="sortTable(3)">Difficulty</th>
+                <th>Link</th>
             </tr>
             </thead>
             <tbody>
@@ -69,100 +136,155 @@
                     <td>Champernowne Verification</td>
                     <td>Ad Hoc</td>
                     <td>Kattis</td>
-                    <td>1.4</td>
+                    <td style="background-color: green;">1.4</td>
                     <td><a href="https://open.kattis.com/problems/champernowneverification" target="_blank">https://open.kattis.com/problems/champernowneverification</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">A simple problem that may require a reread</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
                     <td>Chanukah Challenge</td>
                     <td>Ad Hoc</td>
                     <td>Kattis</td>
-                    <td>1.4</td>
+                    <td style="background-color: green;">1.4</td>
                     <td><a href="https://open.kattis.com/problems/chanukah" target="_blank">https://open.kattis.com/problems/chanukah</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Just counting candles</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
-
                 <tr>
                     <td>Rampant Growth</td>
                     <td>Ad Hoc</td>
                     <td>Kattis</td>
-                    <td>1.8</td>
+                    <td style="background-color: green;">1.8</td>
                     <td><a href="https://open.kattis.com/problems/rampantgrowth" target="_blank">https://open.kattis.com/problems/rampantgrowth</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Formulate a plan to help Eddy</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
                     <td>Sort of Sorting</td>
                     <td>Data Structures</td>
                     <td>Kattis</td>
-                    <td>1.8</td>
+                    <td style="background-color: green;">1.8</td>
                     <td><a href="https://open.kattis.com/problems/sortofsorting" target="_blank">https://open.kattis.com/problems/sortofsorting</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Sorting the normal way is too much work!</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
                     <td>Recount</td>
                     <td>Data Structures</td>
                     <td>Kattis</td>
-                    <td>2.0</td>
+                    <td style="background-color: green;">2.0</td>
                     <td><a href="https://open.kattis.com/problems/recount" target="_blank">https://open.kattis.com/problems/recount</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint">Dictionaries are useful...even for elections like this.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
                     <td>Mastering Mastermind</td>
                     <td>Ad Hoc</td>
                     <td>Kattis</td>
-                    <td>2.6</td>
+                    <td style="background-color: green;">2.6</td>
                     <td><a href="https://open.kattis.com/problems/mastermind" target="_blank">https://open.kattis.com/problems/mastermind</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Eight queens</td>
+                    <td>Backtracking</td>
+                    <td>Kattis</td>
+                    <td style="background-color: yellow;">2.8</td>
+                    <td><a href="https://open.kattis.com/problems/8queens" target="_blank">https://open.kattis.com/problems/8queens</a></td>
+                </tr>
+                <tr class="action">
+                    <td colspan="2" class="probHint"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
                     <td>Anagram Counting</td>
                     <td>Numeric</td>
                     <td>Kattis</td>
-                    <td>3.0</td>
+                    <td style="background-color: yellow;">3.0</td>
                     <td><a href="https://open.kattis.com/problems/anagramcounting" target="_blank">https://open.kattis.com/problems/anagramcounting</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Money Matters</td>
+                    <td>UFDS</td>
+                    <td>Kattis</td>
+                    <td style="background-color: yellow;">3.0</td>
+                    <td><a href="https://open.kattis.com/problems/moneymatters" target="_blank">https://open.kattis.com/problems/moneymatters</a></td>
+                </tr>
+                <tr class="action">
+                    <td colspan="2" class="probHint">Fairly simple once you learn the algorithm</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 
                 <tr>
                     <td>Almost Perfect</td>
                     <td>Numeric</td>
                     <td>Kattis</td>
-                    <td>3.1</td>
+                    <td style="background-color: yellow;">3.1</td>
                     <td><a href="https://open.kattis.com/problems/almostperfect" target="_blank">https://open.kattis.com/problems/almostperfect</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
                     <td>Adding Words</td>
                     <td>Data Structures</td>
                     <td>Kattis</td>
-                    <td>4.0</td>
+                    <td style="background-color: yellow;">4.0</td>
                     <td><a href="https://open.kattis.com/problems/addingwords" target="_blank">https://open.kattis.com/problems/addingwords</a></td>
                 </tr>
                 <tr class="action">
                     <td colspan="2" class="probHint"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
+                
             </tbody>
         </table>
 
