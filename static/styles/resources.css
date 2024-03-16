@@ -13,6 +13,7 @@
     margin-bottom: 20px;
     border: 3px solid #ff6500;
     border-radius: 25px;
+    transition:  0.4s;
 }
 
 .web-card a {
@@ -20,7 +21,8 @@
 }
 
 .web-card:hover{
-    margin-top: -2;
+    transform: translate(0, -10px);
+    box-shadow: 2px 10px;
 }
 
 .web-card-img {
@@ -68,14 +70,17 @@
     overflow:hidden;
     width: 70%;
     border-radius: 25px;
+    transition:  0.4s;
+
+}
+
+.alumni-card:hover{
+    transform: translate(0, -10px);
+    box-shadow: 2px 10px;
 }
 
 .alumni-card a {
     text-decoration: none;
-}
-
-.alumni-card:hover{
-    margin-top: -2;
 }
 
 .alumni-card-img {
