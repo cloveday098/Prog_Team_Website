@@ -1,7 +1,8 @@
-:root {
-    garnet: #600015;
-}
+/* Colors */
+.garnet {color: #600015;}
+.orange {color:#ff6500;}
 
+/* Heading */
 .programmingsite-header1 {
   width: 102%;
   height: 133px;
@@ -49,6 +50,7 @@
   text-decoration: none;
 }
 
+/* Footer */
 .Footer {
   flex: 0 0 auto;
   width: 102%;
@@ -145,6 +147,23 @@
   text-decoration: none;
 }
 
+/* Home */
+.homeGallery {
+  height:600px;
+  background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/improv_coding_session.JPG') center/cover;
+  border-top: 10px solid;
+  border-image: linear-gradient(to right, maroon 50%, red 50%, orange 75%) 5;
+  text-align: center;
+  margin-left:-1%;
+  margin-right:-1%;
+  padding-top: 30px;
+}
+.homeHyper{
+  color:#600015;
+  text-decoration: None;
+}
+
+/* About */
 .about {
   margin-bottom: -1%;
   margin-left:-1%;
@@ -162,10 +181,6 @@
   margin-right:-1%;
   margin-top: 1%;
 }
-.course {
-    color:#600015;
-    font-size: '21px';
-}
 .compbtn {
     width: 300px;
     height: 275px;
@@ -179,23 +194,6 @@
   min-height: 400px;
   opacity: 70%;
   margin-top: -1%;
-}
-.footer {
-    background-color: #600015;
-    color: white;
-}
-.garnet {
-    color: #600015;
-}
-.homeGallery {
-  height:600px;
-  background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/improv_coding_session.JPG') center/cover;
-  border-top: 10px solid;
-  border-image: linear-gradient(to right, maroon 50%, red 50%, orange 75%) 5;
-  text-align: center;
-  margin-left:-1%;
-  margin-right:-1%;
-  padding-top: 30px;
 }
 .imgGallery {
   height: 700px;
@@ -251,7 +249,6 @@
     position: relative;
     overflow: hidden;
 }
-
 .locations-col img{
     width: 100%;
     height: auto;
@@ -266,12 +263,6 @@
   margin-left:-1%;
   margin-right:-1%;
   margin-bottom: -3.8%;
-}
-.orange {
-    color:#ff6500;
-}
-probHint{
-  color: #600015;
 }
 .row {
     display: -ms-flexbox; /* IE10 */
@@ -322,12 +313,6 @@ probHint{
   color: maroon;
   background-color: orange;;
 }
-.yr {
-  color:orange;
-  font-family: Helvetica;
-  font-style: oblique;
-  font-size: '24px';
-}
 
 @media(max-width: 700px){
   .curious {
@@ -348,4 +333,139 @@ probHint{
       text-align: center;
       border: transparent;
   }
+}
+
+/* Problems */
+probHint{
+  color: #600015;
+}
+.styled-table {
+
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-weight: lighter;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-left: auto;
+margin-right: auto;
+box-sizing: border-box;
+
+}
+.styled-table thead tr {
+background-color: #000080;
+color: #ffffff;
+}
+
+.styled-table th,
+.styled-table td {
+padding: 12px 15px;
+}
+.styled-table tbody tr {
+border-bottom: thin solid #dddddd;
+}
+.styled-table a {
+text-decoration: none;
+}
+
+.styled-table a:hover {
+text-decoration: underline;
+}
+
+.styled-table th {
+  cursor: pointer;
+}
+
+.styled-table th::after {
+  content: "\f160";
+  font-family: FontAwesome;
+}
+
+.styled-table-desc {
+
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-weight: lighter;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-left: auto;
+margin-right: auto;
+box-sizing: border-box;
+
+}
+.styled-table-desc thead tr {
+background-color: #000080;
+color: #ffffff;
+}
+
+.styled-table-desc th,
+.styled-table-desc td {
+padding: 12px 15px;
+}
+.styled-table-desc tbody tr {
+border-bottom: thin solid #dddddd;
+}
+.styled-table-desc a {
+text-decoration: none;
+}
+
+.styled-table-desc a:hover {
+text-decoration: underline;
+}
+
+.styled-table-desc th {
+  cursor: pointer;
+}
+
+.styled-table-desc th::after {
+  content: "\f161";
+  font-family: FontAwesome;
+}
+
+
+#searchinput {
+  background-image: url('search.png'); 
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 50%; 
+  font-size: 16px;
+  padding: 12px 20px 12px 40px; 
+  border: 1px solid #ddd; 
+  }
+  #searchinput2 {
+      background-image: url('search.png'); 
+      background-position: 10px 12px; 
+      background-repeat: no-repeat; 
+      width: 15%; 
+      font-size: 14px;
+      padding: 12px 20px 12px 40px; 
+      border: 1px solid #ddd; 
+      }
+
+  tr.action {
+      visibility: collapse;
+      }
+  tr:hover + tr.action {
+  visibility: visible;
+  }
+
+.red {color:red}
+.yellow {color:yellow}
+.green {color:green}
+
+
+.course {
+  color:#600015;
+  font-size: '21px';
+}
+.yr {
+  color:orange;
+  font-family: Helvetica;
+  font-style: oblique;
+  font-size: '24px';
 }
