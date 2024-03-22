@@ -31,7 +31,7 @@
   position: absolute;
   object-fit: cover;
 }
-.programmingsite-links2 {
+.navlinks-container {
   top: 52px;
   flex: 1;
   left: 742px;
@@ -278,7 +278,11 @@
 }
 .sectHeadTop {
   color:maroon;
-  text-shadow: -1px -1px 0 orange, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: 0 0 5px #fff,
+  0 0 10px orange,
+  0 0 20px orange,
+  0 0 30px orange,
+  0 0 40px orange;
   font-size: 50px;
   font-family:Helvetica;
   opacity: 85%;
