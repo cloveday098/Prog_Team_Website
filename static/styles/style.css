@@ -53,12 +53,13 @@
 /* Footer */
 .Footer {
   flex: 0 0 auto;
-  width: 102%;
+  width: 101.6%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #600015;
+  margin-left: -0.6%;
 }
 .innerFooter {
   width: 100%;
@@ -179,7 +180,7 @@
   border-image: linear-gradient(to right, maroon 50%, red 50%, orange 75%) 5;
   text-align: center;
   margin-left:-1%;
-  margin-right:-1%;
+  margin-right:-2%;
   padding-top: 30px;
 }
 .homeHyper{
