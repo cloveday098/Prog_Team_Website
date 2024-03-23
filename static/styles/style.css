@@ -148,6 +148,21 @@
 }
 
 /* Home */
+.calendar{
+  color: white;
+  background-color: #600015;
+  font-size: 18px;
+  margin-top: -3.5%;
+  margin-left: -0.6%;
+  margin-right: -2%;
+}
+.getStarted {
+  margin-top: -1%;
+  margin-left:-1%;
+  margin-right:-1%;
+  color: #600015;
+  font-size: 18px;
+}
 .homeGallery {
   height:600px;
   background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/improv_coding_session.JPG') center/cover;
