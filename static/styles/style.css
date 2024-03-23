@@ -313,7 +313,7 @@
 }
 .studentdescp {
   background-color:inherit;
-  color: var(--dl-color-secondary-gray500);
+  color: white;
   font-size: 18px;
   font-family: Arial;
   width: 375px;
@@ -322,7 +322,7 @@
   border: transparent;
 }
 .studenthead {
-  background-color:inherit;
+  background-color: inherit;
   color:#600015;
   font-family: Helvetica;
   font-size:24px;

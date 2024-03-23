@@ -1,12 +1,12 @@
 <!-- Image Gallery-->
 <script>
     var names = ["Jessica Mohr", "Chance Loveday", "Kylind Reagan", "Samir Rojas", "Gianna Mantegna", "Gustavo Hernandez"];
-    var blurbs = ["Hi! My name is Jessica. I am a sophomore studying BioChemistry and computer science. In my free time, I usually play video games and hang out with my friends.",
+    var blurbs = ["Hi! My name is Jessica. I am a sophomore studying BioChemistry and Computer Science. In my free time, I usually play video games and hang out with my friends.",
                 "Hi, I'm a sophomore Computer Science and Math major. I'm active in several organizations across campus, including S³, Mountain Challenge, and MC3D. However, one club is particularly special. CSC has given me a place to excel, hone my programming skills, and be around some truly incredible people.",
                 "I am a sophomore Computer Science and have been on the Programming Team since I was a freshman. It improved my coding skills, let me meet people in my field, and helped me feel more prepared for both the real world and academia. It's also a lot of fun for anyone who enjoys problem-solving and traveling with peers!",
                 "I am Samir Rojas, a passionate junior studying Computer Science and Math with an anticipated graduation in December 2024. What captivates me most in the realm of Computer Science is the exhilarating journey of programming. Crafting diverse applications and games, such as my rendition of the iconic DOOM game, fuels my enthusiasm by immersing me in multifaceted problem-solving adventures.",
                 "Hey, I'm a freshman pursuing an Environmental Science and Computer Science dual-major with a Humanities minor. I am a part of the Programming Team, Philosophy Club, S³, and the CCA technical team. My favorite part of CSC is getting to learn some pretty amazing techniques for coding. I love getting to learn about how to create programs that solve for the wildest of problems.",
-                "I am a Junior graduating in 2025, I am a computer science major, and my favorite memory from CSC was when I helped the team submit a correct problem. It felt good contributing to the team, since we used lots of teamwork, to ensure that we effectively use our time wisely."];
+                "I am a Junior graduating in 2025, I am a Computer Science major, and my favorite memory from CSC was when I helped the team submit a correct problem. It felt good contributing to the team, since we used lots of teamwork, to ensure that we effectively use our time wisely."];
     var pics = [
         "../static/images/jess.png",
         "../static/images/chance.png",
@@ -96,7 +96,7 @@
     <link rel="stylesheet" href="../static/styles/style.css">
 </head>
 
-<body style="background-color:darkcyan;">
+<body>
     <link rel="stylesheet" href="../static/styles/samirstyle.css" />
     <!--Navbar-->
     <div class="programmingsite-header1">
@@ -114,7 +114,6 @@
         </a>
       </div>
 
-
       <section id = "imgGallery" class="imgGallery" style="background: linear-gradient(rgba(45, 45, 45, 0.5),rgba(0, 0, 0, 0.5)), url('../static/images/lipscomb24.jpg') center/cover;">
         <center><h1 class="sectHeadTop">Meet The <a href="../about_secret_lineup.html" style="text-decoration: none; color: inherit; cursor:crosshair">Team</a> </h1>
         <strong><p class="curious">Curious about programming? You're in the right place!</p></strong>
@@ -122,15 +121,20 @@
             The Computer Science Club (CSC) welcomes all students seeking to expand your knowledge and skills in programming and technology.<br>
             The Programming Team competes in regional and international programming competitions, enhancing their coding, problem-solving,<br>
             and teammwork skills while having fun along the way. <br><br>
-            Mission Statement: The mission is to promote computer science and technical learning among computer science and <br>
-            non-computer science majors alike in the Maryville College community and provide meaningful experiences to individuals<br>
-            seeking a career relating to computer programming.</div>
+        </div>
         
         <!--<figure>
             <img id = "imgGallery" src="../static/images/myrtleBeach_ccsc.jpg" width=auto height = "450">
             <figcaption id="imgGalleryCap" style="color:darkblue;">Only the best of the MC programmers at the 2023 CCSC Contest</figcaption>
         </figure>-->
         </center>
+    </section>
+
+    <section style="text-align:center;">
+        <h2 class="sectHead"><br>Mission Statement</h2>
+        <p class="advisordescp">The mission is to promote computer science and technical learning among computer science and <br>
+        non-computer science majors alike in the Maryville College community and provide meaningful experiences to individuals<br>
+        seeking a career relating to computer programming.<br><br></p>
     </section>
 
     <section class="about" style="background-image: url('../static/images/mountain.jpg');">
@@ -149,7 +153,7 @@
     </center>
     </section>
 
-    <section class="border" style="border-image: linear-gradient(to right, maroon 40%, red 40%, orange 75%) 5; margin-bottom: -2%;;">
+    <section class="border" style="border-image: linear-gradient(to right, maroon 40%, red 40%, orange 75%) 5; margin-bottom: -2%; background-image: linear-gradient(to top, rgb(248, 189, 78) 36%, peachpuff 15%, lightblue 75%);">
     <!--Student Spotlights-->
     <center><h2 class="sectHead" style="margin-top: 0.5%;">Student Spotlights</h2></center>
     <!--Name-->
@@ -192,7 +196,7 @@
         </div>
         
         <div class="side">
-            <textarea id="studentBlurb" class="studentdescp" readonly>"Hi! My name is Jessica. I am a sophomore studying BioChemistry and computer science. In my free time, I usually play video games and hang out with my friends."</textarea>
+            <textarea id="studentBlurb" class="studentdescp" readonly>"Hi! My name is Jessica. I am a sophomore studying BioChemistry and Computer Science. In my free time, I usually play video games and hang out with my friends."</textarea>
         </div>
         <div class="side">
             <textarea id="studentBlurb2" class="studentdescp" readonly>Hi, I'm a sophomore Computer Science and Math major. I'm active in several organizations across campus, including S³, Mountain Challenge, and MC3D. However, one club is particularly special. CSC has given me a place to excel, hone my programming skills, and be around some truly incredible people.</textarea>
