@@ -788,6 +788,9 @@
   color: var(--dl-color-secondary-gray500);
   margin-left: var(--dl-space-space-unit);
 }
+.bottom-nav:hover{
+  color: orange;
+}
 .programmingsite-separator {
   flex: 0 0 auto;
   width: 100%;
