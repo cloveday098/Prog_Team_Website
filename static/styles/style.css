@@ -45,9 +45,11 @@
 .navlinks {
   color: var(--dl-color-gray-white);
   font-size: 26px;
+  font-family: Inter;
   transition: 0.3s;
   margin-left: var(--dl-space-space-twounits);
   text-decoration: none;
+  font-weight: bold;
 }
 
 /* Footer */
