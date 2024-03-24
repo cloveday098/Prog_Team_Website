@@ -1,0 +1,105 @@
+
+
+.styled-table {
+
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+}
+.styled-table thead tr {
+background-color: #000080;
+color: #ffffff;
+}
+
+.styled-table th,
+.styled-table td {
+padding: 12px 15px;
+}
+.styled-table tbody tr {
+border-bottom: thin solid #dddddd;
+}
+.styled-table a {
+text-decoration: none;
+}
+
+.styled-table a:hover {
+text-decoration: underline;
+}
+.clickable-header {
+  cursor: pointer;
+}
+
+.clickable-header::after {
+  content: "\f160";
+  font-family: FontAwesome;
+}
+
+.clickable-header-desc {
+  cursor: pointer;
+}
+
+.clickable-header-desc::after {
+  content: "\f161";
+  font-family: FontAwesome;
+}
+
+
+
+
+#searchinput {
+  background-image: url('search.png'); 
+  background-position: 10px 12px; 
+  background-repeat: no-repeat; 
+  width: 50%; 
+  font-size: 16px;
+  padding: 12px 20px 12px 40px; 
+  border: 1px solid #ddd; 
+  }
+  #searchinput2 {
+      background-image: url('search.png'); 
+      background-position: 10px 12px; 
+      background-repeat: no-repeat; 
+      width: 15%; 
+      font-size: 14px;
+      padding: 12px 20px 12px 40px; 
+      border: 1px solid #ddd; 
+      }
+
+  tr.action {
+      visibility: collapse;
+      background-color: gold;
+      }
+  tr:hover + tr.action {
+  visibility: visible;
+  }
+
+  .problem {
+      width: fit-content;
+      padding: 3px 8px;
+      border-radius: 11.5px;
+      font-weight: 800;
+      color: white;
+      
+  }
+
+  .easy{
+      background-color: green;
+  }
+
+  .medium {
+      background-color: orange;
+  }
+
+  .zhard {
+      background-color: red;
+  }
+
+.red {color:red}
+.yellow {color:yellow}
+.green {color:green}
