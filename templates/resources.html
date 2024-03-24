@@ -1,3 +1,10 @@
+<!--Still don't know what these are?-->
+<!--{% extends "base.html" %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}-->
 <script>
     var pics = ["..static/images/lukekoch.png", "..static/images/davemcneelywhite.jpg", "..static/images/kaylabrown.jpg" ]
     var descriptions = [
@@ -23,14 +30,14 @@
     <body>
         <section id="navbar" class="navbar">
             <!--Navbar-->
+            <link rel="stylesheet" href="../static/styles/samirstyle.css" />
             <div class="programmingsite-header1">
                 <a href="https://www.maryvillecollege.edu/" target="_blank">
                 <img alt="image" src="../static/images/mc_logo-removebg-preview-200h.png" class="MClogo"/>
                 </a>
-                <nav class="programmingsite-links2">
+                <nav class="navlinks-container">
                 <a class="navlinks" href="./about.html">About</a>
                 <a class="navlinks" href="./index.html">Major</a>
-                <a class="navlinks">Resources</a>
                 <a class="navlinks" href="./problems.html">Problems</a>
                 <a class="navlinks" href=""onclick="window.open('http://localhost/contact.html', 'newwindow', 'width=1000,height=550'); return false;">Contact</a>
                 </nav>
@@ -45,7 +52,7 @@
             <h1>General Computer Science
               <span>Perfect for Anyone</span>
             </h1>
-        </div>
+          </div>
         <br>
         <div class="web-card"> 
             <a href="https://www.learncpp.com/" target="_blank">
