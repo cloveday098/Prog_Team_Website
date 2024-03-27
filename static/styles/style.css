@@ -176,6 +176,10 @@
   background-color: lightgray;
   color: #600015;
   font-size: 18px;
+  list-style-type:none;
+}
+.getStarted li {
+  padding: 3px 450px;
 }
 .homeGallery {
   height:600px;
