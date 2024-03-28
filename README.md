@@ -89,4 +89,4 @@ A form that contacts the Programming Team email with the contact's information.
 * Problems: Written by Kylind; problems provided by Kattis and UVA Judge (from Kylind, Chance, and Barbara Johnson)
 * Resources: Written and organized by Kylind; minor styling by Chance
 * Contact: Written and implemented by Jorge and Chance
-Logo designed by MC Design Major Cierra Hudson
+* Logo designed by MC Design Major Cierra Hudson
