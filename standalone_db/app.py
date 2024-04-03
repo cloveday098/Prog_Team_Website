@@ -277,14 +277,42 @@ def submitadd():
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
 
+    cursor.execute("SELECT * FROM problemscategories")
+    pr = cursor.fetchall()
+
     cursor.close()
     conn.close()
 
-    return render_template('problems.html', rows=rows, categories=categories , fr = newdict)
+    return render_template('problems.html', rows=rows, cats=pr , fr = newdict)
+
 
 @app.route('/addproblem', methods=["POST"])
 def addproblem():
     return render_template('addproblem.html')
+
+@app.route('/addcategory', methods=["POST"])
+def addcategory():
+    return render_template('addcategory.html')
+
+@app.route('/submitaddcat', methods=["POST"])
+def submitaddcat():
+    # extensive validation
+    #
+    name = request.form.get("name")
+
+    conn = sqlite3.connect('logins.db')
+    cursor = conn.cursor()
+
+    cursor.execute("INSERT INTO categories (category_name) VALUES (?)" , (name,))
+    conn.commit()
+
+    cursor.execute("SELECT * FROM categories")
+    rows = cursor.fetchall()
+
+    cursor.close()
+    conn.close()
+
+    return render_template('categories.html', rows = rows)
 
 if __name__ == '__main__':
     app.run(debug=True)
