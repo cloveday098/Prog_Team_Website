@@ -5,6 +5,16 @@ import secrets
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
+global newdict
+newdict = {}
+conn = sqlite3.connect('logins.db')
+cursor = conn.cursor()
+cursor.execute("SELECT * from categories")
+res = cursor.fetchall()
+
+for grp in res:
+    newdict[grp[0]] = grp[1]
+
 @app.route('/')
 def home():
     return render_template('dbsignin.html')
@@ -52,7 +62,9 @@ def problems():
     print("rows:" , rows)
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
-    return render_template('problems.html', rows=rows, categories=categories)
+    cursor.execute("SELECT * FROM problemscategories")
+    pr = cursor.fetchall()
+    return render_template('problems.html', rows=rows, categories=categories, cats=pr, fr = newdict)
 
 @app.route('/categories')
 def categories():
@@ -82,11 +94,12 @@ def submitquery():
     cursor.close()
     conn.close()
 
-    return render_template('problems.html' , rows=rows, categories=categories)
+    return render_template('problems.html' , rows=rows, categories=categories, fr = newdict)
 
 @app.route('/editproblem', methods=["POST" , "GET"])
 def editproblem():
     problemid = request.args.get("problemid")
+    print("PROBLEMID:" , problemid)
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
 
@@ -95,6 +108,8 @@ def editproblem():
 
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
+
+    print("ROWSSSS:" , rows)
 
     return render_template('editproblem.html' , rows=rows, pid=problemid, categories=categories)
 
@@ -125,10 +140,13 @@ def handledeleteproblem():
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
 
+    cursor.execute("SELECT * FROM problemscategories")
+    pr = cursor.fetchall()
+
     cursor.close()
     conn.close()
 
-    return render_template('problems.html' , rows=rows, categories=categories)
+    return render_template('problems.html' , rows=rows, categories=categories, cats = pr, fr = newdict)
 
 @app.route('/handledeletecategory')
 def handledeletecategory():
@@ -161,12 +179,15 @@ def submitedit():
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
 
+    catsAndIdsDict = {}
+
     actualcategories = request.form.getlist("categories")
-    print(actualcategories)
+    print("actualcategories" , actualcategories)
+
+    tst = request.form.getlist("category_ids")
+    print("tst" , tst)
 
     cats = []
-
-
 
     name = request.form.get("name")
     link = request.form.get("link")
@@ -205,7 +226,15 @@ def submitedit():
 
         counter = counter + 1
     
-    print(cats)
+    print("CATS" , cats)
+
+    for cat in cats:
+        print(cat[0])
+        cursor.execute("SELECT category_id FROM CATEGORIES WHERE category_name = ?" , (cat[0],))
+        tempId = cursor.fetchone()
+        catsAndIdsDict[tempId[0]] = cat[0]
+    
+    print("dictionary:" , catsAndIdsDict)
 
     conn.commit()
 
@@ -213,7 +242,10 @@ def submitedit():
     conn.commit()
 
     cursor.execute("SELECT * FROM problems")
+
     rows = cursor.fetchall()
+    print("rows:" , rows)
+    print("col[0]" , pr[0])
 
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
@@ -221,7 +253,7 @@ def submitedit():
     cursor.close()
     conn.close()
 
-    return render_template('problems.html', rows=rows, cats=cats)
+    return render_template('problems.html', rows=rows, cats=pr, dct = catsAndIdsDict, fr = newdict)
 
 @app.route('/submitadd' , methods=["POST"])
 def submitadd():
@@ -248,7 +280,7 @@ def submitadd():
     cursor.close()
     conn.close()
 
-    return render_template('problems.html', rows=rows, categories=categories)
+    return render_template('problems.html', rows=rows, categories=categories , fr = newdict)
 
 @app.route('/addproblem', methods=["POST"])
 def addproblem():

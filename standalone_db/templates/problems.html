@@ -79,8 +79,16 @@
                     <td>{{ row[2] }}</td>
                     <td>{{ row[4] }}</td>
                     <td>
-                        {% for cat in cats %}
+                        <!-- {% for cat in cats if row[0][0] == cat[0][0] %}
                             {{ cat[0] }}
+                            {% endfor %} -->
+                        {% for cat in cats %}
+                            {% if row[0] == cat[0] %}
+                                {{ fr[cat[1]] }}
+                                {% if not loop.last %}
+                                    , 
+                                {% endif %}
+                            {% endif %}
                         {% endfor %}
                     </td>
                     <td><button onclick="location.href='/editproblem?problemid={{ row[0] }}'">Edit problem</button></td>
