@@ -69,12 +69,13 @@
         {% endfor %}
 
         <input type="hidden" name="pid" value="{{rows[0][0]}}">
-        <input name="category_ids" id="category_ids" value="">
+        <input type="hidden" name="category_ids" id="category_ids" value="">
 
         <button type="button" onclick="goToProblems(event)" style="background-color: #646464;">Go to problems</button>
         <button type="submit" id="subbutton">Edit</button>
 
-        <input id="alreadycategories" name="alreadycategories" value="{{alreadycategories}}">
+        <input type="hidden" id="alreadycategories" name="alreadycategories" value="{{alreadycategories}}">
+
     </form>
     <script>
         function goToProblems(event) {
