@@ -59,7 +59,6 @@ def problems():
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM problems")
     rows = cursor.fetchall()
-    print("rows:" , rows)
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
     cursor.execute("SELECT * FROM problemscategories")
@@ -99,7 +98,6 @@ def submitquery():
 @app.route('/editproblem', methods=["POST" , "GET"])
 def editproblem():
     problemid = request.args.get("problemid")
-    print("PROBLEMID:" , problemid)
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
 
@@ -109,9 +107,15 @@ def editproblem():
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
 
-    print("ROWSSSS:" , rows)
+    cursor.execute("SELECT category_id FROM problemscategories WHERE problem_id=?", (problemid))
+    alreadycategories = cursor.fetchall()
 
-    return render_template('editproblem.html' , rows=rows, pid=problemid, categories=categories)
+    alreadycategoriesnew = []
+
+    for cat in alreadycategories:
+        alreadycategoriesnew.append(cat[0])
+
+    return render_template('editproblem.html' , rows=rows, pid=problemid, categories=categories, alreadycategories=alreadycategoriesnew)
 
 @app.route('/editcategory', methods=["POST" , "GET"])
 def editcategory():
@@ -151,7 +155,6 @@ def handledeleteproblem():
 @app.route('/handledeletecategory')
 def handledeletecategory():
     categoryid = request.args.get("categoryid")
-    print(categoryid)
 
     conn = sqlite3.connect('logins.db')
     cursor = conn.cursor()
@@ -182,10 +185,8 @@ def submitedit():
     catsAndIdsDict = {}
 
     actualcategories = request.form.getlist("categories")
-    print("actualcategories" , actualcategories)
 
     tst = request.form.getlist("category_ids")
-    print("tst" , tst)
 
     cats = []
 
@@ -194,7 +195,6 @@ def submitedit():
     category = request.form.get("category")
     difficulty = request.form.get("difficulty")
     problemid = request.form.get("pid")
-    print(name, link, category, problemid)
 
     cursor.execute("DELETE FROM problemscategories WHERE problem_id=?" , (problemid,))
     conn.commit()
@@ -205,19 +205,15 @@ def submitedit():
         # here, we iterate through the list and append rows to a hybrid table
         cursor.execute("SELECT category_name FROM categories WHERE category_id=?",(int(cat),))
         cname = cursor.fetchone()
-        print(cname[0])
 
         cursor.execute("INSERT INTO problemscategories (problem_id , category_id) VALUES (? , ?)" , (problemid , int(cat)))
         conn.commit()
 
         cursor.execute("SELECT * FROM problemscategories WHERE problem_id = ?" , (problemid,))
         testing = cursor.fetchall()
-        print(testing)
 
         cursor.execute("SELECT * FROM problemscategories")
         pr = cursor.fetchall()
-        print("Whole table:")
-        print(pr)
 
         cursor.execute("SELECT category_name FROM CATEGORIES WHERE category_id = ?" , (testing[counter][1] , ))
         cactual = cursor.fetchone()
@@ -226,15 +222,12 @@ def submitedit():
 
         counter = counter + 1
     
-    print("CATS" , cats)
 
     for cat in cats:
-        print(cat[0])
         cursor.execute("SELECT category_id FROM CATEGORIES WHERE category_name = ?" , (cat[0],))
         tempId = cursor.fetchone()
         catsAndIdsDict[tempId[0]] = cat[0]
     
-    print("dictionary:" , catsAndIdsDict)
 
     conn.commit()
 
@@ -244,11 +237,12 @@ def submitedit():
     cursor.execute("SELECT * FROM problems")
 
     rows = cursor.fetchall()
-    print("rows:" , rows)
-    print("col[0]" , pr[0])
 
     cursor.execute("SELECT * FROM categories")
     categories = cursor.fetchall()
+
+    cursor.execute("SELECT * FROM problemscategories")
+    pr = cursor.fetchall()
 
     cursor.close()
     conn.close()

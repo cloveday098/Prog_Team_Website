@@ -64,15 +64,17 @@
 
         {% for category in categories %}
             <label>
-                <input type="checkbox" name="categories" value="{{ category[0] }}">{{ category[1]  }}
+                <input type="checkbox" name="categories" id="{{ category[0] }}" value="{{ category[0] }}">{{ category[1]  }}
             </label><br>
         {% endfor %}
 
         <input type="hidden" name="pid" value="{{rows[0][0]}}">
-        <input type="hidden" name="category_ids" id="category_ids" value="">
+        <input name="category_ids" id="category_ids" value="">
 
-        <button onclick="goToProblems(event)" style="background-color: #646464;">Go to problems</button>
+        <button type="button" onclick="goToProblems(event)" style="background-color: #646464;">Go to problems</button>
         <button type="submit" id="subbutton">Edit</button>
+
+        <input id="alreadycategories" name="alreadycategories" value="{{alreadycategories}}">
     </form>
     <script>
         function goToProblems(event) {
@@ -88,6 +90,17 @@
 
             document.forms[0].submit();
         }
-        </script>
+
+        // Get assigned category IDs from hidden field
+        const assignedCategoryIds = JSON.parse(document.getElementById('alreadycategories').value);
+
+        // Loop through checkboxes and pre-select based on IDs
+        assignedCategoryIds.forEach(categoryId => {
+            const checkbox = document.getElementById(categoryId);
+            if (checkbox) {
+                checkbox.checked = true;
+            }
+        });
+    </script>
 </body>
 </html>
