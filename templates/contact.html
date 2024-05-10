@@ -49,6 +49,7 @@
    })();*/
    function test() {
         if (document.getElementById("name").value != "" &&
+            /^[a-zA-Z]+$/.test(document.getElementById("name").value) &&   <!--Not Working-->
             document.getElementById("email").value != "" &&
             document.getElementById("email").value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) != -1 &&
             document.getElementById("phone").value != "" &&
@@ -59,9 +60,10 @@
             document.getElementById('form1').submit();
             alert("Your message was sent successfully!");
         }
-        else {   // Find out how to use regexs.
+        else {
             alert("Error: Fill out all fields");
             if (document.getElementById("name").value == "") {document.getElementById("nameErr").value = "Please enter a valid name";}
+            else if (/^[a-zA-Z]+$/.test(document.getElementById("name").value) == -1) {document.getElementById("nameErr").value = "Include an actual name";}
             else {document.getElementById("nameErr").value = "";}
 
             if (document.getElementById("email").value == "") {document.getElementById("emailErr").value = "Email cannot be empty";}
@@ -93,10 +95,10 @@
                 <h4>Feel free to contact us anytime if you have any questions. If you want to join or have suggestions, please send us your ideas.</h4>
             </div>
             <div class="col-md-6 py-3 custom-form-bg">
-            <h1><center>Contact Form</center></h1> <!-- for mc.csc-->   <!--366a6380303826f3d77a363358bfc3ae for programming.team-->
-            <form id="form1" name="form1" action="https://formsubmit.co/mc.csc@my.maryvillecollege.edu" method="POST">
+            <h1><center>Contact Form</center></h1> <!-- a56b57a10d3a633a1a487f56a5255842 for mc.csc-->   <!--366a6380303826f3d77a363358bfc3ae for programming.team-->
+            <form id="form1" name="form1" action="https://formsubmit.co/a56b57a10d3a633a1a487f56a5255842" method="POST">
                 <input type="hidden" name="_subject" value="New Email">
-                <input type="hidden" name="_next" value="http://localhost/contactthankyou.html">
+                <input type="hidden" name="_next" value="../contactthankyou.html">
                 <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
                     <h5 for="name">Name <span class = "error">* <input class="error" type="text" id="nameErr" value="" readonly></span> </h5>
