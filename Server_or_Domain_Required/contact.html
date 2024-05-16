@@ -27,29 +27,21 @@
           background-color: #640928;
           color: #ff6500;
       }
-
       .custom-btn {
           background-color: #ff6500;
           color: #fff;
       }
-
       .custom-form-bg{
           background-color: rgba(58, 59, 64, 0.372);
           border-radius:4px;
       }
     </style>
-<!--
-<script src="contact.js"></script>
-<script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>-->
+
 <script type="text/javascript">
-   /*(function(){
-      emailjs.init("ogf2JF9JdcQbhnvuy");
-   })();*/
    function test() {
         if (document.getElementById("name").value != "" &&
-            /^[a-zA-Z]+$/.test(document.getElementById("name").value) &&   <!--Not Working-->
+            document.getElementById("name").value.search(/[a-zA-Z]/g) != -1 &&
+            document.getElementById("name").value.search(/[._!@#$%^&*+=]/g) == -1 &&   <!--Not Working-->
             document.getElementById("email").value != "" &&
             document.getElementById("email").value.search(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/) != -1 &&
             document.getElementById("phone").value != "" &&
@@ -63,7 +55,8 @@
         else {
             alert("Error: Fill out all fields");
             if (document.getElementById("name").value == "") {document.getElementById("nameErr").value = "Please enter a valid name";}
-            else if (/^[a-zA-Z]+$/.test(document.getElementById("name").value) == -1) {document.getElementById("nameErr").value = "Include an actual name";}
+            else if (document.getElementById("name").value.search(/[a-zA-Z]/g) == -1) {document.getElementById("nameErr").value = "Include an actual name";}
+            else if (document.getElementById("name").value.search(/[._!@#$%^&*+=]/g) != -1) {document.getElementById("nameErr").value = "No special symbols.";}
             else {document.getElementById("nameErr").value = "";}
 
             if (document.getElementById("email").value == "") {document.getElementById("emailErr").value = "Email cannot be empty";}
@@ -71,21 +64,15 @@
             else {document.getElementById("emailErr").value = "";}
             
             if (document.getElementById("phone").value == "") {document.getElementById("phoneErr").value = "Phone cannot be empty";}
-            else if (document.getElementById("phone").value.search(/[a-zA-Z._!@#$%^&*+]/g) != -1) {document.getElementById("phoneErr").value = "Enter a valid phone number";}
+            else if (document.getElementById("phone").value.search(/[a-zA-Z._!@#$%^&*+=]/g) != -1) {document.getElementById("phoneErr").value = "Enter a valid phone number";}
             else {document.getElementById("phoneErr").value = "";}
             
             if (document.getElementById("message").value.length < 5) {document.getElementById("msgErr").value = "Minimum 5 characters";}
             else {document.getElementById("msgErr").value = "";}
         }
-        /*if (document.getElementById("nameErr").value == "" && document.getElementById("emailErr").value == "" && document.getElementById("phoneErr").value == "" && document.getElementById("msgErr").value == "") {
-            //sendMail();
-            alert(document.getElementById("name").value);
-        }*/
-        //alert(document.getElementById("nameErr").value);
    }
 </script>
 </head>
-<!--<a href="file:///C:\Users\k12jsti\source\repos\Prog_Team_Website\home.html" style="float:left;"><img src="https://www.maryvillecollege.edu/wp-content/uploads/Images/Main/global/MC_V1-Enclosed_RGB_FullColor.png" width=auto height="50"></a>-->
 
 <body style="background-color:lightsalmon;">
     <div class="container border mt-3 bg-red">
@@ -116,10 +103,6 @@
                     <h5 for="message">Message <span class = "error">* <input class="error" type="text" id="msgErr" value="" readonly></span> </h5>
                     <textarea type="text" id="message" name="message" rows="3" class="form-control"></textarea>
                 </div>
-                <!--<input type='hidden' id='nameErr' value=<?php echo $nameErr;?>>
-                <input type='hidden' id='emailErr' value=<?php echo $emailErr;?>>
-                <input type='hidden' id='phoneErr' value=<?php echo $phoneErr;?>>
-                <input type='hidden' id='msgErr' value=<?php echo $msgErr;?>>-->
                 
             </form>
             <center><button type='submit' onclick="test()" class="btn custom-btn">Submit</button></center>
