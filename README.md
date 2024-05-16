@@ -1,5 +1,5 @@
 # Prog_Team_Website
-README authored by Chance Loveday. Contributions by Chance Loveday, Kylind Reagan, Jorge Estrada-Martinez, Kyle Haywood, Matt Hurst, and Jessica Mohr.
+README authored by Chance Loveday. Contributions by Chance Loveday, Kylind Reagan, Jorge Estrada-Martinez, Kyle Haywood, and Matt Hurst.
 
 A collaborative project for Maryville College CSC marketing and use in competition preparation. Please glance through this README to understand the goals and contents of this project.
 
@@ -55,7 +55,7 @@ The custom logo, designed by a Design student, takes the user to the Home Page.
 
 1. [__Calendar__]: A feature implemented via Google Calendar that allows viewers to view upcoming events, such as Meet Maryvilles and Programming Team practices.
 2. [__Competitions__]: Three buttons are linked to the testing sites visited most often by the Programming Team. Contest details should be found on the linked pages.
-3. [__Socials__]: Include an icon linked to the Programming Team Facebook page. Twitter and Instagram accounts are under construction.
+3. [__Socials__]: Include an icon linked to the Programming Team Facebook and Instagram pages. The Instagram account is under construction.
 
 ## About
 A page that should inform the public about CSC both as a competition team and as a student organization. Team achievements, student spotlights, and competition information are provided on this page.
@@ -80,13 +80,13 @@ A collection of resources for areas including, computer science, competitive pro
 
 ## Contact Us
 A form that contacts the Programming Team email with the contact's information.
-* __Contact Form Implementation__: The form requires a valid name, email, phone number, and message (at least 5-10 characters) from the sender. Only members linked to the team email will receive such messages. Security measures should be implemented to prevent phishing.
+* __Contact Form Implementation__: The form requires a valid name (must include letters and no special characters), email, phone number, and message (at least 5 characters) from the sender. Only members linked to the team CSC email will receive such messages. Regexs are implemented for sanitation purposes.
 
 ## Acknowledgements
 * Home: Written by Chance and Kylind
 * About: Written primarily by Chance; contributions by Jorge and all individuals who provided blurbs
 * Major: Written by Samir; revisions and additions by Chance
 * Problems: Written by Kylind; problems provided by Kattis and UVA Judge (from Kylind, Chance, and Barbara Johnson)
-* Resources: Written and organized by Kylind; minor styling by Chance
+* Resources: Written and organized by Kylind and Chance
 * Contact: Written and implemented by Jorge and Chance
-* Logo designed by MC Design Major Cierra Hudson
+* Logo designed by 2024 MC Design Major Cierra Hudson
