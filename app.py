@@ -12,15 +12,19 @@ def about():
 
 @app.route('/major/')
 def major():
-    return render_template("major.html")
+    return render_template("index.html")
 
-# @app.route('/contact/')
-# def contact():
-#     return render_template("contact.html")
+@app.route('/contact/')
+def contact():
+    return render_template("contact.html")
 
-# @app.route('/problems/')
-# def problems():
-#     return render_template("problems.html")
+@app.route('/problems/')
+def problems():
+    return render_template("problems.html")
+
+@app.route('/resources/')
+def resources():
+    return render_template("resources.html")
 
 ####### DISABLED TIL WE DECIDE HOW TO HANDLE LOGIN #######
 
